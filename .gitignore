@@ -1,0 +1,6 @@
+data
+logs
+**/*.pyc
+**/__pycache__
+code/savedmodels/*
+**/*.t7

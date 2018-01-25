@@ -1,0 +1,32 @@
+Namespace(batch_size=256, binEnd=None, binStart=None, binaryWeight=False, bnnModel=False, cachemode=True, calculateBinarizationLosses=False, criterion='crossentropy', cuda=True, data_dir='/tmp', dataset='tuberlin', decayinterval=50, decaylevel=2, epochs=600, evaluate=False, inpsize=225, learningratescheduler='decayschedular', logdir='../logs//tuberlin_sketchanet', lr=None, manualSeed=123, maxlr=0.005, minlr=5e-05, model_def='sketchanet', momentum=0.9, nClasses=250, name='tuberlin_sketchanet', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='', start_epoch=0, store='', tenCrop=True, tensorboard=True, testOnly=False, testbatchsize=16, verbose=False, weightDecay=0.0005, weight_init=True, workers=6)
+Net (
+  (relu): ReLU ()
+  (drop): Dropout2d (p=0.1)
+  (conv1): Conv2d(1, 64, kernel_size=(15, 15), stride=(3, 3))
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv2): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1))
+  (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool2): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv3): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (conv4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (conv5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv6): Conv2d(256, 512, kernel_size=(7, 7), stride=(1, 1))
+  (bn6): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (conv7): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+  (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (conv8): Conv2d(512, 250, kernel_size=(1, 1), stride=(1, 1))
+)
+Starting epoch number: 1 Learning rate: 0.005
+Train: [0]	Time 16.614	Data 1.736	Loss 5.792	Accuracy 0.0089	Prec@1 0.8889	Prec@5 4.0963	
+Val: [0]	Time 18.884	Data 0.583	Loss 5.269	Accuracy 0.0198	Prec@1 1.9846	Prec@5 8.4000	
+Best accuracy: [1.985]	
+Starting epoch number: 2 Learning rate: 0.005
+Train: [1]	Time 13.226	Data 1.562	Loss 5.180	Accuracy 0.0324	Prec@1 3.2444	Prec@5 11.7630	
+Val: [1]	Time 18.787	Data 0.948	Loss 4.837	Accuracy 0.0414	Prec@1 4.1385	Prec@5 15.3077	
+Best accuracy: [4.138]	
+Starting epoch number: 3 Learning rate: 0.005

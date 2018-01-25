@@ -1,0 +1,93 @@
+Namespace(batch_size=64, binEnd=100, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=False, criterion='crossentropy', cuda=True, data_dir='../data', dataset='tuberlin', decayinterval=40, decaylevel=2, epochs=400, evaluate=False, inpsize=224, learningratescheduler='decayschedular', logdir='../logs//tuberlin_resnethybridv218', lr=None, manualSeed=123, maxlr=0.002, minlr=5e-05, model_def='resnethybridv218', momentum=0.9, nClasses=250, name='tuberlin_resnethybridv218', nesterov=True, ngpus=1, numiter=100000000, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='', start_epoch=0, store='', tenCrop=True, tensorboard=True, testOnly=False, testbatchsize=4, verbose=False, weightDecay=0.0, weight_init=True, workers=4)
+ResNet (
+  (conv1): Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (relu1): ReLU (inplace)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), padding=(1, 1), dilation=(1, 1))
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ21): Active (
+  )
+  (conv21): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu21): ReLU (inplace)
+  (bn22): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ22): Active (
+  )
+  (conv22): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu22): ReLU (inplace)
+  (bn31): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ31): Active (
+  )
+  (conv31): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu31): ReLU (inplace)
+  (bn32): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ32): Active (
+  )
+  (conv32): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu32): ReLU (inplace)
+  (bn41): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ41): Active (
+  )
+  (conv41): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+  (relu41): ReLU (inplace)
+  (bn42): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ42): Active (
+  )
+  (conv42): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn43): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ43): Active (
+  )
+  (conv43): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+  (relu43): ReLU (inplace)
+  (bn51): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ51): Active (
+  )
+  (conv51): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu51): ReLU (inplace)
+  (bn52): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ52): Active (
+  )
+  (conv52): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu52): ReLU (inplace)
+  (bn61): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ61): Active (
+  )
+  (conv61): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+  (relu61): ReLU (inplace)
+  (bn62): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ62): Active (
+  )
+  (conv62): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn63): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ63): Active (
+  )
+  (conv63): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+  (relu63): ReLU (inplace)
+  (conv71): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn71): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (relu71): ReLU (inplace)
+  (conv72): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn72): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (relu72): ReLU (inplace)
+  (conv81): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn81): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (relu81): ReLU (inplace)
+  (conv82): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn82): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (conv83): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+  (bn83): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (relu83): ReLU (inplace)
+  (conv91): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn91): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (relu91): ReLU (inplace)
+  (conv92): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn92): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (relu92): ReLU (inplace)
+  (avgpool101): AvgPool2d (
+  )
+  (linear111): Linear (512 -> 250)
+)
+('Starting epoch number:', 1, 'Learning rate:', 0.002)
+Train: [0]	Time 56.606	Data 6.321	Loss 5.315	Accuracy 0.0196	Prec@1 1.9556	Prec@5 7.8444	
+Val: [0]	Time 62.846	Data 0.693	Loss 4.793	Accuracy 0.0442	Prec@1 4.4154	Prec@5 14.7077	
+Best accuracy: [4.415]	
+('Starting epoch number:', 2, 'Learning rate:', 0.002)

@@ -1,0 +1,47 @@
+Namespace(batch_size=256, binEnd=7, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=True, criterion='crossentropy', cuda=True, data_dir='../data', dataset='tuberlin', decayinterval=50, decaylevel=2, epochs=600, evaluate=False, inpsize=225, learningratescheduler='decayschedular', logdir='../logs//tuberlin_sketchanetfbin_binarization_loss', lr=None, manualSeed=123, maxlr=0.002, minlr=5e-05, model_def='sketchanetfbin', momentum=0.9, nClasses=250, name='tuberlin_sketchanetfbin_binarization_loss', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='savedmodels/sketchanetfbin_tuberlin_best.pth.tar', start_epoch=0, store='', tenCrop=False, tensorboard=True, testOnly=True, testbatchsize=16, verbose=False, weightDecay=0.0, weight_init=True, workers=4)
+Net (
+  (relu): ReLU (inplace)
+  (drop): Dropout2d (p=0.2)
+  (conv1): Conv2d(1, 64, kernel_size=(15, 15), stride=(3, 3))
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv2): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ2): Active (
+  )
+  (maxpool2): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv3): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ3): Active (
+  )
+  (conv4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ4): Active (
+  )
+  (conv5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ5): Active (
+  )
+  (maxpool3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv6): Conv2d(256, 512, kernel_size=(7, 7), stride=(1, 1), bias=False)
+  (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ6): Active (
+  )
+  (conv7): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (activ7): Active (
+  )
+  (conv8): Conv2d(512, 250, kernel_size=(1, 1), stride=(1, 1))
+)
+=> loading checkpoint 'savedmodels/sketchanetfbin_tuberlin_best.pth.tar'
+=> loaded checkpoint 'savedmodels/sketchanetfbin_tuberlin_best.pth.tar' (epoch 530)
+('Starting epoch number:', 531, 'Learning rate:', 5e-05)
+Root Mean square error per convolution layer
+[0.607991314388003, 0.6198748280917198, 0.7822913347953266, 0.7910108365406812, 0.683859373329353, 0.9431300636007283]
+Weight Normalized RMSE per convolution layer
+[0.6661531336727143, 0.5922758913493693, 0.7617773447036819, 0.7548800220012772, 0.6412034672255015, 0.9854758824339819]
+One minus W^2 error per convolution layer
+[0.48978292199734974, 0.3988474625133033, 0.5710635978765145, 0.5485118228749942, 0.44021467154236915, 0.6367906211195765]
+Val: [530]	Time 23.111	Data 0.186	Loss 2.203	Accuracy 0.5712	Prec@1 57.1231	Prec@5 81.5538	
+Best accuracy: [57.123]	
+('Starting epoch number:', 532, 'Learning rate:', 5e-05)

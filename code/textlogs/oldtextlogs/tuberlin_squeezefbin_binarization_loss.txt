@@ -1,0 +1,166 @@
+Namespace(batch_size=160, binEnd=100, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=True, criterion='crossentropy', cuda=True, data_dir='../data', dataset='tuberlin', decayinterval=40, decaylevel=2, epochs=400, evaluate=False, inpsize=224, learningratescheduler='decayschedular', logdir='../logs//tuberlin_squeezenetfbin_binarization_loss', lr=None, manualSeed=123, maxlr=0.002, minlr=5e-05, model_def='squeezenetfbin', momentum=0.9, nClasses=250, name='tuberlin_squeezenetfbin_binarization_loss', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='savedmodels/squeezenetfbin_tuberlin_best.pth.tar', start_epoch=0, store='', tenCrop=False, tensorboard=True, testOnly=True, testbatchsize=16, verbose=False, weightDecay=0.0, weight_init=True, workers=4)
+SqueezeNet (
+  (features): Sequential (
+    (0): Conv2d(1, 96, kernel_size=(7, 7), stride=(2, 2))
+    (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+    (2): ReLU (inplace)
+    (3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+    (4): Fire (
+      (bn1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(96, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(16, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (5): Fire (
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(128, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(16, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (6): Fire (
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (7): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+    (8): Fire (
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(256, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (9): Fire (
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(256, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(48, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (10): Fire (
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(384, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(48, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (11): Fire (
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+    (12): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+    (13): Fire (
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+      (activ1): Active (
+      )
+      (squeeze): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (squeeze_activation): ReLU (inplace)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (activ2): Active (
+      )
+      (expand1x1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (expand1x1_activation): ReLU (inplace)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (activ3): Active (
+      )
+      (expand3x3): Conv2d(64, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (expand3x3_activation): ReLU (inplace)
+    )
+  )
+  (classifier): Sequential (
+    (0): Dropout (p = 0.2)
+    (1): Conv2d(512, 250, kernel_size=(1, 1), stride=(1, 1))
+    (2): ReLU (inplace)
+    (3): AvgPool2d (
+    )
+  )
+)
+=> loading checkpoint 'savedmodels/squeezenetfbin_tuberlin_best.pth.tar'
+=> loaded checkpoint 'savedmodels/squeezenetfbin_tuberlin_best.pth.tar' (epoch 235)
+('Starting epoch number:', 236, 'Learning rate:', 6.25e-05)
+Root Mean square error per convolution layer
+[0.8125793540739381, 0.7536079912927297, 0.735679125045653, 0.6933132112864674, 0.6141950349075406, 0.5590370829894463, 0.6481724572639546, 0.5906236306352611, 0.5639947798773288, 0.5673354106495133, 0.5052923292955562, 0.5196167282511733, 0.6252069384364332, 0.5294295264334128, 0.5320998416571802, 0.6525706777105212, 0.5307659295314767, 0.5096649300630937, 0.6717260387884476, 0.536256649739165, 0.5373308703015309, 0.6758592062524877, 0.7006479385762205, 0.6991328812343706]
+Weight Normalized RMSE per convolution layer
+[0.8701607611584908, 0.8170851527562573, 0.8362016163748276, 0.751802264811562, 0.6591070382588273, 0.6009075448227382, 0.6818452229631661, 0.6078119620207127, 0.5935372456144826, 0.5951654719926721, 0.5111469356151267, 0.5315352304073927, 0.6361570709211537, 0.5220761689403749, 0.5699625339022654, 0.6462577294030823, 0.5357537019191313, 0.538065626529372, 0.6658039652583178, 0.5323548904435159, 0.5410876406005269, 0.6290468737470473, 0.546997583941995, 0.5675079554898061]
+One minus W^2 error per convolution layer
+[0.7028910638192435, 0.6390328246651615, 0.618648410946387, 0.5999656707615905, 0.5282558585203616, 0.4565198231689833, 0.5244199922422739, 0.46174294220086837, 0.42975201199622937, 0.43707983014093715, 0.338185850951903, 0.3649501841771588, 0.46341987619638736, 0.35308494550663366, 0.42418963553644806, 0.4577343774460604, 0.37929550868616935, 0.39251495007636067, 0.4744309436630558, 0.35655802834312217, 0.36631451167752027, 0.4467469124988417, 0.2927495476673071, 0.3057842481313891]
+Val: [235]	Time 94.832	Data 0.227	Loss 2.428	Accuracy 0.4326	Prec@1 43.2615	Prec@5 71.1385	
+Best accuracy: [44.169]	
+('Starting epoch number:', 237, 'Learning rate:', 6.25e-05)

@@ -1,0 +1,136 @@
+Namespace(batch_size=160, binEnd=56, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=True, criterion='crossentropy', cuda=True, data_dir='../data', dataset='tuberlin', decayinterval=40, decaylevel=2, epochs=400, evaluate=False, inpsize=224, learningratescheduler='decayschedular', logdir='../logs//tuberlin_resnetfbin18_binarization_loss', lr=None, manualSeed=123, maxlr=0.002, minlr=5e-05, model_def='resnetfbin18', momentum=0.9, nClasses=250, name='tuberlin_resnetfbin18_binarization_loss', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='savedmodels/resnetfbin18_tuberlin_best.pth.tar', start_epoch=0, store='', tenCrop=False, tensorboard=True, testOnly=True, testbatchsize=16, verbose=False, weightDecay=0.0, weight_init=True, workers=4)
+ResNet (
+  (conv1): Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (relu): ReLU (inplace)
+  (maxpool): MaxPool2d (size=(3, 3), stride=(2, 2), padding=(1, 1), dilation=(1, 1))
+  (layer1): Sequential (
+    (0): BasicBlock (
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+    )
+    (1): BasicBlock (
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+    )
+  )
+  (layer2): Sequential (
+    (0): BasicBlock (
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+      (downsample): Sequential (
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+        (1): Active (
+        )
+        (2): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      )
+    )
+    (1): BasicBlock (
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+    )
+  )
+  (layer3): Sequential (
+    (0): BasicBlock (
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+      (downsample): Sequential (
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+        (1): Active (
+        )
+        (2): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      )
+    )
+    (1): BasicBlock (
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+    )
+  )
+  (layer4): Sequential (
+    (0): BasicBlock (
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+      (downsample): Sequential (
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+        (1): Active (
+        )
+        (2): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      )
+    )
+    (1): BasicBlock (
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active1): Active (
+      )
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+      (relu): ReLU (inplace)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (active2): Active (
+      )
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+    )
+  )
+  (avgpool): AvgPool2d (
+  )
+  (fc): Linear (512 -> 250)
+)
+=> loading checkpoint 'savedmodels/resnetfbin18_tuberlin_best.pth.tar'
+=> loaded checkpoint 'savedmodels/resnetfbin18_tuberlin_best.pth.tar' (epoch 227)
+('Starting epoch number:', 228, 'Learning rate:', 6.25e-05)
+Root Mean square error per convolution layer
+[0.6649431409201336, 0.7210392655253194, 0.6381768526128226, 0.6552016788159635, 0.5472370027997712, 0.5734296108027384, 0.5647736035250859, 0.7544592061643297, 0.7190663477355054, 0.6402473266569653, 0.6657112992613163, 0.6645470123089517, 0.8052567740164629, 0.8005151372040799, 0.7074800324971967, 0.8178779118861641, 0.7856660758828659, 1.0710913927552812, 1.0278103012515323]
+Weight Normalized RMSE per convolution layer
+[0.7519150085450591, 0.8396930087738678, 0.660828458317847, 0.733763985911059, 0.575509306868656, 0.5670984600894907, 0.5448922418715655, 0.722633529744368, 0.8293930348869534, 0.6414732467546278, 0.6716005520162777, 0.5936207178732374, 0.7309999192768843, 0.8695375108390829, 0.686253793154374, 0.7494927490146824, 0.6708179601270811, 0.8768982181364333, 0.7224581611404214]
+One minus W^2 error per convolution layer
+[0.5872284379359838, 0.6449516842128018, 0.5130680343570961, 0.5573251020318899, 0.42379114221717423, 0.3837379977720302, 0.363059087837211, 0.5031756481810196, 0.5894323551995309, 0.44752898704288047, 0.4629583407641922, 0.3715770737261166, 0.48301407119547557, 0.6331521789989542, 0.48621900724727635, 0.5267081911096702, 0.43496883229446354, 0.6251455514854236, 0.4511948706129113]
+Val: [227]	Time 75.532	Data 0.217	Loss 1.742	Accuracy 0.6906	Prec@1 69.0615	Prec@5 89.0923	
+Best accuracy: [69.062]	
+('Starting epoch number:', 229, 'Learning rate:', 6.25e-05)

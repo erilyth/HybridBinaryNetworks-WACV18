@@ -1,0 +1,37 @@
+Namespace(batch_size=128, binEnd=8, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=False, criterion='crossentropy', cuda=True, data_dir='/home/vishalapr/Imagenet12', dataset='imagenet12', decayinterval=8, decaylevel=2, epochs=70, evaluate=False, inpsize=224, learningratescheduler='decayschedular', logdir='../logs//imagenet_alexnethybrid_8thwbin', lr=None, manualSeed=123, maxlr=0.0005, minlr=1e-05, model_def='alexnethybrid', momentum=0.9, nClasses=1000, name='imagenet_alexnethybrid_8thwbin', nesterov=False, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='', start_epoch=0, store='', tenCrop=False, tensorboard=True, testOnly=False, testbatchsize=32, verbose=True, weightDecay=0.0, weight_init=True, workers=8)
+Net (
+  (drop): Dropout2d (p=0.1)
+  (relu): ReLU (inplace)
+  (conv1): Conv2d(3, 96, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+  (bn1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv2): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  (bn2): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+  (activ2): Active (
+  )
+  (maxpool2): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv3): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ3): Active (
+  )
+  (conv4): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+  (activ4): Active (
+  )
+  (conv5): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+  (activ5): Active (
+  )
+  (maxpool3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv6): Conv2d(256, 4096, kernel_size=(6, 6), stride=(1, 1), bias=False)
+  (bn6): BatchNorm2d(4096, eps=1e-05, momentum=0.1, affine=True)
+  (conv7): Conv2d(4096, 4096, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn7): BatchNorm2d(4096, eps=1e-05, momentum=0.1, affine=True)
+  (conv8): Conv2d(4096, 1000, kernel_size=(1, 1), stride=(1, 1))
+)
+('Starting epoch number:', 1, 'Learning rate:', 0.0005)
+Epoch: [0][0/10010]	Time 32.236 (32.236)	Data 24.782 (24.782)	Loss 8.048	Accuracy 0.0000	Prec@1 0.0000	Prec@5 0.0000
+Epoch: [0][200/10010]	Time 2.038 (409.566)	Data 1.461 (293.641)	Loss 7.406	Accuracy 0.0027	Prec@1 0.2721	Prec@5 1.2360
+Epoch: [0][400/10010]	Time 2.033 (815.117)	Data 1.473 (590.654)	Loss 7.210	Accuracy 0.0039	Prec@1 0.3916	Prec@5 1.6365
+Epoch: [0][600/10010]	Time 1.990 (1195.885)	Data 1.436 (862.846)	Loss 7.086	Accuracy 0.0054	Prec@1 0.5356	Prec@5 2.0851
+Epoch: [0][800/10010]	Time 1.962 (1571.557)	Data 1.411 (1129.971)	Loss 6.992	Accuracy 0.0065	Prec@1 0.6467	Prec@5 2.5261

@@ -1,0 +1,151 @@
+Namespace(arch='resnet18', batch_size=128, binEnd=100, binStart=2, binaryWeight=False, bnnModel=False, bottleneck=True, cachemode=True, calculateBinarizationLosses=False, criterion='crossentropy', cuda=True, data='../data/', data_dir='../data', dataset='imagenet12', decayinterval=5, decaylevel=2, droprate=0.0, epochs=70, evaluate=False, from_modelzoo=False, growth=12, inpsize=224, layers=40, learningratescheduler='decayschedular', logdir='../logs//imagenet_alexnetfbin', lr=None, manualSeed=123, maxlr=0.0005, minlr=1e-05, model_def='alexnetfbin', momentum=0.9, nClasses=1000, name='imagenet_alexnetfbin', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, reduce=1.0, resume='', start_epoch=0, store='', tenCrop=False, tensorboard=True, testOnly=False, testbatchsize=32, vdata=None, verbose=True, weightDecay=0.0, weight_init=True, widenfactor=4, workers=8)
+Net (
+  (drop): Dropout2d (p=0.0)
+  (relu): ReLU (inplace)
+  (conv1): Conv2d(3, 96, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+  (bn1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv2): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  (bn2): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True)
+  (activ2): Active (
+  )
+  (maxpool2): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv3): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ3): Active (
+  )
+  (conv4): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+  (activ4): Active (
+  )
+  (conv5): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True)
+  (activ5): Active (
+  )
+  (maxpool3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv6): Conv2d(256, 4096, kernel_size=(6, 6), stride=(1, 1), bias=False)
+  (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ6): Active (
+  )
+  (conv7): Conv2d(4096, 4096, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn7): BatchNorm2d(4096, eps=1e-05, momentum=0.1, affine=True)
+  (activ7): Active (
+  )
+  (conv8): Conv2d(4096, 1000, kernel_size=(1, 1), stride=(1, 1))
+)
+('Starting epoch number:', 1, 'Learning rate:', 0.0005)
+Epoch: [0][0/10010]	Time 6.073 (6.073)	Data 1.386 (1.386)	Loss 10.366	Accuracy 0.0000	Prec@1 0.0000	Prec@5 0.7812
+Epoch: [0][200/10010]	Time 0.301 (60.418)	Data 0.008 (1.628)	Loss 7.490	Accuracy 0.0021	Prec@1 0.2138	Prec@5 0.9795
+Epoch: [0][400/10010]	Time 0.286 (114.882)	Data 0.005 (1.907)	Loss 7.182	Accuracy 0.0024	Prec@1 0.2396	Prec@5 1.1612
+Epoch: [0][600/10010]	Time 0.282 (169.324)	Data 0.004 (2.153)	Loss 7.053	Accuracy 0.0028	Prec@1 0.2834	Prec@5 1.3649
+Epoch: [0][800/10010]	Time 0.279 (223.783)	Data 0.003 (2.433)	Loss 6.970	Accuracy 0.0033	Prec@1 0.3326	Prec@5 1.5888
+Epoch: [0][1000/10010]	Time 0.278 (278.152)	Data 0.003 (2.687)	Loss 6.906	Accuracy 0.0039	Prec@1 0.3856	Prec@5 1.7810
+Epoch: [0][1200/10010]	Time 0.277 (332.552)	Data 0.002 (2.963)	Loss 6.846	Accuracy 0.0046	Prec@1 0.4593	Prec@5 2.0894
+Epoch: [0][1400/10010]	Time 0.276 (387.098)	Data 0.002 (3.234)	Loss 6.791	Accuracy 0.0054	Prec@1 0.5387	Prec@5 2.3543
+Epoch: [0][1600/10010]	Time 0.276 (441.521)	Data 0.002 (3.459)	Loss 6.742	Accuracy 0.0062	Prec@1 0.6168	Prec@5 2.6165
+Epoch: [0][1800/10010]	Time 0.275 (495.918)	Data 0.002 (3.749)	Loss 6.696	Accuracy 0.0070	Prec@1 0.7010	Prec@5 2.8934
+Epoch: [0][2000/10010]	Time 0.275 (550.283)	Data 0.002 (3.994)	Loss 6.651	Accuracy 0.0078	Prec@1 0.7848	Prec@5 3.1793
+Epoch: [0][2200/10010]	Time 0.275 (604.653)	Data 0.002 (4.241)	Loss 6.610	Accuracy 0.0086	Prec@1 0.8600	Prec@5 3.4430
+Epoch: [0][2400/10010]	Time 0.275 (659.092)	Data 0.002 (4.483)	Loss 6.571	Accuracy 0.0094	Prec@1 0.9446	Prec@5 3.7263
+Epoch: [0][2600/10010]	Time 0.274 (713.505)	Data 0.002 (4.738)	Loss 6.534	Accuracy 0.0103	Prec@1 1.0309	Prec@5 3.9904
+Epoch: [0][2800/10010]	Time 0.274 (767.799)	Data 0.002 (4.967)	Loss 6.500	Accuracy 0.0112	Prec@1 1.1201	Prec@5 4.2658
+Epoch: [0][3000/10010]	Time 0.274 (822.168)	Data 0.002 (5.217)	Loss 6.466	Accuracy 0.0121	Prec@1 1.2105	Prec@5 4.5516
+Epoch: [0][3200/10010]	Time 0.274 (876.517)	Data 0.002 (5.448)	Loss 6.434	Accuracy 0.0130	Prec@1 1.2960	Prec@5 4.8239
+Epoch: [0][3400/10010]	Time 0.274 (930.793)	Data 0.002 (5.678)	Loss 6.404	Accuracy 0.0138	Prec@1 1.3840	Prec@5 5.1019
+Epoch: [0][3600/10010]	Time 0.274 (985.146)	Data 0.002 (5.921)	Loss 6.375	Accuracy 0.0147	Prec@1 1.4690	Prec@5 5.3659
+Epoch: [0][3800/10010]	Time 0.273 (1039.408)	Data 0.002 (6.142)	Loss 6.347	Accuracy 0.0156	Prec@1 1.5551	Prec@5 5.6455
+Epoch: [0][4000/10010]	Time 0.273 (1093.783)	Data 0.002 (6.394)	Loss 6.321	Accuracy 0.0164	Prec@1 1.6428	Prec@5 5.9120
+Epoch: [0][4200/10010]	Time 0.273 (1148.176)	Data 0.002 (6.670)	Loss 6.295	Accuracy 0.0172	Prec@1 1.7219	Prec@5 6.1552
+Epoch: [0][4400/10010]	Time 0.273 (1202.552)	Data 0.002 (6.914)	Loss 6.271	Accuracy 0.0181	Prec@1 1.8108	Prec@5 6.4124
+Epoch: [0][4600/10010]	Time 0.273 (1256.933)	Data 0.002 (7.136)	Loss 6.247	Accuracy 0.0189	Prec@1 1.8906	Prec@5 6.6536
+Epoch: [0][4800/10010]	Time 0.273 (1311.445)	Data 0.002 (7.419)	Loss 6.226	Accuracy 0.0197	Prec@1 1.9661	Prec@5 6.8784
+Epoch: [0][5000/10010]	Time 0.273 (1365.938)	Data 0.002 (7.701)	Loss 6.203	Accuracy 0.0205	Prec@1 2.0535	Prec@5 7.1303
+Epoch: [0][5200/10010]	Time 0.273 (1420.473)	Data 0.002 (7.975)	Loss 6.183	Accuracy 0.0213	Prec@1 2.1323	Prec@5 7.3583
+Epoch: [0][5400/10010]	Time 0.273 (1475.022)	Data 0.002 (8.253)	Loss 6.161	Accuracy 0.0222	Prec@1 2.2192	Prec@5 7.6026
+Epoch: [0][5600/10010]	Time 0.273 (1529.523)	Data 0.002 (8.524)	Loss 6.142	Accuracy 0.0230	Prec@1 2.2969	Prec@5 7.8237
+Epoch: [0][5800/10010]	Time 0.273 (1583.990)	Data 0.002 (8.785)	Loss 6.123	Accuracy 0.0238	Prec@1 2.3846	Prec@5 8.0468
+Epoch: [0][6000/10010]	Time 0.273 (1638.550)	Data 0.002 (9.104)	Loss 6.104	Accuracy 0.0246	Prec@1 2.4562	Prec@5 8.2665
+Epoch: [0][6200/10010]	Time 0.273 (1692.960)	Data 0.002 (9.352)	Loss 6.087	Accuracy 0.0253	Prec@1 2.5279	Prec@5 8.4610
+Epoch: [0][6400/10010]	Time 0.273 (1747.296)	Data 0.002 (9.617)	Loss 6.070	Accuracy 0.0260	Prec@1 2.5997	Prec@5 8.6605
+Epoch: [0][6600/10010]	Time 0.273 (1801.626)	Data 0.001 (9.855)	Loss 6.053	Accuracy 0.0268	Prec@1 2.6772	Prec@5 8.8673
+Epoch: [0][6800/10010]	Time 0.273 (1856.150)	Data 0.001 (10.147)	Loss 6.037	Accuracy 0.0275	Prec@1 2.7475	Prec@5 9.0642
+Epoch: [0][7000/10010]	Time 0.273 (1910.591)	Data 0.001 (10.420)	Loss 6.021	Accuracy 0.0282	Prec@1 2.8194	Prec@5 9.2602
+Epoch: [0][7200/10010]	Time 0.273 (1965.000)	Data 0.001 (10.690)	Loss 6.005	Accuracy 0.0289	Prec@1 2.8881	Prec@5 9.4562
+Epoch: [0][7400/10010]	Time 0.273 (2019.352)	Data 0.001 (10.949)	Loss 5.990	Accuracy 0.0296	Prec@1 2.9596	Prec@5 9.6523
+Epoch: [0][7600/10010]	Time 0.273 (2073.692)	Data 0.001 (11.188)	Loss 5.976	Accuracy 0.0303	Prec@1 3.0265	Prec@5 9.8344
+Epoch: [0][7800/10010]	Time 0.273 (2127.989)	Data 0.001 (11.399)	Loss 5.962	Accuracy 0.0309	Prec@1 3.0929	Prec@5 10.0134
+Epoch: [0][8000/10010]	Time 0.273 (2182.380)	Data 0.001 (11.643)	Loss 5.947	Accuracy 0.0317	Prec@1 3.1676	Prec@5 10.1995
+Epoch: [0][8200/10010]	Time 0.273 (2236.792)	Data 0.001 (11.903)	Loss 5.933	Accuracy 0.0323	Prec@1 3.2347	Prec@5 10.3846
+Epoch: [0][8400/10010]	Time 0.273 (2291.195)	Data 0.001 (12.140)	Loss 5.919	Accuracy 0.0330	Prec@1 3.3022	Prec@5 10.5579
+Epoch: [0][8600/10010]	Time 0.273 (2345.651)	Data 0.001 (12.437)	Loss 5.906	Accuracy 0.0337	Prec@1 3.3656	Prec@5 10.7179
+Epoch: [0][8800/10010]	Time 0.273 (2400.106)	Data 0.001 (12.700)	Loss 5.894	Accuracy 0.0343	Prec@1 3.4299	Prec@5 10.8818
+Epoch: [0][9000/10010]	Time 0.273 (2454.462)	Data 0.001 (12.985)	Loss 5.881	Accuracy 0.0349	Prec@1 3.4945	Prec@5 11.0390
+Epoch: [0][9200/10010]	Time 0.273 (2508.949)	Data 0.001 (13.228)	Loss 5.869	Accuracy 0.0356	Prec@1 3.5597	Prec@5 11.1982
+Epoch: [0][9400/10010]	Time 0.273 (2563.394)	Data 0.001 (13.501)	Loss 5.857	Accuracy 0.0362	Prec@1 3.6239	Prec@5 11.3558
+Epoch: [0][9600/10010]	Time 0.273 (2617.857)	Data 0.001 (13.859)	Loss 5.846	Accuracy 0.0368	Prec@1 3.6803	Prec@5 11.5029
+Epoch: [0][9800/10010]	Time 0.273 (2672.432)	Data 0.001 (14.254)	Loss 5.835	Accuracy 0.0374	Prec@1 3.7436	Prec@5 11.6551
+Epoch: [0][10000/10010]	Time 0.273 (2726.748)	Data 0.001 (14.482)	Loss 5.824	Accuracy 0.0380	Prec@1 3.8003	Prec@5 11.8063
+Train: [0]	Time 2729.463	Data 14.484	Loss 5.823	Accuracy 0.0380	Prec@1 3.8025	Prec@5 11.8120	
+Epoch: [0][0/391]	Time 0.966 (0.966)	Data 0.911 (0.911)	Loss 4.9655 (4.9655)	Accuracy 0.0547 (0.0547)	Prec@1 5.469 (5.469)	Prec@5 15.625 (15.625)	
+Epoch: [0][200/391]	Time 0.175 (0.097)	Data 0.119 (0.036)	Loss 4.7733 (4.9994)	Accuracy 0.1172 (0.0859)	Prec@1 11.719 (8.594)	Prec@5 25.000 (23.224)	
+Val: [0]	Time 37.777	Data 13.433	Loss 5.004	Accuracy 0.0853	Prec@1 8.5340	Prec@5 23.0220	
+Best accuracy: [8.534]	
+('Starting epoch number:', 2, 'Learning rate:', 0.0005)
+Epoch: [1][0/10010]	Time 1.983 (1.983)	Data 1.655 (1.655)	Loss 5.293	Accuracy 0.0781	Prec@1 7.8125	Prec@5 18.7500
+Epoch: [1][200/10010]	Time 0.281 (56.558)	Data 0.011 (2.120)	Loss 5.261	Accuracy 0.0696	Prec@1 6.9613	Prec@5 19.5079
+Epoch: [1][400/10010]	Time 0.277 (110.939)	Data 0.006 (2.402)	Loss 5.256	Accuracy 0.0687	Prec@1 6.8656	Prec@5 19.4592
+Epoch: [1][600/10010]	Time 0.275 (165.370)	Data 0.004 (2.702)	Loss 5.247	Accuracy 0.0705	Prec@1 7.0520	Prec@5 19.7886
+Epoch: [1][800/10010]	Time 0.274 (219.678)	Data 0.004 (2.945)	Loss 5.244	Accuracy 0.0710	Prec@1 7.0956	Prec@5 19.8209
+Epoch: [1][1000/10010]	Time 0.274 (273.984)	Data 0.003 (3.193)	Loss 5.237	Accuracy 0.0717	Prec@1 7.1749	Prec@5 19.9043
+Epoch: [1][1200/10010]	Time 0.274 (328.499)	Data 0.003 (3.486)	Loss 5.231	Accuracy 0.0720	Prec@1 7.1991	Prec@5 19.9814
+Epoch: [1][1400/10010]	Time 0.273 (383.112)	Data 0.003 (3.842)	Loss 5.228	Accuracy 0.0722	Prec@1 7.2225	Prec@5 20.0331
+Epoch: [1][1600/10010]	Time 0.273 (437.795)	Data 0.003 (4.217)	Loss 5.223	Accuracy 0.0728	Prec@1 7.2796	Prec@5 20.1441
+Epoch: [1][1800/10010]	Time 0.273 (492.554)	Data 0.003 (4.641)	Loss 5.217	Accuracy 0.0735	Prec@1 7.3514	Prec@5 20.2383
+Epoch: [1][2000/10010]	Time 0.273 (547.126)	Data 0.002 (4.974)	Loss 5.210	Accuracy 0.0741	Prec@1 7.4068	Prec@5 20.3699
+Epoch: [1][2200/10010]	Time 0.273 (601.683)	Data 0.002 (5.297)	Loss 5.203	Accuracy 0.0747	Prec@1 7.4693	Prec@5 20.4822
+Epoch: [1][2400/10010]	Time 0.273 (656.429)	Data 0.002 (5.760)	Loss 5.199	Accuracy 0.0748	Prec@1 7.4845	Prec@5 20.5425
+Epoch: [1][2600/10010]	Time 0.273 (711.109)	Data 0.002 (6.139)	Loss 5.194	Accuracy 0.0752	Prec@1 7.5241	Prec@5 20.6138
+Epoch: [1][2800/10010]	Time 0.273 (765.705)	Data 0.002 (6.470)	Loss 5.188	Accuracy 0.0756	Prec@1 7.5573	Prec@5 20.6935
+Epoch: [1][3000/10010]	Time 0.273 (820.380)	Data 0.002 (6.852)	Loss 5.184	Accuracy 0.0759	Prec@1 7.5923	Prec@5 20.7873
+Epoch: [1][3200/10010]	Time 0.273 (875.022)	Data 0.002 (7.197)	Loss 5.179	Accuracy 0.0764	Prec@1 7.6351	Prec@5 20.8907
+Epoch: [1][3400/10010]	Time 0.273 (929.547)	Data 0.002 (7.465)	Loss 5.174	Accuracy 0.0766	Prec@1 7.6646	Prec@5 20.9771
+Epoch: [1][3600/10010]	Time 0.273 (984.090)	Data 0.002 (7.759)	Loss 5.169	Accuracy 0.0771	Prec@1 7.7121	Prec@5 21.0621
+Epoch: [1][3800/10010]	Time 0.273 (1038.620)	Data 0.002 (8.063)	Loss 5.165	Accuracy 0.0775	Prec@1 7.7473	Prec@5 21.1373
+Epoch: [1][4000/10010]	Time 0.273 (1093.168)	Data 0.002 (8.364)	Loss 5.180	Accuracy 0.0770	Prec@1 7.7010	Prec@5 21.0153
+Epoch: [1][4200/10010]	Time 0.273 (1147.607)	Data 0.002 (8.666)	Loss 5.189	Accuracy 0.0765	Prec@1 7.6498	Prec@5 20.8912
+Epoch: [1][4400/10010]	Time 0.273 (1202.016)	Data 0.002 (8.917)	Loss 5.188	Accuracy 0.0765	Prec@1 7.6456	Prec@5 20.8983
+Epoch: [1][4600/10010]	Time 0.273 (1256.329)	Data 0.002 (9.134)	Loss 5.184	Accuracy 0.0767	Prec@1 7.6707	Prec@5 20.9582
+Epoch: [1][4800/10010]	Time 0.273 (1310.699)	Data 0.002 (9.367)	Loss 5.180	Accuracy 0.0771	Prec@1 7.7074	Prec@5 21.0132
+Epoch: [1][5000/10010]	Time 0.273 (1365.103)	Data 0.002 (9.635)	Loss 5.176	Accuracy 0.0774	Prec@1 7.7441	Prec@5 21.0970
+Epoch: [1][5200/10010]	Time 0.273 (1419.488)	Data 0.002 (9.877)	Loss 5.172	Accuracy 0.0778	Prec@1 7.7825	Prec@5 21.1643
+Epoch: [1][5400/10010]	Time 0.273 (1473.843)	Data 0.002 (10.111)	Loss 5.169	Accuracy 0.0780	Prec@1 7.8008	Prec@5 21.2128
+Epoch: [1][5600/10010]	Time 0.273 (1528.234)	Data 0.002 (10.348)	Loss 5.164	Accuracy 0.0784	Prec@1 7.8437	Prec@5 21.2931
+Epoch: [1][5800/10010]	Time 0.273 (1582.551)	Data 0.002 (10.583)	Loss 5.159	Accuracy 0.0789	Prec@1 7.8901	Prec@5 21.3817
+Epoch: [1][6000/10010]	Time 0.273 (1636.894)	Data 0.002 (10.847)	Loss 5.153	Accuracy 0.0793	Prec@1 7.9324	Prec@5 21.4745
+Epoch: [1][6200/10010]	Time 0.273 (1691.306)	Data 0.002 (11.088)	Loss 5.149	Accuracy 0.0797	Prec@1 7.9682	Prec@5 21.5420
+Epoch: [1][6400/10010]	Time 0.273 (1745.611)	Data 0.002 (11.309)	Loss 5.145	Accuracy 0.0800	Prec@1 8.0020	Prec@5 21.6117
+Epoch: [1][6600/10010]	Time 0.273 (1799.908)	Data 0.002 (11.547)	Loss 5.140	Accuracy 0.0805	Prec@1 8.0472	Prec@5 21.6834
+Epoch: [1][6800/10010]	Time 0.273 (1854.303)	Data 0.002 (11.780)	Loss 5.137	Accuracy 0.0808	Prec@1 8.0791	Prec@5 21.7458
+Epoch: [1][7000/10010]	Time 0.273 (1908.694)	Data 0.002 (12.017)	Loss 5.133	Accuracy 0.0811	Prec@1 8.1082	Prec@5 21.7971
+Epoch: [1][7200/10010]	Time 0.273 (1963.101)	Data 0.002 (12.269)	Loss 5.129	Accuracy 0.0813	Prec@1 8.1321	Prec@5 21.8547
+Epoch: [1][7400/10010]	Time 0.273 (2017.492)	Data 0.002 (12.514)	Loss 5.126	Accuracy 0.0816	Prec@1 8.1604	Prec@5 21.9240
+Epoch: [1][7600/10010]	Time 0.273 (2072.001)	Data 0.002 (12.807)	Loss 5.122	Accuracy 0.0820	Prec@1 8.2032	Prec@5 21.9898
+Epoch: [1][7800/10010]	Time 0.273 (2126.474)	Data 0.002 (13.101)	Loss 5.119	Accuracy 0.0823	Prec@1 8.2253	Prec@5 22.0465
+Epoch: [1][8000/10010]	Time 0.273 (2180.996)	Data 0.002 (13.372)	Loss 5.115	Accuracy 0.0826	Prec@1 8.2592	Prec@5 22.1123
+Epoch: [1][8200/10010]	Time 0.273 (2235.408)	Data 0.002 (13.627)	Loss 5.111	Accuracy 0.0830	Prec@1 8.2955	Prec@5 22.1768
+Epoch: [1][8400/10010]	Time 0.273 (2289.792)	Data 0.002 (13.873)	Loss 5.107	Accuracy 0.0832	Prec@1 8.3246	Prec@5 22.2419
+Epoch: [1][8600/10010]	Time 0.273 (2344.093)	Data 0.002 (14.098)	Loss 5.104	Accuracy 0.0836	Prec@1 8.3577	Prec@5 22.3045
+Epoch: [1][8800/10010]	Time 0.273 (2398.517)	Data 0.002 (14.341)	Loss 5.101	Accuracy 0.0839	Prec@1 8.3896	Prec@5 22.3663
+Epoch: [1][9000/10010]	Time 0.273 (2453.022)	Data 0.002 (14.584)	Loss 5.098	Accuracy 0.0842	Prec@1 8.4179	Prec@5 22.4267
+Epoch: [1][9200/10010]	Time 0.273 (2507.547)	Data 0.002 (14.890)	Loss 5.095	Accuracy 0.0844	Prec@1 8.4376	Prec@5 22.4691
+Epoch: [1][9400/10010]	Time 0.273 (2562.094)	Data 0.002 (15.191)	Loss 5.092	Accuracy 0.0847	Prec@1 8.4674	Prec@5 22.5259
+Epoch: [1][9600/10010]	Time 0.273 (2616.607)	Data 0.002 (15.442)	Loss 5.089	Accuracy 0.0849	Prec@1 8.4943	Prec@5 22.5914
+Epoch: [1][9800/10010]	Time 0.273 (2671.060)	Data 0.002 (15.682)	Loss 5.085	Accuracy 0.0852	Prec@1 8.5244	Prec@5 22.6501
+Epoch: [1][10000/10010]	Time 0.273 (2725.460)	Data 0.002 (15.899)	Loss 5.082	Accuracy 0.0856	Prec@1 8.5564	Prec@5 22.7159
+Train: [1]	Time 2727.749	Data 15.901	Loss 5.082	Accuracy 0.0856	Prec@1 8.5584	Prec@5 22.7194	
+Epoch: [1][0/391]	Time 1.416 (1.416)	Data 1.361 (1.361)	Loss 4.9060 (4.9060)	Accuracy 0.0859 (0.0859)	Prec@1 8.594 (8.594)	Prec@5 28.125 (28.125)	
+Epoch: [1][200/391]	Time 0.203 (0.112)	Data 0.145 (0.049)	Loss 4.7023 (4.6332)	Accuracy 0.0859 (0.1220)	Prec@1 8.594 (12.201)	Prec@5 25.000 (29.742)	
+Val: [1]	Time 53.320	Data 29.247	Loss 4.628	Accuracy 0.1209	Prec@1 12.0900	Prec@5 29.7920	
+Best accuracy: [12.090]	
+('Starting epoch number:', 3, 'Learning rate:', 0.0005)
+Epoch: [2][0/10010]	Time 2.042 (2.042)	Data 1.770 (1.770)	Loss 5.386	Accuracy 0.1094	Prec@1 10.9375	Prec@5 21.0938

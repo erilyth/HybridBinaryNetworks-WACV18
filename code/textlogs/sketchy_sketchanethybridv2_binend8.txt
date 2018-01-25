@@ -1,0 +1,1633 @@
+Namespace(batch_size=256, binEnd=8, binStart=2, binaryWeight=True, bnnModel=False, cachemode=True, calculateBinarizationLosses=False, criterion='nllLoss', cuda=True, data_dir='../data/', dataset='sketchyrecognition', decayinterval=50, decaylevel=2, epochs=400, evaluate=False, inpsize=225, learningratescheduler='decayschedular', logdir='../logs//sketchy_sketchanethybridv2_binend8', lr=None, manualSeed=123, maxlr=0.002, minlr=5e-05, model_def='sketchanethybridv2', momentum=0.9, nClasses=125, name='sketchy_sketchanethybridv2_binend8', nesterov=True, ngpus=1, optimType='adam', pretrained=False, pretrained_file='', printfreq=200, resume='', start_epoch=0, store='', tenCrop=True, tensorboard=True, testOnly=False, testbatchsize=16, verbose=False, weightDecay=0.0, weight_init=True, workers=4)
+Net (
+  (relu): ReLU (inplace)
+  (drop): Dropout2d (p=0.2)
+  (conv1): Conv2d(1, 64, kernel_size=(15, 15), stride=(3, 3))
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (maxpool1): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv2): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True)
+  (activ2): Active (
+  )
+  (maxpool2): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv3): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True)
+  (activ3): Active (
+  )
+  (conv4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ4): Active (
+  )
+  (conv5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (activ5): Active (
+  )
+  (maxpool3): MaxPool2d (size=(3, 3), stride=(2, 2), dilation=(1, 1))
+  (conv6): Conv2d(256, 512, kernel_size=(7, 7), stride=(1, 1), bias=False)
+  (activ6): Active (
+  )
+  (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True)
+  (conv7): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True)
+  (conv8): Conv2d(512, 125, kernel_size=(1, 1), stride=(1, 1))
+)
+Starting epoch number: 1 Learning rate: 0.002
+Train: [0]	Time 107.873	Data 68.192	Loss 4.757	Accuracy 0.0432	Prec@1 4.3176	Prec@5 14.9405	
+Val: [0]	Time 15.653	Data 3.326	Loss 4.281	Accuracy 0.1063	Prec@1 10.6329	Prec@5 28.8404	
+Best accuracy: [10.633]	
+Starting epoch number: 2 Learning rate: 0.002
+Train: [1]	Time 81.785	Data 45.408	Loss 3.922	Accuracy 0.1207	Prec@1 12.0699	Prec@5 32.6800	
+Val: [1]	Time 14.697	Data 2.901	Loss 3.024	Accuracy 0.2952	Prec@1 29.5200	Prec@5 59.9320	
+Best accuracy: [29.520]	
+Starting epoch number: 3 Learning rate: 0.002
+Train: [2]	Time 73.109	Data 36.626	Loss 3.473	Accuracy 0.1908	Prec@1 19.0754	Prec@5 43.9563	
+Val: [2]	Time 14.620	Data 2.847	Loss 2.706	Accuracy 0.3772	Prec@1 37.7177	Prec@5 66.4590	
+Best accuracy: [37.718]	
+Starting epoch number: 4 Learning rate: 0.002
+Train: [3]	Time 72.499	Data 36.087	Loss 3.229	Accuracy 0.2371	Prec@1 23.7131	Prec@5 49.8071	
+Val: [3]	Time 13.600	Data 1.846	Loss 2.427	Accuracy 0.4246	Prec@1 42.4607	Prec@5 72.0657	
+Best accuracy: [42.461]	
+Starting epoch number: 5 Learning rate: 0.002
+Train: [4]	Time 71.547	Data 35.086	Loss 3.060	Accuracy 0.2690	Prec@1 26.9023	Prec@5 53.4012	
+Val: [4]	Time 14.437	Data 2.709	Loss 2.231	Accuracy 0.4793	Prec@1 47.9258	Prec@5 76.4548	
+Best accuracy: [47.926]	
+Starting epoch number: 6 Learning rate: 0.002
+Train: [5]	Time 70.897	Data 34.479	Loss 2.936	Accuracy 0.2927	Prec@1 29.2657	Prec@5 56.2542	
+Val: [5]	Time 13.991	Data 2.220	Loss 2.113	Accuracy 0.5059	Prec@1 50.5876	Prec@5 78.0122	
+Best accuracy: [50.588]	
+Starting epoch number: 7 Learning rate: 0.002
+Train: [6]	Time 70.727	Data 34.342	Loss 2.845	Accuracy 0.3127	Prec@1 31.2739	Prec@5 58.2449	
+Val: [6]	Time 13.966	Data 2.199	Loss 2.000	Accuracy 0.5301	Prec@1 53.0086	Prec@5 79.7961	
+Best accuracy: [53.009]	
+Starting epoch number: 8 Learning rate: 0.002
+Train: [7]	Time 71.221	Data 34.837	Loss 2.765	Accuracy 0.3292	Prec@1 32.9168	Prec@5 60.0880	
+Val: [7]	Time 14.349	Data 2.602	Loss 1.988	Accuracy 0.5353	Prec@1 53.5325	Prec@5 80.5890	
+Best accuracy: [53.532]	
+Starting epoch number: 9 Learning rate: 0.002
+Train: [8]	Time 70.291	Data 33.802	Loss 2.707	Accuracy 0.3417	Prec@1 34.1723	Prec@5 61.1944	
+Val: [8]	Time 14.268	Data 2.499	Loss 1.909	Accuracy 0.5529	Prec@1 55.2881	Prec@5 82.1747	
+Best accuracy: [55.288]	
+Starting epoch number: 10 Learning rate: 0.002
+Train: [9]	Time 71.902	Data 35.492	Loss 2.653	Accuracy 0.3509	Prec@1 35.0931	Prec@5 62.2380	
+Val: [9]	Time 13.619	Data 1.894	Loss 1.897	Accuracy 0.5624	Prec@1 56.2367	Prec@5 81.9907	
+Best accuracy: [56.237]	
+Starting epoch number: 11 Learning rate: 0.002
+Train: [10]	Time 70.567	Data 34.226	Loss 2.609	Accuracy 0.3632	Prec@1 36.3223	Prec@5 63.1749	
+Val: [10]	Time 14.467	Data 2.735	Loss 1.919	Accuracy 0.5611	Prec@1 56.1093	Prec@5 81.6084	
+Best accuracy: [56.237]	
+Starting epoch number: 12 Learning rate: 0.002
+Train: [11]	Time 71.084	Data 34.703	Loss 2.557	Accuracy 0.3713	Prec@1 37.1291	Prec@5 64.2872	
+Val: [11]	Time 13.944	Data 2.221	Loss 1.753	Accuracy 0.5863	Prec@1 58.6295	Prec@5 84.1144	
+Best accuracy: [58.629]	
+Starting epoch number: 13 Learning rate: 0.002
+Train: [12]	Time 72.125	Data 35.702	Loss 2.535	Accuracy 0.3769	Prec@1 37.6860	Prec@5 64.4465	
+Val: [12]	Time 13.018	Data 1.275	Loss 1.903	Accuracy 0.5612	Prec@1 56.1235	Prec@5 81.8208	
+Best accuracy: [58.629]	
+Starting epoch number: 14 Learning rate: 0.002
+Train: [13]	Time 78.958	Data 42.535	Loss 2.482	Accuracy 0.3886	Prec@1 38.8626	Prec@5 65.7108	
+Val: [13]	Time 15.192	Data 3.336	Loss 1.705	Accuracy 0.6047	Prec@1 60.4701	Prec@5 85.2187	
+Best accuracy: [60.470]	
+Starting epoch number: 15 Learning rate: 0.002
+Train: [14]	Time 74.369	Data 38.068	Loss 2.467	Accuracy 0.3948	Prec@1 39.4794	Prec@5 65.9066	
+Val: [14]	Time 14.416	Data 2.647	Loss 1.719	Accuracy 0.5976	Prec@1 59.7621	Prec@5 85.2046	
+Best accuracy: [60.470]	
+Starting epoch number: 16 Learning rate: 0.002
+Train: [15]	Time 79.142	Data 42.749	Loss 2.425	Accuracy 0.3997	Prec@1 39.9676	Prec@5 66.8494	
+Val: [15]	Time 14.187	Data 2.343	Loss 2.239	Accuracy 0.4961	Prec@1 49.6106	Prec@5 76.5963	
+Best accuracy: [60.470]	
+Starting epoch number: 17 Learning rate: 0.002
+Train: [16]	Time 74.896	Data 38.551	Loss 2.400	Accuracy 0.4074	Prec@1 40.7393	Prec@5 67.0671	
+Val: [16]	Time 13.898	Data 2.093	Loss 1.998	Accuracy 0.5366	Prec@1 53.6599	Prec@5 82.4154	
+Best accuracy: [60.470]	
+Starting epoch number: 18 Learning rate: 0.002
+Train: [17]	Time 79.614	Data 43.254	Loss 2.376	Accuracy 0.4120	Prec@1 41.1968	Prec@5 67.7746	
+Val: [17]	Time 14.737	Data 2.910	Loss 1.582	Accuracy 0.6265	Prec@1 62.6504	Prec@5 87.1867	
+Best accuracy: [62.650]	
+Starting epoch number: 19 Learning rate: 0.002
+Train: [18]	Time 75.642	Data 39.309	Loss 2.362	Accuracy 0.4148	Prec@1 41.4818	Prec@5 68.0099	
+Val: [18]	Time 14.107	Data 2.250	Loss 1.841	Accuracy 0.5847	Prec@1 58.4737	Prec@5 84.3126	
+Best accuracy: [62.650]	
+Starting epoch number: 20 Learning rate: 0.002
+Train: [19]	Time 77.745	Data 41.435	Loss 2.323	Accuracy 0.4251	Prec@1 42.5093	Prec@5 68.7261	
+Val: [19]	Time 14.837	Data 3.067	Loss 1.577	Accuracy 0.6417	Prec@1 64.1654	Prec@5 87.0027	
+Best accuracy: [64.165]	
+Starting epoch number: 21 Learning rate: 0.002
+Train: [20]	Time 73.733	Data 37.405	Loss 2.308	Accuracy 0.4285	Prec@1 42.8469	Prec@5 68.9862	
+Val: [20]	Time 14.465	Data 2.649	Loss 1.802	Accuracy 0.5917	Prec@1 59.1675	Prec@5 85.2329	
+Best accuracy: [64.165]	
+Starting epoch number: 22 Learning rate: 0.002
+Train: [21]	Time 77.234	Data 40.938	Loss 2.290	Accuracy 0.4299	Prec@1 42.9887	Prec@5 69.3341	
+Val: [21]	Time 13.977	Data 2.163	Loss 1.974	Accuracy 0.5389	Prec@1 53.8865	Prec@5 81.3394	
+Best accuracy: [64.165]	
+Starting epoch number: 23 Learning rate: 0.002
+Train: [22]	Time 74.052	Data 37.745	Loss 2.267	Accuracy 0.4385	Prec@1 43.8466	Prec@5 69.9085	
+Val: [22]	Time 14.658	Data 2.869	Loss 1.640	Accuracy 0.6232	Prec@1 62.3248	Prec@5 86.0541	
+Best accuracy: [64.165]	
+Starting epoch number: 24 Learning rate: 0.002
+Train: [23]	Time 77.296	Data 40.912	Loss 2.262	Accuracy 0.4376	Prec@1 43.7575	Prec@5 69.8968	
+Val: [23]	Time 14.523	Data 2.747	Loss 2.021	Accuracy 0.5401	Prec@1 54.0139	Prec@5 80.8863	
+Best accuracy: [64.165]	
+Starting epoch number: 25 Learning rate: 0.002
+Train: [24]	Time 73.545	Data 37.220	Loss 2.244	Accuracy 0.4415	Prec@1 44.1507	Prec@5 70.1760	
+Val: [24]	Time 13.962	Data 2.175	Loss 2.056	Accuracy 0.5230	Prec@1 52.3007	Prec@5 80.0085	
+Best accuracy: [64.165]	
+Starting epoch number: 26 Learning rate: 0.002
+Train: [25]	Time 73.036	Data 36.668	Loss 2.212	Accuracy 0.4498	Prec@1 44.9779	Prec@5 70.8965	
+Val: [25]	Time 14.264	Data 2.452	Loss 1.676	Accuracy 0.6132	Prec@1 61.3196	Prec@5 85.6293	
+Best accuracy: [64.165]	
+Starting epoch number: 27 Learning rate: 0.002
+Train: [26]	Time 73.307	Data 36.934	Loss 2.213	Accuracy 0.4492	Prec@1 44.9224	Prec@5 70.8483	
+Val: [26]	Time 14.777	Data 3.006	Loss 1.609	Accuracy 0.6309	Prec@1 63.0893	Prec@5 86.9885	
+Best accuracy: [64.165]	
+Starting epoch number: 28 Learning rate: 0.002
+Train: [27]	Time 74.056	Data 37.726	Loss 2.188	Accuracy 0.4519	Prec@1 45.1869	Prec@5 71.1816	
+Val: [27]	Time 14.528	Data 2.765	Loss 1.566	Accuracy 0.6465	Prec@1 64.6468	Prec@5 86.9036	
+Best accuracy: [64.647]	
+Starting epoch number: 29 Learning rate: 0.002
+Train: [28]	Time 71.900	Data 35.535	Loss 2.177	Accuracy 0.4548	Prec@1 45.4822	Prec@5 71.2429	
+Val: [28]	Time 13.989	Data 2.211	Loss 3.220	Accuracy 0.3174	Prec@1 31.7429	Prec@5 58.9693	
+Best accuracy: [64.647]	
+Starting epoch number: 30 Learning rate: 0.002
+Train: [29]	Time 75.527	Data 39.156	Loss 2.164	Accuracy 0.4593	Prec@1 45.9324	Prec@5 71.6537	
+Val: [29]	Time 13.230	Data 1.458	Loss 2.365	Accuracy 0.4650	Prec@1 46.4958	Prec@5 73.1417	
+Best accuracy: [64.647]	
+Starting epoch number: 31 Learning rate: 0.002
+Train: [30]	Time 74.801	Data 38.432	Loss 2.152	Accuracy 0.4646	Prec@1 46.4644	Prec@5 71.7253	
+Val: [30]	Time 14.084	Data 2.322	Loss 1.699	Accuracy 0.6094	Prec@1 60.9373	Prec@5 86.1815	
+Best accuracy: [64.647]	
+Starting epoch number: 32 Learning rate: 0.002
+Train: [31]	Time 76.213	Data 39.898	Loss 2.154	Accuracy 0.4599	Prec@1 45.9879	Prec@5 71.7063	
+Val: [31]	Time 14.959	Data 3.120	Loss 1.449	Accuracy 0.6664	Prec@1 66.6431	Prec@5 89.1123	
+Best accuracy: [66.643]	
+Starting epoch number: 33 Learning rate: 0.002
+Train: [32]	Time 75.747	Data 39.393	Loss 2.126	Accuracy 0.4677	Prec@1 46.7655	Prec@5 72.1579	
+Val: [32]	Time 14.307	Data 2.565	Loss 1.900	Accuracy 0.5839	Prec@1 58.3888	Prec@5 82.1039	
+Best accuracy: [66.643]	
+Starting epoch number: 34 Learning rate: 0.002
+Train: [33]	Time 75.576	Data 39.183	Loss 2.115	Accuracy 0.4728	Prec@1 47.2756	Prec@5 72.4312	
+Val: [33]	Time 14.704	Data 2.948	Loss 1.344	Accuracy 0.6922	Prec@1 69.2199	Prec@5 90.4856	
+Best accuracy: [69.220]	
+Starting epoch number: 35 Learning rate: 0.002
+Train: [34]	Time 71.256	Data 34.856	Loss 2.104	Accuracy 0.4728	Prec@1 47.2829	Prec@5 72.6359	
+Val: [34]	Time 13.865	Data 2.129	Loss 1.741	Accuracy 0.6108	Prec@1 61.0789	Prec@5 85.4878	
+Best accuracy: [69.220]	
+Starting epoch number: 36 Learning rate: 0.002
+Train: [35]	Time 73.479	Data 37.105	Loss 2.089	Accuracy 0.4764	Prec@1 47.6439	Prec@5 73.0042	
+Val: [35]	Time 14.072	Data 2.300	Loss 1.863	Accuracy 0.5771	Prec@1 57.7092	Prec@5 83.5905	
+Best accuracy: [69.220]	
+Starting epoch number: 37 Learning rate: 0.002
+Train: [36]	Time 72.304	Data 35.908	Loss 2.074	Accuracy 0.4814	Prec@1 48.1408	Prec@5 73.2994	
+Val: [36]	Time 14.475	Data 2.713	Loss 1.985	Accuracy 0.5489	Prec@1 54.8917	Prec@5 81.9907	
+Best accuracy: [69.220]	
+Starting epoch number: 38 Learning rate: 0.002
+Train: [37]	Time 70.779	Data 34.375	Loss 2.081	Accuracy 0.4784	Prec@1 47.8354	Prec@5 73.0890	
+Val: [37]	Time 14.075	Data 2.338	Loss 1.788	Accuracy 0.5891	Prec@1 58.9126	Prec@5 84.1002	
+Best accuracy: [69.220]	
+Starting epoch number: 39 Learning rate: 0.002
+Train: [38]	Time 71.079	Data 34.667	Loss 2.064	Accuracy 0.4805	Prec@1 48.0517	Prec@5 73.3374	
+Val: [38]	Time 13.539	Data 1.809	Loss 1.794	Accuracy 0.6065	Prec@1 60.6541	Prec@5 85.7992	
+Best accuracy: [69.220]	
+Starting epoch number: 40 Learning rate: 0.002
+Train: [39]	Time 72.010	Data 35.616	Loss 2.058	Accuracy 0.4818	Prec@1 48.1759	Prec@5 73.4003	
+Val: [39]	Time 14.798	Data 3.041	Loss 1.446	Accuracy 0.6769	Prec@1 67.6908	Prec@5 89.1123	
+Best accuracy: [69.220]	
+Starting epoch number: 41 Learning rate: 0.002
+Train: [40]	Time 71.041	Data 34.670	Loss 2.057	Accuracy 0.4840	Prec@1 48.4039	Prec@5 73.5084	
+Val: [40]	Time 14.208	Data 2.494	Loss 1.580	Accuracy 0.6465	Prec@1 64.6468	Prec@5 87.6540	
+Best accuracy: [69.220]	
+Starting epoch number: 42 Learning rate: 0.002
+Train: [41]	Time 70.394	Data 34.031	Loss 2.043	Accuracy 0.4869	Prec@1 48.6948	Prec@5 73.6604	
+Val: [41]	Time 14.095	Data 2.369	Loss 1.707	Accuracy 0.6082	Prec@1 60.8240	Prec@5 85.5727	
+Best accuracy: [69.220]	
+Starting epoch number: 43 Learning rate: 0.002
+Train: [42]	Time 74.482	Data 38.118	Loss 2.044	Accuracy 0.4859	Prec@1 48.5896	Prec@5 73.6911	
+Val: [42]	Time 14.148	Data 2.288	Loss 1.895	Accuracy 0.5816	Prec@1 58.1623	Prec@5 83.5622	
+Best accuracy: [69.220]	
+Starting epoch number: 44 Learning rate: 0.002
+Train: [43]	Time 71.012	Data 34.595	Loss 2.026	Accuracy 0.4924	Prec@1 49.2356	Prec@5 73.9922	
+Val: [43]	Time 14.518	Data 2.734	Loss 1.747	Accuracy 0.5986	Prec@1 59.8612	Prec@5 85.2471	
+Best accuracy: [69.220]	
+Starting epoch number: 45 Learning rate: 0.002
+Train: [44]	Time 72.472	Data 36.006	Loss 2.022	Accuracy 0.4919	Prec@1 49.1859	Prec@5 74.0215	
+Val: [44]	Time 14.506	Data 2.751	Loss 1.447	Accuracy 0.6691	Prec@1 66.9121	Prec@5 89.4521	
+Best accuracy: [69.220]	
+Starting epoch number: 46 Learning rate: 0.002
+Train: [45]	Time 70.593	Data 34.150	Loss 2.007	Accuracy 0.4961	Prec@1 49.6127	Prec@5 74.2729	
+Val: [45]	Time 14.544	Data 2.827	Loss 2.107	Accuracy 0.5591	Prec@1 55.9111	Prec@5 82.0473	
+Best accuracy: [69.220]	
+Starting epoch number: 47 Learning rate: 0.002
+Train: [46]	Time 71.955	Data 35.545	Loss 2.005	Accuracy 0.4965	Prec@1 49.6507	Prec@5 74.2085	
+Val: [46]	Time 14.654	Data 2.927	Loss 1.677	Accuracy 0.6225	Prec@1 62.2540	Prec@5 85.5444	
+Best accuracy: [69.220]	
+Starting epoch number: 48 Learning rate: 0.002
+Train: [47]	Time 72.310	Data 35.918	Loss 1.998	Accuracy 0.4962	Prec@1 49.6229	Prec@5 74.5009	
+Val: [47]	Time 14.360	Data 2.543	Loss 1.526	Accuracy 0.6588	Prec@1 65.8785	Prec@5 87.8097	
+Best accuracy: [69.220]	
+Starting epoch number: 49 Learning rate: 0.002
+Train: [48]	Time 73.406	Data 37.046	Loss 1.984	Accuracy 0.5007	Prec@1 50.0687	Prec@5 74.7625	
+Val: [48]	Time 14.932	Data 3.083	Loss 1.612	Accuracy 0.6418	Prec@1 64.1795	Prec@5 87.0452	
+Best accuracy: [69.220]	
+Starting epoch number: 50 Learning rate: 0.002
+Train: [49]	Time 77.926	Data 41.580	Loss 1.982	Accuracy 0.5016	Prec@1 50.1608	Prec@5 74.7333	
+Val: [49]	Time 13.593	Data 1.743	Loss 1.449	Accuracy 0.6734	Prec@1 67.3368	Prec@5 89.1972	
+Best accuracy: [69.220]	
+Starting epoch number: 51 Learning rate: 0.001
+Train: [50]	Time 73.503	Data 37.151	Loss 1.912	Accuracy 0.5169	Prec@1 51.6940	Prec@5 75.8222	
+Val: [50]	Time 13.954	Data 2.190	Loss 1.310	Accuracy 0.7045	Prec@1 70.4516	Prec@5 90.2025	
+Best accuracy: [70.452]	
+Starting epoch number: 52 Learning rate: 0.001
+Train: [51]	Time 72.754	Data 36.358	Loss 1.885	Accuracy 0.5236	Prec@1 52.3634	Prec@5 76.1291	
+Val: [51]	Time 14.317	Data 2.524	Loss 1.387	Accuracy 0.6861	Prec@1 68.6111	Prec@5 89.4238	
+Best accuracy: [70.452]	
+Starting epoch number: 53 Learning rate: 0.001
+Train: [52]	Time 73.325	Data 36.960	Loss 1.877	Accuracy 0.5257	Prec@1 52.5651	Prec@5 76.4930	
+Val: [52]	Time 13.922	Data 2.146	Loss 1.353	Accuracy 0.6922	Prec@1 69.2199	Prec@5 89.9476	
+Best accuracy: [70.452]	
+Starting epoch number: 54 Learning rate: 0.001
+Train: [53]	Time 73.824	Data 37.419	Loss 1.856	Accuracy 0.5294	Prec@1 52.9393	Prec@5 76.5939	
+Val: [53]	Time 14.908	Data 3.127	Loss 2.644	Accuracy 0.4512	Prec@1 45.1225	Prec@5 72.9435	
+Best accuracy: [70.452]	
+Starting epoch number: 55 Learning rate: 0.001
+Train: [54]	Time 72.719	Data 36.330	Loss 1.873	Accuracy 0.5271	Prec@1 52.7084	Prec@5 76.5734	
+Val: [54]	Time 14.598	Data 2.864	Loss 1.494	Accuracy 0.6683	Prec@1 66.8271	Prec@5 88.7583	
+Best accuracy: [70.452]	
+Starting epoch number: 56 Learning rate: 0.001
+Train: [55]	Time 73.595	Data 37.220	Loss 1.868	Accuracy 0.5273	Prec@1 52.7332	Prec@5 76.5252	
+Val: [55]	Time 14.671	Data 2.879	Loss 1.275	Accuracy 0.7166	Prec@1 71.6551	Prec@5 90.7830	
+Best accuracy: [71.655]	
+Starting epoch number: 57 Learning rate: 0.001
+Train: [56]	Time 73.073	Data 36.680	Loss 1.851	Accuracy 0.5335	Prec@1 53.3515	Prec@5 76.8862	
+Val: [56]	Time 14.430	Data 2.675	Loss 1.301	Accuracy 0.7071	Prec@1 70.7065	Prec@5 91.2360	
+Best accuracy: [71.655]	
+Starting epoch number: 58 Learning rate: 0.001
+Train: [57]	Time 73.642	Data 37.251	Loss 1.839	Accuracy 0.5358	Prec@1 53.5780	Prec@5 76.9520	
+Val: [57]	Time 14.394	Data 2.657	Loss 1.289	Accuracy 0.7173	Prec@1 71.7259	Prec@5 91.0803	
+Best accuracy: [71.726]	
+Starting epoch number: 59 Learning rate: 0.001
+Train: [58]	Time 73.570	Data 37.167	Loss 1.843	Accuracy 0.5333	Prec@1 53.3339	Prec@5 76.9520	
+Val: [58]	Time 12.333	Data 0.589	Loss 1.264	Accuracy 0.7144	Prec@1 71.4427	Prec@5 91.1511	
+Best accuracy: [71.726]	
+Starting epoch number: 60 Learning rate: 0.001
+Train: [59]	Time 73.366	Data 36.937	Loss 1.845	Accuracy 0.5321	Prec@1 53.2082	Prec@5 76.9315	
+Val: [59]	Time 13.782	Data 2.020	Loss 1.704	Accuracy 0.6165	Prec@1 61.6452	Prec@5 86.2523	
+Best accuracy: [71.726]	
+Starting epoch number: 61 Learning rate: 0.001
+Train: [60]	Time 71.558	Data 35.118	Loss 1.837	Accuracy 0.5317	Prec@1 53.1702	Prec@5 77.0674	
+Val: [60]	Time 13.722	Data 1.986	Loss 1.490	Accuracy 0.6615	Prec@1 66.1475	Prec@5 88.5176	
+Best accuracy: [71.726]	
+Starting epoch number: 62 Learning rate: 0.001
+Train: [61]	Time 72.556	Data 36.157	Loss 1.825	Accuracy 0.5377	Prec@1 53.7651	Prec@5 77.0835	
+Val: [61]	Time 14.419	Data 2.669	Loss 1.380	Accuracy 0.6935	Prec@1 69.3473	Prec@5 90.5989	
+Best accuracy: [71.726]	
+Starting epoch number: 63 Learning rate: 0.001
+Train: [62]	Time 70.978	Data 34.551	Loss 1.826	Accuracy 0.5393	Prec@1 53.9303	Prec@5 77.2969	
+Val: [62]	Time 13.356	Data 1.569	Loss 1.259	Accuracy 0.7207	Prec@1 72.0657	Prec@5 91.4059	
+Best accuracy: [72.066]	
+Starting epoch number: 64 Learning rate: 0.001
+Train: [63]	Time 72.984	Data 36.609	Loss 1.834	Accuracy 0.5367	Prec@1 53.6701	Prec@5 77.1522	
+Val: [63]	Time 14.698	Data 2.896	Loss 1.375	Accuracy 0.6959	Prec@1 69.5880	Prec@5 89.9476	
+Best accuracy: [72.066]	
+Starting epoch number: 65 Learning rate: 0.001
+Train: [64]	Time 72.683	Data 36.306	Loss 1.828	Accuracy 0.5367	Prec@1 53.6701	Prec@5 77.2209	
+Val: [64]	Time 14.247	Data 2.480	Loss 1.624	Accuracy 0.6346	Prec@1 63.4575	Prec@5 86.7620	
+Best accuracy: [72.066]	
+Starting epoch number: 66 Learning rate: 0.001
+Train: [65]	Time 71.732	Data 35.347	Loss 1.816	Accuracy 0.5418	Prec@1 54.1787	Prec@5 77.4811	
+Val: [65]	Time 15.127	Data 3.404	Loss 1.254	Accuracy 0.7216	Prec@1 72.1648	Prec@5 90.9670	
+Best accuracy: [72.165]	
+Starting epoch number: 67 Learning rate: 0.001
+Train: [66]	Time 71.206	Data 34.811	Loss 1.808	Accuracy 0.5422	Prec@1 54.2182	Prec@5 77.4898	
+Val: [66]	Time 14.519	Data 2.718	Loss 1.220	Accuracy 0.7325	Prec@1 73.2550	Prec@5 92.0572	
+Best accuracy: [73.255]	
+Starting epoch number: 68 Learning rate: 0.001
+Train: [67]	Time 72.696	Data 36.316	Loss 1.812	Accuracy 0.5407	Prec@1 54.0750	Prec@5 77.3627	
+Val: [67]	Time 14.262	Data 2.480	Loss 1.715	Accuracy 0.6305	Prec@1 63.0469	Prec@5 86.3939	
+Best accuracy: [73.255]	
+Starting epoch number: 69 Learning rate: 0.001
+Train: [68]	Time 75.676	Data 39.308	Loss 1.807	Accuracy 0.5420	Prec@1 54.2006	Prec@5 77.4825	
+Val: [68]	Time 14.080	Data 2.298	Loss 1.258	Accuracy 0.7202	Prec@1 72.0232	Prec@5 91.5475	
+Best accuracy: [73.255]	
+Starting epoch number: 70 Learning rate: 0.001
+Train: [69]	Time 73.392	Data 37.041	Loss 1.803	Accuracy 0.5431	Prec@1 54.3059	Prec@5 77.5995	
+Val: [69]	Time 14.759	Data 3.006	Loss 1.401	Accuracy 0.6878	Prec@1 68.7810	Prec@5 90.0467	
+Best accuracy: [73.255]	
+Starting epoch number: 71 Learning rate: 0.001
+Train: [70]	Time 73.135	Data 36.726	Loss 1.792	Accuracy 0.5448	Prec@1 54.4813	Prec@5 77.7427	
+Val: [70]	Time 14.126	Data 2.372	Loss 1.278	Accuracy 0.7174	Prec@1 71.7401	Prec@5 91.3634	
+Best accuracy: [73.255]	
+Starting epoch number: 72 Learning rate: 0.001
+Train: [71]	Time 73.061	Data 36.672	Loss 1.801	Accuracy 0.5462	Prec@1 54.6187	Prec@5 77.6082	
+Val: [71]	Time 14.492	Data 2.684	Loss 1.243	Accuracy 0.7266	Prec@1 72.6603	Prec@5 91.8590	
+Best accuracy: [73.255]	
+Starting epoch number: 73 Learning rate: 0.001
+Train: [72]	Time 73.482	Data 37.095	Loss 1.791	Accuracy 0.5451	Prec@1 54.5134	Prec@5 77.8026	
+Val: [72]	Time 14.108	Data 2.380	Loss 1.663	Accuracy 0.6346	Prec@1 63.4575	Prec@5 87.0168	
+Best accuracy: [73.255]	
+Starting epoch number: 74 Learning rate: 0.001
+Train: [73]	Time 72.625	Data 36.283	Loss 1.789	Accuracy 0.5471	Prec@1 54.7122	Prec@5 77.7281	
+Val: [73]	Time 13.196	Data 1.441	Loss 1.333	Accuracy 0.7034	Prec@1 70.3384	Prec@5 90.2025	
+Best accuracy: [73.255]	
+Starting epoch number: 75 Learning rate: 0.001
+Train: [74]	Time 73.817	Data 37.466	Loss 1.792	Accuracy 0.5445	Prec@1 54.4550	Prec@5 77.5878	
+Val: [74]	Time 13.019	Data 1.203	Loss 1.188	Accuracy 0.7369	Prec@1 73.6939	Prec@5 92.2271	
+Best accuracy: [73.694]	
+Starting epoch number: 76 Learning rate: 0.001
+Train: [75]	Time 75.180	Data 38.802	Loss 1.781	Accuracy 0.5476	Prec@1 54.7634	Prec@5 77.8669	
+Val: [75]	Time 14.244	Data 2.517	Loss 1.198	Accuracy 0.7323	Prec@1 73.2267	Prec@5 91.7740	
+Best accuracy: [73.694]	
+Starting epoch number: 77 Learning rate: 0.001
+Train: [76]	Time 73.199	Data 36.817	Loss 1.781	Accuracy 0.5491	Prec@1 54.9051	Prec@5 78.0409	
+Val: [76]	Time 13.670	Data 1.918	Loss 1.209	Accuracy 0.7301	Prec@1 73.0143	Prec@5 92.0572	
+Best accuracy: [73.694]	
+Starting epoch number: 78 Learning rate: 0.001
+Train: [77]	Time 73.229	Data 36.829	Loss 1.795	Accuracy 0.5442	Prec@1 54.4228	Prec@5 77.8026	
+Val: [77]	Time 14.970	Data 3.168	Loss 1.478	Accuracy 0.6761	Prec@1 67.6058	Prec@5 89.1264	
+Best accuracy: [73.694]	
+Starting epoch number: 79 Learning rate: 0.001
+Train: [78]	Time 74.489	Data 38.135	Loss 1.763	Accuracy 0.5521	Prec@1 55.2106	Prec@5 78.1943	
+Val: [78]	Time 14.334	Data 2.499	Loss 1.235	Accuracy 0.7273	Prec@1 72.7311	Prec@5 91.5617	
+Best accuracy: [73.694]	
+Starting epoch number: 80 Learning rate: 0.001
+Train: [79]	Time 73.005	Data 36.587	Loss 1.780	Accuracy 0.5483	Prec@1 54.8291	Prec@5 77.8085	
+Val: [79]	Time 14.994	Data 3.204	Loss 1.207	Accuracy 0.7304	Prec@1 73.0426	Prec@5 91.9298	
+Best accuracy: [73.694]	
+Starting epoch number: 81 Learning rate: 0.001
+Train: [80]	Time 75.672	Data 39.302	Loss 1.769	Accuracy 0.5520	Prec@1 55.2048	Prec@5 78.1753	
+Val: [80]	Time 14.866	Data 3.071	Loss 1.297	Accuracy 0.7195	Prec@1 71.9524	Prec@5 91.2785	
+Best accuracy: [73.694]	
+Starting epoch number: 82 Learning rate: 0.001
+Train: [81]	Time 74.592	Data 38.243	Loss 1.772	Accuracy 0.5497	Prec@1 54.9665	Prec@5 78.2060	
+Val: [81]	Time 14.143	Data 2.359	Loss 1.285	Accuracy 0.7141	Prec@1 71.4144	Prec@5 91.2502	
+Best accuracy: [73.694]	
+Starting epoch number: 83 Learning rate: 0.001
+Train: [82]	Time 72.977	Data 36.494	Loss 1.773	Accuracy 0.5502	Prec@1 55.0250	Prec@5 78.1461	
+Val: [82]	Time 14.670	Data 2.905	Loss 1.368	Accuracy 0.6976	Prec@1 69.7579	Prec@5 90.6838	
+Best accuracy: [73.694]	
+Starting epoch number: 84 Learning rate: 0.001
+Train: [83]	Time 73.505	Data 37.083	Loss 1.779	Accuracy 0.5486	Prec@1 54.8598	Prec@5 77.8421	
+Val: [83]	Time 14.293	Data 2.516	Loss 1.187	Accuracy 0.7409	Prec@1 74.0903	Prec@5 92.0997	
+Best accuracy: [74.090]	
+Starting epoch number: 85 Learning rate: 0.001
+Train: [84]	Time 73.290	Data 36.868	Loss 1.758	Accuracy 0.5527	Prec@1 55.2676	Prec@5 78.2148	
+Val: [84]	Time 14.136	Data 2.362	Loss 1.502	Accuracy 0.6738	Prec@1 67.3793	Prec@5 89.3388	
+Best accuracy: [74.090]	
+Starting epoch number: 86 Learning rate: 0.001
+Train: [85]	Time 72.237	Data 35.759	Loss 1.766	Accuracy 0.5532	Prec@1 55.3217	Prec@5 78.0935	
+Val: [85]	Time 14.427	Data 2.698	Loss 1.233	Accuracy 0.7258	Prec@1 72.5754	Prec@5 91.8873	
+Best accuracy: [74.090]	
+Starting epoch number: 87 Learning rate: 0.001
+Train: [86]	Time 71.438	Data 35.013	Loss 1.760	Accuracy 0.5539	Prec@1 55.3875	Prec@5 78.2075	
+Val: [86]	Time 14.379	Data 2.620	Loss 1.184	Accuracy 0.7399	Prec@1 73.9912	Prec@5 92.3120	
+Best accuracy: [74.090]	
+Starting epoch number: 88 Learning rate: 0.001
+Train: [87]	Time 74.074	Data 37.650	Loss 1.747	Accuracy 0.5548	Prec@1 55.4752	Prec@5 78.4896	
+Val: [87]	Time 14.316	Data 2.540	Loss 1.192	Accuracy 0.7345	Prec@1 73.4532	Prec@5 92.4395	
+Best accuracy: [74.090]	
+Starting epoch number: 89 Learning rate: 0.001
+Train: [88]	Time 73.267	Data 36.831	Loss 1.767	Accuracy 0.5513	Prec@1 55.1302	Prec@5 78.1432	
+Val: [88]	Time 13.378	Data 1.659	Loss 1.165	Accuracy 0.7468	Prec@1 74.6850	Prec@5 92.8784	
+Best accuracy: [74.685]	
+Starting epoch number: 90 Learning rate: 0.001
+Train: [89]	Time 79.167	Data 42.681	Loss 1.762	Accuracy 0.5523	Prec@1 55.2311	Prec@5 78.0979	
+Val: [89]	Time 13.405	Data 1.667	Loss 1.308	Accuracy 0.7124	Prec@1 71.2445	Prec@5 90.9104	
+Best accuracy: [74.685]	
+Starting epoch number: 91 Learning rate: 0.001
+Train: [90]	Time 73.240	Data 36.861	Loss 1.758	Accuracy 0.5557	Prec@1 55.5672	Prec@5 78.1578	
+Val: [90]	Time 14.224	Data 2.497	Loss 1.261	Accuracy 0.7266	Prec@1 72.6603	Prec@5 91.5617	
+Best accuracy: [74.685]	
+Starting epoch number: 92 Learning rate: 0.001
+Train: [91]	Time 74.811	Data 38.352	Loss 1.741	Accuracy 0.5582	Prec@1 55.8201	Prec@5 78.5948	
+Val: [91]	Time 14.355	Data 2.619	Loss 1.161	Accuracy 0.7473	Prec@1 74.7275	Prec@5 92.7934	
+Best accuracy: [74.727]	
+Starting epoch number: 93 Learning rate: 0.001
+Train: [92]	Time 70.344	Data 33.943	Loss 1.750	Accuracy 0.5574	Prec@1 55.7441	Prec@5 78.2908	
+Val: [92]	Time 14.523	Data 2.782	Loss 1.118	Accuracy 0.7522	Prec@1 75.2230	Prec@5 93.0908	
+Best accuracy: [75.223]	
+Starting epoch number: 94 Learning rate: 0.001
+Train: [93]	Time 70.604	Data 34.133	Loss 1.741	Accuracy 0.5587	Prec@1 55.8669	Prec@5 78.4925	
+Val: [93]	Time 14.682	Data 2.936	Loss 1.154	Accuracy 0.7459	Prec@1 74.5859	Prec@5 92.8784	
+Best accuracy: [75.223]	
+Starting epoch number: 95 Learning rate: 0.001
+Train: [94]	Time 71.985	Data 35.564	Loss 1.749	Accuracy 0.5569	Prec@1 55.6900	Prec@5 78.3756	
+Val: [94]	Time 14.801	Data 2.923	Loss 1.184	Accuracy 0.7419	Prec@1 74.1894	Prec@5 92.2271	
+Best accuracy: [75.223]	
+Starting epoch number: 96 Learning rate: 0.001
+Train: [95]	Time 77.388	Data 41.033	Loss 1.734	Accuracy 0.5590	Prec@1 55.9020	Prec@5 78.7512	
+Val: [95]	Time 15.280	Data 3.465	Loss 1.165	Accuracy 0.7481	Prec@1 74.8124	Prec@5 92.7934	
+Best accuracy: [75.223]	
+Starting epoch number: 97 Learning rate: 0.001
+Train: [96]	Time 78.552	Data 42.203	Loss 1.739	Accuracy 0.5582	Prec@1 55.8186	Prec@5 78.5977	
+Val: [96]	Time 14.285	Data 2.479	Loss 1.475	Accuracy 0.6773	Prec@1 67.7333	Prec@5 89.3246	
+Best accuracy: [75.223]	
+Starting epoch number: 98 Learning rate: 0.001
+Train: [97]	Time 78.490	Data 42.157	Loss 1.731	Accuracy 0.5607	Prec@1 56.0715	Prec@5 78.7103	
+Val: [97]	Time 14.863	Data 3.048	Loss 1.099	Accuracy 0.7531	Prec@1 75.3079	Prec@5 93.0483	
+Best accuracy: [75.308]	
+Starting epoch number: 99 Learning rate: 0.001
+Train: [98]	Time 82.095	Data 45.751	Loss 1.733	Accuracy 0.5607	Prec@1 56.0671	Prec@5 78.7205	
+Val: [98]	Time 14.143	Data 2.353	Loss 1.304	Accuracy 0.7146	Prec@1 71.4569	Prec@5 91.0944	
+Best accuracy: [75.308]	
+Starting epoch number: 100 Learning rate: 0.001
+Train: [99]	Time 80.156	Data 43.832	Loss 1.733	Accuracy 0.5580	Prec@1 55.8026	Prec@5 78.7059	
+Val: [99]	Time 14.218	Data 2.453	Loss 1.246	Accuracy 0.7259	Prec@1 72.5896	Prec@5 91.7174	
+Best accuracy: [75.308]	
+Starting epoch number: 101 Learning rate: 0.0005
+Train: [100]	Time 77.253	Data 40.903	Loss 1.691	Accuracy 0.5695	Prec@1 56.9528	Prec@5 79.0830	
+Val: [100]	Time 14.441	Data 2.554	Loss 1.090	Accuracy 0.7563	Prec@1 75.6336	Prec@5 93.1049	
+Best accuracy: [75.634]	
+Starting epoch number: 102 Learning rate: 0.0005
+Train: [101]	Time 74.871	Data 38.496	Loss 1.680	Accuracy 0.5723	Prec@1 57.2349	Prec@5 79.3432	
+Val: [101]	Time 14.108	Data 2.329	Loss 1.370	Accuracy 0.6991	Prec@1 69.9136	Prec@5 90.4715	
+Best accuracy: [75.634]	
+Starting epoch number: 103 Learning rate: 0.0005
+Train: [102]	Time 74.602	Data 38.234	Loss 1.673	Accuracy 0.5742	Prec@1 57.4249	Prec@5 79.5390	
+Val: [102]	Time 13.860	Data 2.076	Loss 1.142	Accuracy 0.7529	Prec@1 75.2938	Prec@5 92.6094	
+Best accuracy: [75.634]	
+Starting epoch number: 104 Learning rate: 0.0005
+Train: [103]	Time 72.064	Data 35.675	Loss 1.663	Accuracy 0.5760	Prec@1 57.5960	Prec@5 79.6969	
+Val: [103]	Time 13.987	Data 2.219	Loss 1.087	Accuracy 0.7619	Prec@1 76.1858	Prec@5 93.1757	
+Best accuracy: [76.186]	
+Starting epoch number: 105 Learning rate: 0.0005
+Train: [104]	Time 73.061	Data 36.688	Loss 1.659	Accuracy 0.5773	Prec@1 57.7319	Prec@5 79.7436	
+Val: [104]	Time 13.844	Data 2.009	Loss 1.106	Accuracy 0.7536	Prec@1 75.3646	Prec@5 93.5297	
+Best accuracy: [76.186]	
+Starting epoch number: 106 Learning rate: 0.0005
+Train: [105]	Time 73.839	Data 37.469	Loss 1.667	Accuracy 0.5763	Prec@1 57.6310	Prec@5 79.6399	
+Val: [105]	Time 14.774	Data 2.933	Loss 1.371	Accuracy 0.6947	Prec@1 69.4747	Prec@5 90.4432	
+Best accuracy: [76.186]	
+Starting epoch number: 107 Learning rate: 0.0005
+Train: [106]	Time 72.288	Data 35.906	Loss 1.663	Accuracy 0.5772	Prec@1 57.7187	Prec@5 79.5697	
+Val: [106]	Time 13.596	Data 1.898	Loss 1.180	Accuracy 0.7427	Prec@1 74.2744	Prec@5 92.5669	
+Best accuracy: [76.186]	
+Starting epoch number: 108 Learning rate: 0.0005
+Train: [107]	Time 70.679	Data 34.240	Loss 1.663	Accuracy 0.5754	Prec@1 57.5360	Prec@5 79.7115	
+Val: [107]	Time 14.347	Data 2.654	Loss 1.067	Accuracy 0.7688	Prec@1 76.8795	Prec@5 93.3031	
+Best accuracy: [76.880]	
+Starting epoch number: 109 Learning rate: 0.0005
+Train: [108]	Time 71.237	Data 34.863	Loss 1.655	Accuracy 0.5779	Prec@1 57.7903	Prec@5 79.8328	
+Val: [108]	Time 14.781	Data 3.012	Loss 1.400	Accuracy 0.6911	Prec@1 69.1066	Prec@5 90.7688	
+Best accuracy: [76.880]	
+Starting epoch number: 110 Learning rate: 0.0005
+Train: [109]	Time 70.286	Data 33.865	Loss 1.662	Accuracy 0.5782	Prec@1 57.8225	Prec@5 79.5112	
+Val: [109]	Time 14.342	Data 2.532	Loss 1.155	Accuracy 0.7466	Prec@1 74.6567	Prec@5 92.9350	
+Best accuracy: [76.880]	
+Starting epoch number: 111 Learning rate: 0.0005
+Train: [110]	Time 71.851	Data 35.436	Loss 1.655	Accuracy 0.5784	Prec@1 57.8430	Prec@5 79.9059	
+Val: [110]	Time 14.423	Data 2.662	Loss 1.076	Accuracy 0.7643	Prec@1 76.4264	Prec@5 93.6996	
+Best accuracy: [76.880]	
+Starting epoch number: 112 Learning rate: 0.0005
+Train: [111]	Time 70.362	Data 33.930	Loss 1.653	Accuracy 0.5790	Prec@1 57.8956	Prec@5 79.8635	
+Val: [111]	Time 13.359	Data 1.619	Loss 4.016	Accuracy 0.2306	Prec@1 23.0639	Prec@5 48.5346	
+Best accuracy: [76.880]	
+Starting epoch number: 113 Learning rate: 0.0005
+Train: [112]	Time 71.365	Data 34.869	Loss 1.656	Accuracy 0.5777	Prec@1 57.7728	Prec@5 79.7173	
+Val: [112]	Time 13.660	Data 1.904	Loss 1.198	Accuracy 0.7379	Prec@1 73.7930	Prec@5 92.4678	
+Best accuracy: [76.880]	
+Starting epoch number: 114 Learning rate: 0.0005
+Train: [113]	Time 70.493	Data 34.025	Loss 1.648	Accuracy 0.5791	Prec@1 57.9131	Prec@5 80.0155	
+Val: [113]	Time 14.060	Data 2.338	Loss 1.345	Accuracy 0.7078	Prec@1 70.7773	Prec@5 90.7971	
+Best accuracy: [76.880]	
+Starting epoch number: 115 Learning rate: 0.0005
+Train: [114]	Time 72.416	Data 36.026	Loss 1.646	Accuracy 0.5786	Prec@1 57.8605	Prec@5 79.9570	
+Val: [114]	Time 13.928	Data 2.148	Loss 1.549	Accuracy 0.6650	Prec@1 66.5015	Prec@5 88.1070	
+Best accuracy: [76.880]	
+Starting epoch number: 116 Learning rate: 0.0005
+Train: [115]	Time 72.655	Data 36.244	Loss 1.644	Accuracy 0.5815	Prec@1 58.1528	Prec@5 80.0301	
+Val: [115]	Time 14.379	Data 2.538	Loss 1.158	Accuracy 0.7490	Prec@1 74.8974	Prec@5 92.3970	
+Best accuracy: [76.880]	
+Starting epoch number: 117 Learning rate: 0.0005
+Train: [116]	Time 73.475	Data 37.115	Loss 1.653	Accuracy 0.5787	Prec@1 57.8678	Prec@5 79.8635	
+Val: [116]	Time 14.166	Data 2.390	Loss 1.212	Accuracy 0.7376	Prec@1 73.7647	Prec@5 92.0289	
+Best accuracy: [76.880]	
+Starting epoch number: 118 Learning rate: 0.0005
+Train: [117]	Time 72.931	Data 36.533	Loss 1.652	Accuracy 0.5790	Prec@1 57.8956	Prec@5 79.9892	
+Val: [117]	Time 14.625	Data 2.842	Loss 1.101	Accuracy 0.7589	Prec@1 75.8884	Prec@5 93.0908	
+Best accuracy: [76.880]	
+Starting epoch number: 119 Learning rate: 0.0005
+Train: [118]	Time 74.559	Data 38.174	Loss 1.647	Accuracy 0.5809	Prec@1 58.0914	Prec@5 79.8459	
+Val: [118]	Time 15.092	Data 3.286	Loss 1.065	Accuracy 0.7729	Prec@1 77.2901	Prec@5 93.6712	
+Best accuracy: [77.290]	
+Starting epoch number: 120 Learning rate: 0.0005
+Train: [119]	Time 72.232	Data 35.815	Loss 1.647	Accuracy 0.5801	Prec@1 58.0081	Prec@5 79.9307	
+Val: [119]	Time 14.203	Data 2.399	Loss 1.574	Accuracy 0.6554	Prec@1 65.5387	Prec@5 88.2911	
+Best accuracy: [77.290]	
+Starting epoch number: 121 Learning rate: 0.0005
+Train: [120]	Time 74.649	Data 38.226	Loss 1.645	Accuracy 0.5789	Prec@1 57.8868	Prec@5 79.8489	
+Val: [120]	Time 14.587	Data 2.845	Loss 1.130	Accuracy 0.7572	Prec@1 75.7185	Prec@5 92.7793	
+Best accuracy: [77.290]	
+Starting epoch number: 122 Learning rate: 0.0005
+Train: [121]	Time 74.485	Data 38.106	Loss 1.639	Accuracy 0.5830	Prec@1 58.3034	Prec@5 80.0623	
+Val: [121]	Time 14.257	Data 2.451	Loss 1.349	Accuracy 0.7146	Prec@1 71.4569	Prec@5 90.4715	
+Best accuracy: [77.290]	
+Starting epoch number: 123 Learning rate: 0.0005
+Train: [122]	Time 76.647	Data 40.306	Loss 1.635	Accuracy 0.5846	Prec@1 58.4627	Prec@5 80.0272	
+Val: [122]	Time 15.851	Data 4.032	Loss 1.151	Accuracy 0.7527	Prec@1 75.2655	Prec@5 92.6660	
+Best accuracy: [77.290]	
+Starting epoch number: 124 Learning rate: 0.0005
+Train: [123]	Time 76.305	Data 39.926	Loss 1.633	Accuracy 0.5822	Prec@1 58.2215	Prec@5 80.1880	
+Val: [123]	Time 13.847	Data 1.989	Loss 1.216	Accuracy 0.7388	Prec@1 73.8780	Prec@5 92.1138	
+Best accuracy: [77.290]	
+Starting epoch number: 125 Learning rate: 0.0005
+Train: [124]	Time 76.538	Data 40.155	Loss 1.634	Accuracy 0.5837	Prec@1 58.3677	Prec@5 80.1865	
+Val: [124]	Time 14.754	Data 2.960	Loss 1.175	Accuracy 0.7444	Prec@1 74.4443	Prec@5 92.6235	
+Best accuracy: [77.290]	
+Starting epoch number: 126 Learning rate: 0.0005
+Train: [125]	Time 77.165	Data 40.772	Loss 1.629	Accuracy 0.5845	Prec@1 58.4451	Prec@5 80.1251	
+Val: [125]	Time 14.235	Data 2.473	Loss 2.035	Accuracy 0.5478	Prec@1 54.7784	Prec@5 81.6084	
+Best accuracy: [77.290]	
+Starting epoch number: 127 Learning rate: 0.0005
+Train: [126]	Time 77.428	Data 41.032	Loss 1.626	Accuracy 0.5860	Prec@1 58.5957	Prec@5 80.3809	
+Val: [126]	Time 14.330	Data 2.574	Loss 1.086	Accuracy 0.7644	Prec@1 76.4406	Prec@5 93.6005	
+Best accuracy: [77.290]	
+Starting epoch number: 128 Learning rate: 0.0005
+Train: [127]	Time 79.285	Data 42.920	Loss 1.634	Accuracy 0.5848	Prec@1 58.4788	Prec@5 80.0184	
+Val: [127]	Time 14.799	Data 2.978	Loss 1.294	Accuracy 0.7202	Prec@1 72.0232	Prec@5 91.1228	
+Best accuracy: [77.290]	
+Starting epoch number: 129 Learning rate: 0.0005
+Train: [128]	Time 78.013	Data 41.645	Loss 1.646	Accuracy 0.5797	Prec@1 57.9730	Prec@5 79.9994	
+Val: [128]	Time 14.800	Data 2.989	Loss 1.132	Accuracy 0.7536	Prec@1 75.3646	Prec@5 93.2465	
+Best accuracy: [77.290]	
+Starting epoch number: 130 Learning rate: 0.0005
+Train: [129]	Time 76.598	Data 40.202	Loss 1.633	Accuracy 0.5851	Prec@1 58.5138	Prec@5 80.1090	
+Val: [129]	Time 13.829	Data 1.964	Loss 1.111	Accuracy 0.7546	Prec@1 75.4637	Prec@5 93.2607	
+Best accuracy: [77.290]	
+Starting epoch number: 131 Learning rate: 0.0005
+Train: [130]	Time 73.209	Data 36.735	Loss 1.633	Accuracy 0.5835	Prec@1 58.3472	Prec@5 80.1017	
+Val: [130]	Time 13.675	Data 1.892	Loss 1.062	Accuracy 0.7662	Prec@1 76.6247	Prec@5 93.6571	
+Best accuracy: [77.290]	
+Starting epoch number: 132 Learning rate: 0.0005
+Train: [131]	Time 72.083	Data 35.722	Loss 1.619	Accuracy 0.5868	Prec@1 58.6761	Prec@5 80.4671	
+Val: [131]	Time 14.226	Data 2.489	Loss 1.114	Accuracy 0.7552	Prec@1 75.5203	Prec@5 93.1757	
+Best accuracy: [77.290]	
+Starting epoch number: 133 Learning rate: 0.0005
+Train: [132]	Time 72.947	Data 36.513	Loss 1.637	Accuracy 0.5849	Prec@1 58.4905	Prec@5 80.0754	
+Val: [132]	Time 12.704	Data 0.950	Loss 4.484	Accuracy 0.2054	Prec@1 20.5437	Prec@5 47.8267	
+Best accuracy: [77.290]	
+Starting epoch number: 134 Learning rate: 0.0005
+Train: [133]	Time 72.539	Data 36.127	Loss 1.632	Accuracy 0.5831	Prec@1 58.3136	Prec@5 80.2011	
+Val: [133]	Time 14.771	Data 2.975	Loss 1.253	Accuracy 0.7287	Prec@1 72.8727	Prec@5 91.7174	
+Best accuracy: [77.290]	
+Starting epoch number: 135 Learning rate: 0.0005
+Train: [134]	Time 74.853	Data 38.422	Loss 1.624	Accuracy 0.5847	Prec@1 58.4715	Prec@5 80.2450	
+Val: [134]	Time 13.837	Data 2.083	Loss 1.262	Accuracy 0.7265	Prec@1 72.6462	Prec@5 91.6608	
+Best accuracy: [77.290]	
+Starting epoch number: 136 Learning rate: 0.0005
+Train: [135]	Time 72.772	Data 36.378	Loss 1.634	Accuracy 0.5840	Prec@1 58.3998	Prec@5 80.0681	
+Val: [135]	Time 13.908	Data 2.192	Loss 1.123	Accuracy 0.7553	Prec@1 75.5345	Prec@5 93.0341	
+Best accuracy: [77.290]	
+Starting epoch number: 137 Learning rate: 0.0005
+Train: [136]	Time 70.760	Data 34.301	Loss 1.622	Accuracy 0.5871	Prec@1 58.7082	Prec@5 80.3283	
+Val: [136]	Time 14.579	Data 2.837	Loss 1.401	Accuracy 0.6889	Prec@1 68.8942	Prec@5 90.5139	
+Best accuracy: [77.290]	
+Starting epoch number: 138 Learning rate: 0.0005
+Train: [137]	Time 75.087	Data 38.645	Loss 1.621	Accuracy 0.5866	Prec@1 58.6615	Prec@5 80.0696	
+Val: [137]	Time 14.231	Data 2.461	Loss 1.149	Accuracy 0.7544	Prec@1 75.4354	Prec@5 92.6943	
+Best accuracy: [77.290]	
+Starting epoch number: 139 Learning rate: 0.0005
+Train: [138]	Time 69.495	Data 33.054	Loss 1.626	Accuracy 0.5842	Prec@1 58.4203	Prec@5 80.1339	
+Val: [138]	Time 14.126	Data 2.388	Loss 1.097	Accuracy 0.7660	Prec@1 76.5963	Prec@5 93.5297	
+Best accuracy: [77.290]	
+Starting epoch number: 140 Learning rate: 0.0005
+Train: [139]	Time 69.690	Data 33.210	Loss 1.634	Accuracy 0.5840	Prec@1 58.3969	Prec@5 80.0433	
+Val: [139]	Time 14.286	Data 2.557	Loss 1.053	Accuracy 0.7715	Prec@1 77.1485	Prec@5 93.9686	
+Best accuracy: [77.290]	
+Starting epoch number: 141 Learning rate: 0.0005
+Train: [140]	Time 69.423	Data 32.982	Loss 1.620	Accuracy 0.5868	Prec@1 58.6848	Prec@5 80.2917	
+Val: [140]	Time 14.327	Data 2.568	Loss 1.109	Accuracy 0.7553	Prec@1 75.5345	Prec@5 93.2465	
+Best accuracy: [77.290]	
+Starting epoch number: 142 Learning rate: 0.0005
+Train: [141]	Time 73.460	Data 36.981	Loss 1.604	Accuracy 0.5909	Prec@1 59.0941	Prec@5 80.7156	
+Val: [141]	Time 14.359	Data 2.580	Loss 1.107	Accuracy 0.7679	Prec@1 76.7946	Prec@5 93.2890	
+Best accuracy: [77.290]	
+Starting epoch number: 143 Learning rate: 0.0005
+Train: [142]	Time 69.907	Data 33.403	Loss 1.623	Accuracy 0.5860	Prec@1 58.6001	Prec@5 80.2493	
+Val: [142]	Time 14.337	Data 2.546	Loss 1.104	Accuracy 0.7606	Prec@1 76.0583	Prec@5 93.4164	
+Best accuracy: [77.290]	
+Starting epoch number: 144 Learning rate: 0.0005
+Train: [143]	Time 72.805	Data 36.390	Loss 1.608	Accuracy 0.5889	Prec@1 58.8924	Prec@5 80.4847	
+Val: [143]	Time 14.858	Data 3.088	Loss 1.138	Accuracy 0.7546	Prec@1 75.4637	Prec@5 92.6943	
+Best accuracy: [77.290]	
+Starting epoch number: 145 Learning rate: 0.0005
+Train: [144]	Time 71.483	Data 35.079	Loss 1.605	Accuracy 0.5898	Prec@1 58.9757	Prec@5 80.7478	
+Val: [144]	Time 14.642	Data 2.826	Loss 1.232	Accuracy 0.7296	Prec@1 72.9577	Prec@5 91.6325	
+Best accuracy: [77.290]	
+Starting epoch number: 146 Learning rate: 0.0005
+Train: [145]	Time 75.369	Data 38.911	Loss 1.601	Accuracy 0.5895	Prec@1 58.9494	Prec@5 80.5928	
+Val: [145]	Time 15.911	Data 4.116	Loss 1.212	Accuracy 0.7361	Prec@1 73.6089	Prec@5 92.1563	
+Best accuracy: [77.290]	
+Starting epoch number: 147 Learning rate: 0.0005
+Train: [146]	Time 73.602	Data 37.184	Loss 1.620	Accuracy 0.5872	Prec@1 58.7214	Prec@5 80.3268	
+Val: [146]	Time 14.625	Data 2.819	Loss 1.178	Accuracy 0.7468	Prec@1 74.6850	Prec@5 92.7651	
+Best accuracy: [77.290]	
+Starting epoch number: 148 Learning rate: 0.0005
+Train: [147]	Time 73.607	Data 37.204	Loss 1.618	Accuracy 0.5876	Prec@1 58.7623	Prec@5 80.3444	
+Val: [147]	Time 14.245	Data 2.422	Loss 1.033	Accuracy 0.7749	Prec@1 77.4883	Prec@5 93.7987	
+Best accuracy: [77.488]	
+Starting epoch number: 149 Learning rate: 0.0005
+Train: [148]	Time 72.979	Data 36.544	Loss 1.608	Accuracy 0.5895	Prec@1 58.9479	Prec@5 80.6148	
+Val: [148]	Time 14.558	Data 2.787	Loss 1.087	Accuracy 0.7664	Prec@1 76.6388	Prec@5 93.0766	
+Best accuracy: [77.488]	
+Starting epoch number: 150 Learning rate: 0.0005
+Train: [149]	Time 73.267	Data 36.860	Loss 1.610	Accuracy 0.5890	Prec@1 58.9012	Prec@5 80.4832	
+Val: [149]	Time 14.771	Data 2.943	Loss 1.064	Accuracy 0.7736	Prec@1 77.3609	Prec@5 93.6288	
+Best accuracy: [77.488]	
+Starting epoch number: 151 Learning rate: 0.00025
+Train: [150]	Time 74.122	Data 37.727	Loss 1.590	Accuracy 0.5938	Prec@1 59.3820	Prec@5 80.6586	
+Val: [150]	Time 13.789	Data 1.990	Loss 1.146	Accuracy 0.7558	Prec@1 75.5770	Prec@5 92.5952	
+Best accuracy: [77.488]	
+Starting epoch number: 152 Learning rate: 0.00025
+Train: [151]	Time 73.456	Data 37.102	Loss 1.577	Accuracy 0.5974	Prec@1 59.7416	Prec@5 80.8311	
+Val: [151]	Time 13.787	Data 1.940	Loss 1.048	Accuracy 0.7752	Prec@1 77.5166	Prec@5 93.8270	
+Best accuracy: [77.517]	
+Starting epoch number: 153 Learning rate: 0.00025
+Train: [152]	Time 75.171	Data 38.808	Loss 1.582	Accuracy 0.5973	Prec@1 59.7328	Prec@5 80.8004	
+Val: [152]	Time 14.319	Data 2.485	Loss 1.105	Accuracy 0.7633	Prec@1 76.3273	Prec@5 93.3598	
+Best accuracy: [77.517]	
+Starting epoch number: 154 Learning rate: 0.00025
+Train: [153]	Time 74.843	Data 38.397	Loss 1.569	Accuracy 0.5989	Prec@1 59.8863	Prec@5 81.0605	
+Val: [153]	Time 14.069	Data 2.181	Loss 1.283	Accuracy 0.7231	Prec@1 72.3064	Prec@5 92.1138	
+Best accuracy: [77.517]	
+Starting epoch number: 155 Learning rate: 0.00025
+Train: [154]	Time 74.372	Data 37.918	Loss 1.578	Accuracy 0.5975	Prec@1 59.7474	Prec@5 80.8135	
+Val: [154]	Time 14.821	Data 2.875	Loss 1.455	Accuracy 0.6831	Prec@1 68.3137	Prec@5 90.4007	
+Best accuracy: [77.517]	
+Starting epoch number: 156 Learning rate: 0.00025
+Train: [155]	Time 75.181	Data 38.787	Loss 1.574	Accuracy 0.6000	Prec@1 59.9974	Prec@5 80.7551	
+Val: [155]	Time 15.063	Data 3.199	Loss 0.996	Accuracy 0.7835	Prec@1 78.3520	Prec@5 94.3508	
+Best accuracy: [78.352]	
+Starting epoch number: 157 Learning rate: 0.00025
+Train: [156]	Time 74.029	Data 37.623	Loss 1.570	Accuracy 0.5981	Prec@1 59.8117	Prec@5 80.9173	
+Val: [156]	Time 14.346	Data 2.584	Loss 0.998	Accuracy 0.7862	Prec@1 78.6210	Prec@5 93.9544	
+Best accuracy: [78.621]	
+Starting epoch number: 158 Learning rate: 0.00025
+Train: [157]	Time 70.489	Data 34.019	Loss 1.568	Accuracy 0.5988	Prec@1 59.8848	Prec@5 81.0255	
+Val: [157]	Time 14.255	Data 2.527	Loss 1.076	Accuracy 0.7706	Prec@1 77.0636	Prec@5 93.8411	
+Best accuracy: [78.621]	
+Starting epoch number: 159 Learning rate: 0.00025
+Train: [158]	Time 71.562	Data 35.063	Loss 1.554	Accuracy 0.6035	Prec@1 60.3467	Prec@5 81.3002	
+Val: [158]	Time 13.706	Data 1.950	Loss 1.243	Accuracy 0.7306	Prec@1 73.0568	Prec@5 92.3404	
+Best accuracy: [78.621]	
+Starting epoch number: 160 Learning rate: 0.00025
+Train: [159]	Time 69.800	Data 33.417	Loss 1.576	Accuracy 0.5967	Prec@1 59.6714	Prec@5 80.9305	
+Val: [159]	Time 14.483	Data 2.747	Loss 1.115	Accuracy 0.7579	Prec@1 75.7893	Prec@5 93.3314	
+Best accuracy: [78.621]	
+Starting epoch number: 161 Learning rate: 0.00025
+Train: [160]	Time 70.358	Data 33.819	Loss 1.567	Accuracy 0.6003	Prec@1 60.0295	Prec@5 81.2520	
+Val: [160]	Time 14.256	Data 2.497	Loss 1.043	Accuracy 0.7766	Prec@1 77.6582	Prec@5 93.9544	
+Best accuracy: [78.621]	
+Starting epoch number: 162 Learning rate: 0.00025
+Train: [161]	Time 69.390	Data 32.830	Loss 1.568	Accuracy 0.6001	Prec@1 60.0120	Prec@5 81.0488	
+Val: [161]	Time 14.387	Data 2.637	Loss 1.009	Accuracy 0.7856	Prec@1 78.5643	Prec@5 94.3225	
+Best accuracy: [78.621]	
+Starting epoch number: 163 Learning rate: 0.00025
+Train: [162]	Time 71.939	Data 35.472	Loss 1.553	Accuracy 0.6022	Prec@1 60.2210	Prec@5 81.3251	
+Val: [162]	Time 14.738	Data 3.010	Loss 1.009	Accuracy 0.7824	Prec@1 78.2387	Prec@5 94.1668	
+Best accuracy: [78.621]	
+Starting epoch number: 164 Learning rate: 0.00025
+Train: [163]	Time 72.344	Data 35.953	Loss 1.571	Accuracy 0.5982	Prec@1 59.8205	Prec@5 80.9246	
+Val: [163]	Time 14.010	Data 2.251	Loss 1.013	Accuracy 0.7791	Prec@1 77.9131	Prec@5 94.2517	
+Best accuracy: [78.621]	
+Starting epoch number: 165 Learning rate: 0.00025
+Train: [164]	Time 72.094	Data 35.719	Loss 1.555	Accuracy 0.6007	Prec@1 60.0675	Prec@5 81.4654	
+Val: [164]	Time 15.390	Data 3.578	Loss 1.026	Accuracy 0.7796	Prec@1 77.9555	Prec@5 94.0677	
+Best accuracy: [78.621]	
+Starting epoch number: 166 Learning rate: 0.00025
+Train: [165]	Time 72.705	Data 36.295	Loss 1.551	Accuracy 0.6036	Prec@1 60.3613	Prec@5 81.3178	
+Val: [165]	Time 14.878	Data 3.079	Loss 1.092	Accuracy 0.7746	Prec@1 77.4600	Prec@5 93.3881	
+Best accuracy: [78.621]	
+Starting epoch number: 167 Learning rate: 0.00025
+Train: [166]	Time 73.248	Data 36.876	Loss 1.557	Accuracy 0.6020	Prec@1 60.2005	Prec@5 81.2359	
+Val: [166]	Time 14.887	Data 3.054	Loss 1.016	Accuracy 0.7837	Prec@1 78.3661	Prec@5 94.4500	
+Best accuracy: [78.621]	
+Starting epoch number: 168 Learning rate: 0.00025
+Train: [167]	Time 76.797	Data 40.418	Loss 1.562	Accuracy 0.6010	Prec@1 60.0982	Prec@5 81.0781	
+Val: [167]	Time 14.981	Data 3.195	Loss 1.007	Accuracy 0.7835	Prec@1 78.3520	Prec@5 94.1951	
+Best accuracy: [78.621]	
+Starting epoch number: 169 Learning rate: 0.00025
+Train: [168]	Time 75.478	Data 39.105	Loss 1.564	Accuracy 0.6009	Prec@1 60.0924	Prec@5 81.1263	
+Val: [168]	Time 14.539	Data 2.731	Loss 3.051	Accuracy 0.3915	Prec@1 39.1477	Prec@5 67.2660	
+Best accuracy: [78.621]	
+Starting epoch number: 170 Learning rate: 0.00025
+Train: [169]	Time 77.386	Data 41.003	Loss 1.556	Accuracy 0.6039	Prec@1 60.3949	Prec@5 81.1629	
+Val: [169]	Time 14.556	Data 2.692	Loss 1.010	Accuracy 0.7858	Prec@1 78.5785	Prec@5 94.0535	
+Best accuracy: [78.621]	
+Starting epoch number: 171 Learning rate: 0.00025
+Train: [170]	Time 75.463	Data 39.112	Loss 1.558	Accuracy 0.6026	Prec@1 60.2605	Prec@5 81.2871	
+Val: [170]	Time 14.465	Data 2.622	Loss 1.045	Accuracy 0.7777	Prec@1 77.7715	Prec@5 93.9261	
+Best accuracy: [78.621]	
+Starting epoch number: 172 Learning rate: 0.00025
+Train: [171]	Time 74.641	Data 38.237	Loss 1.560	Accuracy 0.6010	Prec@1 60.0982	Prec@5 81.1629	
+Val: [171]	Time 14.800	Data 2.977	Loss 1.014	Accuracy 0.7855	Prec@1 78.5502	Prec@5 94.0960	
+Best accuracy: [78.621]	
+Starting epoch number: 173 Learning rate: 0.00025
+Train: [172]	Time 72.185	Data 35.711	Loss 1.552	Accuracy 0.6027	Prec@1 60.2692	Prec@5 81.4420	
+Val: [172]	Time 14.246	Data 2.461	Loss 1.213	Accuracy 0.7437	Prec@1 74.3735	Prec@5 92.1705	
+Best accuracy: [78.621]	
+Starting epoch number: 174 Learning rate: 0.00025
+Train: [173]	Time 74.432	Data 38.028	Loss 1.551	Accuracy 0.6031	Prec@1 60.3058	Prec@5 81.0912	
+Val: [173]	Time 14.345	Data 2.554	Loss 0.988	Accuracy 0.7893	Prec@1 78.9325	Prec@5 94.4075	
+Best accuracy: [78.932]	
+Starting epoch number: 175 Learning rate: 0.00025
+Train: [174]	Time 73.648	Data 37.262	Loss 1.539	Accuracy 0.6063	Prec@1 60.6346	Prec@5 81.5692	
+Val: [174]	Time 13.290	Data 1.525	Loss 1.035	Accuracy 0.7817	Prec@1 78.1679	Prec@5 93.9261	
+Best accuracy: [78.932]	
+Starting epoch number: 176 Learning rate: 0.00025
+Train: [175]	Time 76.212	Data 39.861	Loss 1.553	Accuracy 0.6013	Prec@1 60.1260	Prec@5 81.4055	
+Val: [175]	Time 14.635	Data 2.854	Loss 0.988	Accuracy 0.7883	Prec@1 78.8334	Prec@5 94.2093	
+Best accuracy: [78.932]	
+Starting epoch number: 177 Learning rate: 0.00025
+Train: [176]	Time 74.116	Data 37.701	Loss 1.568	Accuracy 0.6000	Prec@1 60.0018	Prec@5 81.0766	
+Val: [176]	Time 14.136	Data 2.368	Loss 1.006	Accuracy 0.7830	Prec@1 78.2953	Prec@5 94.1385	
+Best accuracy: [78.932]	
+Starting epoch number: 178 Learning rate: 0.00025
+Train: [177]	Time 73.596	Data 37.212	Loss 1.543	Accuracy 0.6071	Prec@1 60.7092	Prec@5 81.5794	
+Val: [177]	Time 14.559	Data 2.784	Loss 1.008	Accuracy 0.7871	Prec@1 78.7059	Prec@5 94.3933	
+Best accuracy: [78.932]	
+Starting epoch number: 179 Learning rate: 0.00025
+Train: [178]	Time 69.727	Data 33.296	Loss 1.560	Accuracy 0.6006	Prec@1 60.0631	Prec@5 81.2389	
+Val: [178]	Time 14.124	Data 2.376	Loss 0.978	Accuracy 0.7879	Prec@1 78.7909	Prec@5 94.4075	
+Best accuracy: [78.932]	
+Starting epoch number: 180 Learning rate: 0.00025
+Train: [179]	Time 71.173	Data 34.658	Loss 1.548	Accuracy 0.6013	Prec@1 60.1260	Prec@5 81.3485	
+Val: [179]	Time 14.053	Data 2.280	Loss 1.283	Accuracy 0.7255	Prec@1 72.5471	Prec@5 91.0520	
+Best accuracy: [78.932]	
+Starting epoch number: 181 Learning rate: 0.00025
+Train: [180]	Time 69.842	Data 33.453	Loss 1.549	Accuracy 0.6050	Prec@1 60.5016	Prec@5 81.3879	
+Val: [180]	Time 14.594	Data 2.848	Loss 1.059	Accuracy 0.7787	Prec@1 77.8706	Prec@5 93.5438	
+Best accuracy: [78.932]	
+Starting epoch number: 182 Learning rate: 0.00025
+Train: [181]	Time 69.784	Data 33.361	Loss 1.553	Accuracy 0.6018	Prec@1 60.1830	Prec@5 81.3748	
+Val: [181]	Time 13.555	Data 1.802	Loss 1.055	Accuracy 0.7725	Prec@1 77.2476	Prec@5 94.1102	
+Best accuracy: [78.932]	
+Starting epoch number: 183 Learning rate: 0.00025
+Train: [182]	Time 69.254	Data 32.757	Loss 1.559	Accuracy 0.6041	Prec@1 60.4052	Prec@5 81.3002	
+Val: [182]	Time 13.944	Data 2.211	Loss 1.126	Accuracy 0.7573	Prec@1 75.7327	Prec@5 92.9775	
+Best accuracy: [78.932]	
+Starting epoch number: 184 Learning rate: 0.00025
+Train: [183]	Time 70.379	Data 33.883	Loss 1.553	Accuracy 0.6030	Prec@1 60.3028	Prec@5 81.2374	
+Val: [183]	Time 14.552	Data 2.789	Loss 0.989	Accuracy 0.7920	Prec@1 79.2015	Prec@5 94.5632	
+Best accuracy: [79.201]	
+Starting epoch number: 185 Learning rate: 0.00025
+Train: [184]	Time 70.867	Data 34.408	Loss 1.553	Accuracy 0.6012	Prec@1 60.1158	Prec@5 81.2695	
+Val: [184]	Time 14.724	Data 2.915	Loss 1.192	Accuracy 0.7450	Prec@1 74.5009	Prec@5 92.3262	
+Best accuracy: [79.201]	
+Starting epoch number: 186 Learning rate: 0.00025
+Train: [185]	Time 72.106	Data 35.653	Loss 1.552	Accuracy 0.6033	Prec@1 60.3321	Prec@5 81.1702	
+Val: [185]	Time 15.094	Data 3.297	Loss 1.021	Accuracy 0.7834	Prec@1 78.3378	Prec@5 94.4075	
+Best accuracy: [79.201]	
+Starting epoch number: 187 Learning rate: 0.00025
+Train: [186]	Time 77.438	Data 41.058	Loss 1.552	Accuracy 0.6025	Prec@1 60.2458	Prec@5 81.2579	
+Val: [186]	Time 14.643	Data 2.806	Loss 1.050	Accuracy 0.7781	Prec@1 77.8140	Prec@5 94.1102	
+Best accuracy: [79.201]	
+Starting epoch number: 188 Learning rate: 0.00025
+Train: [187]	Time 72.533	Data 36.089	Loss 1.557	Accuracy 0.6006	Prec@1 60.0602	Prec@5 81.3646	
+Val: [187]	Time 14.577	Data 2.710	Loss 1.250	Accuracy 0.7340	Prec@1 73.3966	Prec@5 91.9722	
+Best accuracy: [79.201]	
+Starting epoch number: 189 Learning rate: 0.00025
+Train: [188]	Time 76.081	Data 39.681	Loss 1.542	Accuracy 0.6066	Prec@1 60.6580	Prec@5 81.4844	
+Val: [188]	Time 14.339	Data 2.548	Loss 1.047	Accuracy 0.7807	Prec@1 78.0688	Prec@5 93.6996	
+Best accuracy: [79.201]	
+Starting epoch number: 190 Learning rate: 0.00025
+Train: [189]	Time 74.186	Data 37.825	Loss 1.540	Accuracy 0.6079	Prec@1 60.7852	Prec@5 81.4435	
+Val: [189]	Time 14.745	Data 2.926	Loss 1.000	Accuracy 0.7841	Prec@1 78.4086	Prec@5 94.3225	
+Best accuracy: [79.201]	
+Starting epoch number: 191 Learning rate: 0.00025
+Train: [190]	Time 72.387	Data 35.896	Loss 1.551	Accuracy 0.6037	Prec@1 60.3672	Prec@5 81.3689	
+Val: [190]	Time 14.685	Data 2.862	Loss 1.095	Accuracy 0.7732	Prec@1 77.3184	Prec@5 93.5155	
+Best accuracy: [79.201]	
+Starting epoch number: 192 Learning rate: 0.00025
+Train: [191]	Time 72.857	Data 36.495	Loss 1.540	Accuracy 0.6045	Prec@1 60.4549	Prec@5 81.5370	
+Val: [191]	Time 13.999	Data 2.229	Loss 1.065	Accuracy 0.7671	Prec@1 76.7096	Prec@5 93.5013	
+Best accuracy: [79.201]	
+Starting epoch number: 193 Learning rate: 0.00025
+Train: [192]	Time 73.468	Data 37.053	Loss 1.548	Accuracy 0.6026	Prec@1 60.2575	Prec@5 81.2842	
+Val: [192]	Time 14.691	Data 2.831	Loss 1.000	Accuracy 0.7873	Prec@1 78.7342	Prec@5 94.1951	
+Best accuracy: [79.201]	
+Starting epoch number: 194 Learning rate: 0.00025
+Train: [193]	Time 72.476	Data 36.037	Loss 1.559	Accuracy 0.6032	Prec@1 60.3175	Prec@5 81.2228	
+Val: [193]	Time 13.848	Data 2.102	Loss 1.038	Accuracy 0.7824	Prec@1 78.2387	Prec@5 94.1243	
+Best accuracy: [79.201]	
+Starting epoch number: 195 Learning rate: 0.00025
+Train: [194]	Time 71.475	Data 34.970	Loss 1.543	Accuracy 0.6050	Prec@1 60.5016	Prec@5 81.4946	
+Val: [194]	Time 14.355	Data 2.567	Loss 1.045	Accuracy 0.7856	Prec@1 78.5643	Prec@5 93.9261	
+Best accuracy: [79.201]	
+Starting epoch number: 196 Learning rate: 0.00025
+Train: [195]	Time 71.801	Data 35.341	Loss 1.557	Accuracy 0.6021	Prec@1 60.2093	Prec@5 81.1804	
+Val: [195]	Time 14.400	Data 2.670	Loss 1.020	Accuracy 0.7803	Prec@1 78.0263	Prec@5 93.8128	
+Best accuracy: [79.201]	
+Starting epoch number: 197 Learning rate: 0.00025
+Train: [196]	Time 72.546	Data 36.122	Loss 1.545	Accuracy 0.6047	Prec@1 60.4709	Prec@5 81.3909	
+Val: [196]	Time 14.459	Data 2.690	Loss 1.006	Accuracy 0.7815	Prec@1 78.1538	Prec@5 94.3367	
+Best accuracy: [79.201]	
+Starting epoch number: 198 Learning rate: 0.00025
+Train: [197]	Time 71.570	Data 35.116	Loss 1.545	Accuracy 0.6055	Prec@1 60.5469	Prec@5 81.4420	
+Val: [197]	Time 14.194	Data 2.406	Loss 1.021	Accuracy 0.7801	Prec@1 78.0122	Prec@5 93.9403	
+Best accuracy: [79.201]	
+Starting epoch number: 199 Learning rate: 0.00025
+Train: [198]	Time 73.708	Data 37.279	Loss 1.554	Accuracy 0.6025	Prec@1 60.2473	Prec@5 81.3119	
+Val: [198]	Time 14.496	Data 2.678	Loss 0.980	Accuracy 0.7937	Prec@1 79.3714	Prec@5 94.4641	
+Best accuracy: [79.371]	
+Starting epoch number: 200 Learning rate: 0.00025
+Train: [199]	Time 71.774	Data 35.379	Loss 1.536	Accuracy 0.6056	Prec@1 60.5586	Prec@5 81.6043	
+Val: [199]	Time 13.709	Data 1.965	Loss 1.099	Accuracy 0.7708	Prec@1 77.0777	Prec@5 93.6571	
+Best accuracy: [79.371]	
+Starting epoch number: 201 Learning rate: 0.000125
+Train: [200]	Time 72.041	Data 35.619	Loss 1.525	Accuracy 0.6108	Prec@1 61.0790	Prec@5 81.6569	
+Val: [200]	Time 14.424	Data 2.681	Loss 1.013	Accuracy 0.7866	Prec@1 78.6635	Prec@5 93.8411	
+Best accuracy: [79.371]	
+Starting epoch number: 202 Learning rate: 0.000125
+Train: [201]	Time 71.000	Data 34.513	Loss 1.535	Accuracy 0.6098	Prec@1 60.9840	Prec@5 81.4698	
+Val: [201]	Time 14.346	Data 2.564	Loss 1.125	Accuracy 0.7682	Prec@1 76.8229	Prec@5 93.5013	
+Best accuracy: [79.371]	
+Starting epoch number: 203 Learning rate: 0.000125
+Train: [202]	Time 69.607	Data 33.145	Loss 1.518	Accuracy 0.6114	Prec@1 61.1447	Prec@5 81.8410	
+Val: [202]	Time 15.085	Data 3.339	Loss 1.006	Accuracy 0.7852	Prec@1 78.5219	Prec@5 94.1809	
+Best accuracy: [79.371]	
+Starting epoch number: 204 Learning rate: 0.000125
+Train: [203]	Time 70.311	Data 33.832	Loss 1.516	Accuracy 0.6119	Prec@1 61.1944	Prec@5 81.6876	
+Val: [203]	Time 13.985	Data 2.214	Loss 1.036	Accuracy 0.7855	Prec@1 78.5502	Prec@5 93.7704	
+Best accuracy: [79.371]	
+Starting epoch number: 205 Learning rate: 0.000125
+Train: [204]	Time 69.461	Data 32.965	Loss 1.514	Accuracy 0.6120	Prec@1 61.1959	Prec@5 81.7007	
+Val: [204]	Time 14.020	Data 2.251	Loss 1.044	Accuracy 0.7814	Prec@1 78.1396	Prec@5 93.6854	
+Best accuracy: [79.371]	
+Starting epoch number: 206 Learning rate: 0.000125
+Train: [205]	Time 73.567	Data 37.124	Loss 1.521	Accuracy 0.6117	Prec@1 61.1740	Prec@5 81.7153	
+Val: [205]	Time 13.748	Data 2.016	Loss 0.973	Accuracy 0.7934	Prec@1 79.3431	Prec@5 94.6340	
+Best accuracy: [79.371]	
+Starting epoch number: 207 Learning rate: 0.000125
+Train: [206]	Time 71.335	Data 34.948	Loss 1.512	Accuracy 0.6131	Prec@1 61.3055	Prec@5 81.8966	
+Val: [206]	Time 14.532	Data 2.699	Loss 1.007	Accuracy 0.7883	Prec@1 78.8334	Prec@5 93.9686	
+Best accuracy: [79.371]	
+Starting epoch number: 208 Learning rate: 0.000125
+Train: [207]	Time 74.890	Data 38.482	Loss 1.508	Accuracy 0.6130	Prec@1 61.3026	Prec@5 82.1450	
+Val: [207]	Time 15.369	Data 3.597	Loss 0.989	Accuracy 0.7923	Prec@1 79.2298	Prec@5 94.4641	
+Best accuracy: [79.371]	
+Starting epoch number: 209 Learning rate: 0.000125
+Train: [208]	Time 72.433	Data 35.989	Loss 1.517	Accuracy 0.6113	Prec@1 61.1345	Prec@5 81.8074	
+Val: [208]	Time 14.470	Data 2.646	Loss 1.067	Accuracy 0.7852	Prec@1 78.5219	Prec@5 93.6005	
+Best accuracy: [79.371]	
+Starting epoch number: 210 Learning rate: 0.000125
+Train: [209]	Time 72.071	Data 35.603	Loss 1.526	Accuracy 0.6086	Prec@1 60.8553	Prec@5 81.6890	
+Val: [209]	Time 13.167	Data 1.404	Loss 1.111	Accuracy 0.7609	Prec@1 76.0866	Prec@5 93.2890	
+Best accuracy: [79.371]	
+Starting epoch number: 211 Learning rate: 0.000125
+Train: [210]	Time 73.020	Data 36.637	Loss 1.512	Accuracy 0.6130	Prec@1 61.2997	Prec@5 81.8308	
+Val: [210]	Time 14.189	Data 2.402	Loss 1.083	Accuracy 0.7685	Prec@1 76.8512	Prec@5 93.5297	
+Best accuracy: [79.371]	
+Starting epoch number: 212 Learning rate: 0.000125
+Train: [211]	Time 72.578	Data 36.136	Loss 1.507	Accuracy 0.6139	Prec@1 61.3932	Prec@5 81.9258	
+Val: [211]	Time 13.835	Data 2.054	Loss 0.997	Accuracy 0.7900	Prec@1 79.0033	Prec@5 94.2093	
+Best accuracy: [79.371]	
+Starting epoch number: 213 Learning rate: 0.000125
+Train: [212]	Time 77.863	Data 41.464	Loss 1.506	Accuracy 0.6144	Prec@1 61.4356	Prec@5 81.9580	
+Val: [212]	Time 14.732	Data 2.878	Loss 1.429	Accuracy 0.6940	Prec@1 69.4039	Prec@5 90.3157	
+Best accuracy: [79.371]	
+Starting epoch number: 214 Learning rate: 0.000125
+Train: [213]	Time 73.801	Data 37.394	Loss 1.519	Accuracy 0.6121	Prec@1 61.2061	Prec@5 81.8673	
+Val: [213]	Time 14.232	Data 2.430	Loss 1.037	Accuracy 0.7824	Prec@1 78.2387	Prec@5 93.7704	
+Best accuracy: [79.371]	
+Starting epoch number: 215 Learning rate: 0.000125
+Train: [214]	Time 72.791	Data 36.382	Loss 1.514	Accuracy 0.6132	Prec@1 61.3201	Prec@5 81.6583	
+Val: [214]	Time 13.964	Data 2.245	Loss 1.128	Accuracy 0.7689	Prec@1 76.8937	Prec@5 93.0058	
+Best accuracy: [79.371]	
+Starting epoch number: 216 Learning rate: 0.000125
+Train: [215]	Time 71.936	Data 35.560	Loss 1.512	Accuracy 0.6153	Prec@1 61.5291	Prec@5 81.7519	
+Val: [215]	Time 14.414	Data 2.615	Loss 1.002	Accuracy 0.7875	Prec@1 78.7484	Prec@5 93.9686	
+Best accuracy: [79.371]	
+Starting epoch number: 217 Learning rate: 0.000125
+Train: [216]	Time 71.182	Data 34.712	Loss 1.509	Accuracy 0.6142	Prec@1 61.4166	Prec@5 81.9623	
+Val: [216]	Time 14.034	Data 2.242	Loss 1.592	Accuracy 0.6768	Prec@1 67.6766	Prec@5 89.0556	
+Best accuracy: [79.371]	
+Starting epoch number: 218 Learning rate: 0.000125
+Train: [217]	Time 73.896	Data 37.536	Loss 1.515	Accuracy 0.6133	Prec@1 61.3304	Prec@5 81.7490	
+Val: [217]	Time 13.376	Data 1.544	Loss 0.973	Accuracy 0.7974	Prec@1 79.7395	Prec@5 94.3933	
+Best accuracy: [79.739]	
+Starting epoch number: 219 Learning rate: 0.000125
+Train: [218]	Time 74.474	Data 38.081	Loss 1.517	Accuracy 0.6123	Prec@1 61.2324	Prec@5 81.7782	
+Val: [218]	Time 14.977	Data 3.106	Loss 0.984	Accuracy 0.7899	Prec@1 78.9891	Prec@5 94.3650	
+Best accuracy: [79.739]	
+Starting epoch number: 220 Learning rate: 0.000125
+Train: [219]	Time 74.220	Data 37.826	Loss 1.510	Accuracy 0.6147	Prec@1 61.4677	Prec@5 81.7928	
+Val: [219]	Time 14.299	Data 2.502	Loss 1.095	Accuracy 0.7672	Prec@1 76.7238	Prec@5 93.5580	
+Best accuracy: [79.739]	
+Starting epoch number: 221 Learning rate: 0.000125
+Train: [220]	Time 74.673	Data 38.242	Loss 1.508	Accuracy 0.6134	Prec@1 61.3406	Prec@5 81.8600	
+Val: [220]	Time 14.711	Data 2.889	Loss 1.264	Accuracy 0.7399	Prec@1 73.9912	Prec@5 92.4961	
+Best accuracy: [79.739]	
+Starting epoch number: 222 Learning rate: 0.000125
+Train: [221]	Time 73.138	Data 36.755	Loss 1.520	Accuracy 0.6098	Prec@1 60.9840	Prec@5 81.6452	
+Val: [221]	Time 14.948	Data 3.201	Loss 1.123	Accuracy 0.7664	Prec@1 76.6388	Prec@5 93.2890	
+Best accuracy: [79.739]	
+Starting epoch number: 223 Learning rate: 0.000125
+Train: [222]	Time 72.529	Data 36.077	Loss 1.515	Accuracy 0.6130	Prec@1 61.3026	Prec@5 81.7387	
+Val: [222]	Time 14.283	Data 2.519	Loss 1.046	Accuracy 0.7788	Prec@1 77.8848	Prec@5 93.8270	
+Best accuracy: [79.739]	
+Starting epoch number: 224 Learning rate: 0.000125
+Train: [223]	Time 69.981	Data 33.554	Loss 1.509	Accuracy 0.6132	Prec@1 61.3230	Prec@5 81.8557	
+Val: [223]	Time 14.307	Data 2.491	Loss 1.021	Accuracy 0.7886	Prec@1 78.8617	Prec@5 94.2376	
+Best accuracy: [79.739]	
+Starting epoch number: 225 Learning rate: 0.000125
+Train: [224]	Time 70.582	Data 34.059	Loss 1.510	Accuracy 0.6122	Prec@1 61.2222	Prec@5 82.1187	
+Val: [224]	Time 14.205	Data 2.491	Loss 0.999	Accuracy 0.7847	Prec@1 78.4652	Prec@5 94.3084	
+Best accuracy: [79.739]	
+Starting epoch number: 226 Learning rate: 0.000125
+Train: [225]	Time 71.225	Data 34.715	Loss 1.512	Accuracy 0.6143	Prec@1 61.4312	Prec@5 81.9053	
+Val: [225]	Time 13.466	Data 1.717	Loss 1.113	Accuracy 0.7694	Prec@1 76.9361	Prec@5 93.3739	
+Best accuracy: [79.739]	
+Starting epoch number: 227 Learning rate: 0.000125
+Train: [226]	Time 71.244	Data 34.775	Loss 1.514	Accuracy 0.6143	Prec@1 61.4327	Prec@5 81.7636	
+Val: [226]	Time 15.308	Data 3.565	Loss 0.999	Accuracy 0.7864	Prec@1 78.6351	Prec@5 94.5632	
+Best accuracy: [79.739]	
+Starting epoch number: 228 Learning rate: 0.000125
+Train: [227]	Time 79.027	Data 42.598	Loss 1.512	Accuracy 0.6124	Prec@1 61.2353	Prec@5 81.8820	
+Val: [227]	Time 14.181	Data 2.417	Loss 1.191	Accuracy 0.7460	Prec@1 74.6000	Prec@5 92.3120	
+Best accuracy: [79.739]	
+Starting epoch number: 229 Learning rate: 0.000125
+Train: [228]	Time 74.983	Data 38.558	Loss 1.521	Accuracy 0.6113	Prec@1 61.1330	Prec@5 81.6145	
+Val: [228]	Time 15.855	Data 4.089	Loss 1.080	Accuracy 0.7728	Prec@1 77.2759	Prec@5 93.6288	
+Best accuracy: [79.739]	
+Starting epoch number: 230 Learning rate: 0.000125
+Train: [229]	Time 96.796	Data 60.428	Loss 1.500	Accuracy 0.6169	Prec@1 61.6884	Prec@5 82.0515	
+Val: [229]	Time 14.803	Data 3.037	Loss 1.046	Accuracy 0.7864	Prec@1 78.6351	Prec@5 93.7562	
+Best accuracy: [79.739]	
+Starting epoch number: 231 Learning rate: 0.000125
+Train: [230]	Time 126.153	Data 89.915	Loss 1.509	Accuracy 0.6135	Prec@1 61.3464	Prec@5 81.7855	
+Val: [230]	Time 18.778	Data 6.939	Loss 1.161	Accuracy 0.7611	Prec@1 76.1150	Prec@5 92.7934	
+Best accuracy: [79.739]	
+Starting epoch number: 232 Learning rate: 0.000125
+Train: [231]	Time 77.329	Data 41.019	Loss 1.513	Accuracy 0.6134	Prec@1 61.3435	Prec@5 81.7840	
+Val: [231]	Time 14.558	Data 2.686	Loss 1.030	Accuracy 0.7831	Prec@1 78.3095	Prec@5 93.8270	
+Best accuracy: [79.739]	
+Starting epoch number: 233 Learning rate: 0.000125
+Train: [232]	Time 75.515	Data 39.157	Loss 1.516	Accuracy 0.6134	Prec@1 61.3406	Prec@5 81.7738	
+Val: [232]	Time 14.822	Data 3.004	Loss 1.020	Accuracy 0.7882	Prec@1 78.8192	Prec@5 93.9119	
+Best accuracy: [79.739]	
+Starting epoch number: 234 Learning rate: 0.000125
+Train: [233]	Time 73.976	Data 37.622	Loss 1.513	Accuracy 0.6121	Prec@1 61.2061	Prec@5 81.8162	
+Val: [233]	Time 14.629	Data 2.840	Loss 0.968	Accuracy 0.7941	Prec@1 79.4138	Prec@5 94.4641	
+Best accuracy: [79.739]	
+Starting epoch number: 235 Learning rate: 0.000125
+Train: [234]	Time 73.607	Data 37.257	Loss 1.506	Accuracy 0.6134	Prec@1 61.3450	Prec@5 81.8893	
+Val: [234]	Time 14.354	Data 2.578	Loss 0.988	Accuracy 0.7872	Prec@1 78.7201	Prec@5 94.4075	
+Best accuracy: [79.739]	
+Starting epoch number: 236 Learning rate: 0.000125
+Train: [235]	Time 73.300	Data 36.924	Loss 1.507	Accuracy 0.6155	Prec@1 61.5525	Prec@5 81.8951	
+Val: [235]	Time 13.594	Data 1.800	Loss 2.247	Accuracy 0.5342	Prec@1 53.4192	Prec@5 77.9980	
+Best accuracy: [79.739]	
+Starting epoch number: 237 Learning rate: 0.000125
+Train: [236]	Time 72.462	Data 35.993	Loss 1.503	Accuracy 0.6142	Prec@1 61.4224	Prec@5 82.1334	
+Val: [236]	Time 14.459	Data 2.680	Loss 0.984	Accuracy 0.7926	Prec@1 79.2581	Prec@5 94.4358	
+Best accuracy: [79.739]	
+Starting epoch number: 238 Learning rate: 0.000125
+Train: [237]	Time 73.704	Data 37.301	Loss 1.511	Accuracy 0.6108	Prec@1 61.0760	Prec@5 81.8074	
+Val: [237]	Time 14.093	Data 2.348	Loss 1.004	Accuracy 0.7882	Prec@1 78.8192	Prec@5 94.5207	
+Best accuracy: [79.739]	
+Starting epoch number: 239 Learning rate: 0.000125
+Train: [238]	Time 72.941	Data 36.526	Loss 1.512	Accuracy 0.6157	Prec@1 61.5730	Prec@5 81.8206	
+Val: [238]	Time 14.348	Data 2.628	Loss 1.066	Accuracy 0.7835	Prec@1 78.3520	Prec@5 93.6712	
+Best accuracy: [79.739]	
+Starting epoch number: 240 Learning rate: 0.000125
+Train: [239]	Time 70.055	Data 33.528	Loss 1.521	Accuracy 0.6110	Prec@1 61.1009	Prec@5 81.7080	
+Val: [239]	Time 14.389	Data 2.651	Loss 1.063	Accuracy 0.7719	Prec@1 77.1910	Prec@5 94.0394	
+Best accuracy: [79.739]	
+Starting epoch number: 241 Learning rate: 0.000125
+Train: [240]	Time 72.256	Data 35.794	Loss 1.501	Accuracy 0.6163	Prec@1 61.6314	Prec@5 82.0442	
+Val: [240]	Time 13.846	Data 2.109	Loss 1.560	Accuracy 0.6670	Prec@1 66.6997	Prec@5 89.2680	
+Best accuracy: [79.739]	
+Starting epoch number: 242 Learning rate: 0.000125
+Train: [241]	Time 71.315	Data 34.841	Loss 1.509	Accuracy 0.6127	Prec@1 61.2690	Prec@5 81.8060	
+Val: [241]	Time 14.692	Data 2.916	Loss 0.960	Accuracy 0.7956	Prec@1 79.5554	Prec@5 94.4924	
+Best accuracy: [79.739]	
+Starting epoch number: 243 Learning rate: 0.000125
+Train: [242]	Time 72.243	Data 35.828	Loss 1.497	Accuracy 0.6167	Prec@1 61.6651	Prec@5 82.2225	
+Val: [242]	Time 14.111	Data 2.385	Loss 1.048	Accuracy 0.7769	Prec@1 77.6865	Prec@5 93.7562	
+Best accuracy: [79.739]	
+Starting epoch number: 244 Learning rate: 0.000125
+Train: [243]	Time 73.114	Data 36.671	Loss 1.505	Accuracy 0.6146	Prec@1 61.4604	Prec@5 81.9200	
+Val: [243]	Time 14.544	Data 2.798	Loss 1.005	Accuracy 0.7866	Prec@1 78.6635	Prec@5 94.2801	
+Best accuracy: [79.739]	
+Starting epoch number: 245 Learning rate: 0.000125
+Train: [244]	Time 71.236	Data 34.792	Loss 1.504	Accuracy 0.6157	Prec@1 61.5657	Prec@5 81.9243	
+Val: [244]	Time 14.730	Data 2.996	Loss 0.948	Accuracy 0.8049	Prec@1 80.4899	Prec@5 94.5774	
+Best accuracy: [80.490]	
+Starting epoch number: 246 Learning rate: 0.000125
+Train: [245]	Time 70.188	Data 33.734	Loss 1.510	Accuracy 0.6123	Prec@1 61.2324	Prec@5 81.8717	
+Val: [245]	Time 14.244	Data 2.510	Loss 1.268	Accuracy 0.7283	Prec@1 72.8302	Prec@5 91.7316	
+Best accuracy: [80.490]	
+Starting epoch number: 247 Learning rate: 0.000125
+Train: [246]	Time 72.287	Data 35.837	Loss 1.500	Accuracy 0.6151	Prec@1 61.5116	Prec@5 82.0632	
+Val: [246]	Time 14.738	Data 2.944	Loss 0.966	Accuracy 0.7963	Prec@1 79.6262	Prec@5 94.5349	
+Best accuracy: [80.490]	
+Starting epoch number: 248 Learning rate: 0.000125
+Train: [247]	Time 74.695	Data 38.296	Loss 1.500	Accuracy 0.6154	Prec@1 61.5394	Prec@5 81.9068	
+Val: [247]	Time 14.173	Data 2.364	Loss 0.957	Accuracy 0.7957	Prec@1 79.5696	Prec@5 94.6340	
+Best accuracy: [80.490]	
+Starting epoch number: 249 Learning rate: 0.000125
+Train: [248]	Time 72.499	Data 36.123	Loss 1.511	Accuracy 0.6119	Prec@1 61.1944	Prec@5 81.9258	
+Val: [248]	Time 14.511	Data 2.679	Loss 1.128	Accuracy 0.7624	Prec@1 76.2424	Prec@5 93.0766	
+Best accuracy: [80.490]	
+Starting epoch number: 250 Learning rate: 0.000125
+Train: [249]	Time 72.120	Data 35.653	Loss 1.511	Accuracy 0.6141	Prec@1 61.4122	Prec@5 81.7358	
+Val: [249]	Time 13.944	Data 2.210	Loss 0.993	Accuracy 0.7900	Prec@1 79.0033	Prec@5 94.4500	
+Best accuracy: [80.490]	
+Starting epoch number: 251 Learning rate: 6.25e-05
+Train: [250]	Time 71.456	Data 34.984	Loss 1.478	Accuracy 0.6204	Prec@1 62.0363	Prec@5 82.4125	
+Val: [250]	Time 14.296	Data 2.551	Loss 0.965	Accuracy 0.7961	Prec@1 79.6121	Prec@5 94.4783	
+Best accuracy: [80.490]	
+Starting epoch number: 252 Learning rate: 6.25e-05
+Train: [251]	Time 71.518	Data 35.051	Loss 1.489	Accuracy 0.6189	Prec@1 61.8872	Prec@5 82.1465	
+Val: [251]	Time 14.889	Data 3.146	Loss 1.217	Accuracy 0.7453	Prec@1 74.5292	Prec@5 92.4961	
+Best accuracy: [80.490]	
+Starting epoch number: 253 Learning rate: 6.25e-05
+Train: [252]	Time 69.399	Data 33.063	Loss 1.493	Accuracy 0.6176	Prec@1 61.7615	Prec@5 82.0632	
+Val: [252]	Time 14.295	Data 2.545	Loss 1.002	Accuracy 0.7956	Prec@1 79.5554	Prec@5 94.2093	
+Best accuracy: [80.490]	
+Starting epoch number: 254 Learning rate: 6.25e-05
+Train: [253]	Time 71.832	Data 35.414	Loss 1.478	Accuracy 0.6214	Prec@1 62.1372	Prec@5 82.3234	
+Val: [253]	Time 14.086	Data 2.316	Loss 1.079	Accuracy 0.7773	Prec@1 77.7290	Prec@5 93.8695	
+Best accuracy: [80.490]	
+Starting epoch number: 255 Learning rate: 6.25e-05
+Train: [254]	Time 75.680	Data 39.211	Loss 1.489	Accuracy 0.6194	Prec@1 61.9369	Prec@5 82.1304	
+Val: [254]	Time 14.628	Data 2.847	Loss 0.976	Accuracy 0.7991	Prec@1 79.9094	Prec@5 94.2376	
+Best accuracy: [80.490]	
+Starting epoch number: 256 Learning rate: 6.25e-05
+Train: [255]	Time 70.738	Data 34.238	Loss 1.492	Accuracy 0.6185	Prec@1 61.8536	Prec@5 82.1831	
+Val: [255]	Time 13.528	Data 1.712	Loss 0.993	Accuracy 0.7927	Prec@1 79.2723	Prec@5 94.3792	
+Best accuracy: [80.490]	
+Starting epoch number: 257 Learning rate: 6.25e-05
+Train: [256]	Time 70.530	Data 34.090	Loss 1.492	Accuracy 0.6175	Prec@1 61.7469	Prec@5 82.1728	
+Val: [256]	Time 14.359	Data 2.637	Loss 3.552	Accuracy 0.2721	Prec@1 27.2122	Prec@5 55.7129	
+Best accuracy: [80.490]	
+Starting epoch number: 258 Learning rate: 6.25e-05
+Train: [257]	Time 70.728	Data 34.299	Loss 1.486	Accuracy 0.6199	Prec@1 61.9881	Prec@5 82.1085	
+Val: [257]	Time 14.189	Data 2.412	Loss 1.006	Accuracy 0.7855	Prec@1 78.5502	Prec@5 94.0394	
+Best accuracy: [80.490]	
+Starting epoch number: 259 Learning rate: 6.25e-05
+Train: [258]	Time 69.697	Data 33.258	Loss 1.486	Accuracy 0.6204	Prec@1 62.0392	Prec@5 82.2079	
+Val: [258]	Time 14.457	Data 2.730	Loss 1.084	Accuracy 0.7753	Prec@1 77.5308	Prec@5 93.7420	
+Best accuracy: [80.490]	
+Starting epoch number: 260 Learning rate: 6.25e-05
+Train: [259]	Time 71.605	Data 35.171	Loss 1.473	Accuracy 0.6220	Prec@1 62.2044	Prec@5 82.4724	
+Val: [259]	Time 14.840	Data 3.074	Loss 1.202	Accuracy 0.7385	Prec@1 73.8496	Prec@5 92.2696	
+Best accuracy: [80.490]	
+Starting epoch number: 261 Learning rate: 6.25e-05
+Train: [260]	Time 73.344	Data 36.859	Loss 1.482	Accuracy 0.6215	Prec@1 62.1532	Prec@5 82.2971	
+Val: [260]	Time 14.380	Data 2.547	Loss 0.963	Accuracy 0.7981	Prec@1 79.8103	Prec@5 94.3792	
+Best accuracy: [80.490]	
+Starting epoch number: 262 Learning rate: 6.25e-05
+Train: [261]	Time 73.760	Data 37.434	Loss 1.478	Accuracy 0.6210	Prec@1 62.0962	Prec@5 82.3760	
+Val: [261]	Time 14.554	Data 2.770	Loss 0.975	Accuracy 0.7963	Prec@1 79.6262	Prec@5 94.5207	
+Best accuracy: [80.490]	
+Starting epoch number: 263 Learning rate: 6.25e-05
+Train: [262]	Time 75.025	Data 38.691	Loss 1.488	Accuracy 0.6190	Prec@1 61.9018	Prec@5 82.1319	
+Val: [262]	Time 14.998	Data 3.196	Loss 1.039	Accuracy 0.7906	Prec@1 79.0599	Prec@5 94.0394	
+Best accuracy: [80.490]	
+Starting epoch number: 264 Learning rate: 6.25e-05
+Train: [263]	Time 74.318	Data 37.961	Loss 1.481	Accuracy 0.6197	Prec@1 61.9691	Prec@5 82.3263	
+Val: [263]	Time 14.184	Data 2.324	Loss 1.384	Accuracy 0.7078	Prec@1 70.7773	Prec@5 90.7263	
+Best accuracy: [80.490]	
+Starting epoch number: 265 Learning rate: 6.25e-05
+Train: [264]	Time 74.463	Data 38.030	Loss 1.495	Accuracy 0.6175	Prec@1 61.7469	Prec@5 82.0413	
+Val: [264]	Time 14.462	Data 2.708	Loss 0.944	Accuracy 0.7992	Prec@1 79.9235	Prec@5 95.1012	
+Best accuracy: [80.490]	
+Starting epoch number: 266 Learning rate: 6.25e-05
+Train: [265]	Time 73.743	Data 37.329	Loss 1.481	Accuracy 0.6200	Prec@1 61.9983	Prec@5 82.3584	
+Val: [265]	Time 14.246	Data 2.469	Loss 0.959	Accuracy 0.8007	Prec@1 80.0651	Prec@5 94.5915	
+Best accuracy: [80.490]	
+Starting epoch number: 267 Learning rate: 6.25e-05
+Train: [266]	Time 75.724	Data 39.312	Loss 1.486	Accuracy 0.6190	Prec@1 61.8975	Prec@5 82.3380	
+Val: [266]	Time 14.128	Data 2.299	Loss 0.975	Accuracy 0.8011	Prec@1 80.1076	Prec@5 94.1526	
+Best accuracy: [80.490]	
+Starting epoch number: 268 Learning rate: 6.25e-05
+Train: [267]	Time 74.902	Data 38.493	Loss 1.483	Accuracy 0.6210	Prec@1 62.0977	Prec@5 82.2137	
+Val: [267]	Time 14.511	Data 2.690	Loss 0.954	Accuracy 0.8050	Prec@1 80.5040	Prec@5 94.7473	
+Best accuracy: [80.504]	
+Starting epoch number: 269 Learning rate: 6.25e-05
+Train: [268]	Time 73.632	Data 37.229	Loss 1.485	Accuracy 0.6192	Prec@1 61.9179	Prec@5 82.1714	
+Val: [268]	Time 15.140	Data 3.312	Loss 0.953	Accuracy 0.7984	Prec@1 79.8386	Prec@5 94.3508	
+Best accuracy: [80.504]	
+Starting epoch number: 270 Learning rate: 6.25e-05
+Train: [269]	Time 72.872	Data 36.447	Loss 1.485	Accuracy 0.6185	Prec@1 61.8463	Prec@5 82.3073	
+Val: [269]	Time 14.061	Data 2.299	Loss 0.987	Accuracy 0.7946	Prec@1 79.4563	Prec@5 94.2517	
+Best accuracy: [80.504]	
+Starting epoch number: 271 Learning rate: 6.25e-05
+Train: [270]	Time 71.418	Data 34.925	Loss 1.482	Accuracy 0.6210	Prec@1 62.1035	Prec@5 82.1831	
+Val: [270]	Time 14.848	Data 3.084	Loss 0.957	Accuracy 0.7965	Prec@1 79.6545	Prec@5 94.6057	
+Best accuracy: [80.504]	
+Starting epoch number: 272 Learning rate: 6.25e-05
+Train: [271]	Time 72.651	Data 36.208	Loss 1.490	Accuracy 0.6169	Prec@1 61.6943	Prec@5 82.2854	
+Val: [271]	Time 14.321	Data 2.568	Loss 0.988	Accuracy 0.7924	Prec@1 79.2439	Prec@5 94.5632	
+Best accuracy: [80.504]	
+Starting epoch number: 273 Learning rate: 6.25e-05
+Train: [272]	Time 70.675	Data 34.238	Loss 1.487	Accuracy 0.6199	Prec@1 61.9939	Prec@5 82.1714	
+Val: [272]	Time 13.726	Data 1.997	Loss 0.953	Accuracy 0.7967	Prec@1 79.6687	Prec@5 94.6765	
+Best accuracy: [80.504]	
+Starting epoch number: 274 Learning rate: 6.25e-05
+Train: [273]	Time 74.037	Data 37.630	Loss 1.476	Accuracy 0.6222	Prec@1 62.2190	Prec@5 82.5748	
+Val: [273]	Time 13.894	Data 2.060	Loss 0.984	Accuracy 0.7954	Prec@1 79.5413	Prec@5 94.5207	
+Best accuracy: [80.504]	
+Starting epoch number: 275 Learning rate: 6.25e-05
+Train: [274]	Time 70.807	Data 34.382	Loss 1.485	Accuracy 0.6202	Prec@1 62.0188	Prec@5 82.2561	
+Val: [274]	Time 13.713	Data 1.960	Loss 0.944	Accuracy 0.8025	Prec@1 80.2492	Prec@5 94.7614	
+Best accuracy: [80.504]	
+Starting epoch number: 276 Learning rate: 6.25e-05
+Train: [275]	Time 71.169	Data 34.689	Loss 1.481	Accuracy 0.6194	Prec@1 61.9384	Prec@5 82.2517	
+Val: [275]	Time 15.181	Data 3.379	Loss 0.960	Accuracy 0.7997	Prec@1 79.9660	Prec@5 94.3367	
+Best accuracy: [80.504]	
+Starting epoch number: 277 Learning rate: 6.25e-05
+Train: [276]	Time 73.357	Data 36.947	Loss 1.492	Accuracy 0.6164	Prec@1 61.6402	Prec@5 82.0705	
+Val: [276]	Time 14.114	Data 2.299	Loss 0.967	Accuracy 0.7947	Prec@1 79.4705	Prec@5 94.6340	
+Best accuracy: [80.504]	
+Starting epoch number: 278 Learning rate: 6.25e-05
+Train: [277]	Time 75.070	Data 38.697	Loss 1.489	Accuracy 0.6190	Prec@1 61.8989	Prec@5 82.1743	
+Val: [277]	Time 14.584	Data 2.815	Loss 0.984	Accuracy 0.7944	Prec@1 79.4422	Prec@5 94.4358	
+Best accuracy: [80.504]	
+Starting epoch number: 279 Learning rate: 6.25e-05
+Train: [278]	Time 72.794	Data 36.434	Loss 1.487	Accuracy 0.6193	Prec@1 61.9340	Prec@5 82.1100	
+Val: [278]	Time 14.759	Data 2.957	Loss 1.003	Accuracy 0.7912	Prec@1 79.1165	Prec@5 93.9544	
+Best accuracy: [80.504]	
+Starting epoch number: 280 Learning rate: 6.25e-05
+Train: [279]	Time 76.632	Data 40.284	Loss 1.488	Accuracy 0.6165	Prec@1 61.6534	Prec@5 82.2327	
+Val: [279]	Time 14.905	Data 3.075	Loss 1.087	Accuracy 0.7818	Prec@1 78.1821	Prec@5 93.3739	
+Best accuracy: [80.504]	
+Starting epoch number: 281 Learning rate: 6.25e-05
+Train: [280]	Time 75.723	Data 39.318	Loss 1.485	Accuracy 0.6191	Prec@1 61.9121	Prec@5 82.2298	
+Val: [280]	Time 15.106	Data 3.266	Loss 0.972	Accuracy 0.7953	Prec@1 79.5271	Prec@5 94.7190	
+Best accuracy: [80.504]	
+Starting epoch number: 282 Learning rate: 6.25e-05
+Train: [281]	Time 76.107	Data 39.750	Loss 1.488	Accuracy 0.6182	Prec@1 61.8171	Prec@5 82.1684	
+Val: [281]	Time 14.841	Data 3.056	Loss 0.998	Accuracy 0.7956	Prec@1 79.5554	Prec@5 94.2093	
+Best accuracy: [80.504]	
+Starting epoch number: 283 Learning rate: 6.25e-05
+Train: [282]	Time 73.081	Data 36.649	Loss 1.475	Accuracy 0.6203	Prec@1 62.0334	Prec@5 82.4988	
+Val: [282]	Time 17.584	Data 5.752	Loss 1.056	Accuracy 0.7832	Prec@1 78.3237	Prec@5 93.7279	
+Best accuracy: [80.504]	
+Starting epoch number: 284 Learning rate: 6.25e-05
+Train: [283]	Time 71.556	Data 35.095	Loss 1.486	Accuracy 0.6200	Prec@1 61.9954	Prec@5 82.1684	
+Val: [283]	Time 13.923	Data 2.196	Loss 0.970	Accuracy 0.7964	Prec@1 79.6404	Prec@5 94.6057	
+Best accuracy: [80.504]	
+Starting epoch number: 285 Learning rate: 6.25e-05
+Train: [284]	Time 73.717	Data 37.259	Loss 1.482	Accuracy 0.6210	Prec@1 62.1035	Prec@5 82.3526	
+Val: [284]	Time 17.110	Data 5.322	Loss 0.993	Accuracy 0.7926	Prec@1 79.2581	Prec@5 94.7190	
+Best accuracy: [80.504]	
+Starting epoch number: 286 Learning rate: 6.25e-05
+Train: [285]	Time 70.774	Data 34.320	Loss 1.469	Accuracy 0.6222	Prec@1 62.2161	Prec@5 82.4914	
+Val: [285]	Time 13.984	Data 2.216	Loss 0.976	Accuracy 0.7974	Prec@1 79.7395	Prec@5 94.6623	
+Best accuracy: [80.504]	
+Starting epoch number: 287 Learning rate: 6.25e-05
+Train: [286]	Time 70.932	Data 34.418	Loss 1.485	Accuracy 0.6202	Prec@1 62.0232	Prec@5 82.1494	
+Val: [286]	Time 13.276	Data 1.551	Loss 1.013	Accuracy 0.7872	Prec@1 78.7201	Prec@5 94.3650	
+Best accuracy: [80.504]	
+Starting epoch number: 288 Learning rate: 6.25e-05
+Train: [287]	Time 71.394	Data 35.010	Loss 1.499	Accuracy 0.6167	Prec@1 61.6724	Prec@5 81.9477	
+Val: [287]	Time 14.092	Data 2.354	Loss 0.958	Accuracy 0.7988	Prec@1 79.8811	Prec@5 94.6623	
+Best accuracy: [80.504]	
+Starting epoch number: 289 Learning rate: 6.25e-05
+Train: [288]	Time 70.864	Data 34.381	Loss 1.480	Accuracy 0.6203	Prec@1 62.0305	Prec@5 82.2313	
+Val: [288]	Time 14.437	Data 2.689	Loss 0.983	Accuracy 0.7909	Prec@1 79.0882	Prec@5 94.7756	
+Best accuracy: [80.504]	
+Starting epoch number: 290 Learning rate: 6.25e-05
+Train: [289]	Time 70.879	Data 34.471	Loss 1.480	Accuracy 0.6215	Prec@1 62.1459	Prec@5 82.2240	
+Val: [289]	Time 15.811	Data 4.001	Loss 0.973	Accuracy 0.7973	Prec@1 79.7253	Prec@5 94.7048	
+Best accuracy: [80.504]	
+Starting epoch number: 291 Learning rate: 6.25e-05
+Train: [290]	Time 73.037	Data 36.561	Loss 1.483	Accuracy 0.6188	Prec@1 61.8799	Prec@5 82.2605	
+Val: [290]	Time 14.578	Data 2.760	Loss 0.968	Accuracy 0.7994	Prec@1 79.9377	Prec@5 94.9455	
+Best accuracy: [80.504]	
+Starting epoch number: 292 Learning rate: 6.25e-05
+Train: [291]	Time 73.506	Data 37.111	Loss 1.478	Accuracy 0.6217	Prec@1 62.1664	Prec@5 82.2094	
+Val: [291]	Time 14.524	Data 2.674	Loss 0.951	Accuracy 0.8031	Prec@1 80.3058	Prec@5 94.6765	
+Best accuracy: [80.504]	
+Starting epoch number: 293 Learning rate: 6.25e-05
+Train: [292]	Time 74.950	Data 38.569	Loss 1.479	Accuracy 0.6214	Prec@1 62.1401	Prec@5 82.2561	
+Val: [292]	Time 14.061	Data 2.298	Loss 1.110	Accuracy 0.7722	Prec@1 77.2193	Prec@5 93.3314	
+Best accuracy: [80.504]	
+Starting epoch number: 294 Learning rate: 6.25e-05
+Train: [293]	Time 71.286	Data 34.854	Loss 1.477	Accuracy 0.6218	Prec@1 62.1766	Prec@5 82.3731	
+Val: [293]	Time 14.384	Data 2.637	Loss 1.019	Accuracy 0.7837	Prec@1 78.3661	Prec@5 94.1668	
+Best accuracy: [80.504]	
+Starting epoch number: 295 Learning rate: 6.25e-05
+Train: [294]	Time 70.032	Data 33.608	Loss 1.476	Accuracy 0.6202	Prec@1 62.0158	Prec@5 82.2503	
+Val: [294]	Time 14.556	Data 2.763	Loss 0.973	Accuracy 0.7984	Prec@1 79.8386	Prec@5 94.7897	
+Best accuracy: [80.504]	
+Starting epoch number: 296 Learning rate: 6.25e-05
+Train: [295]	Time 69.891	Data 33.359	Loss 1.489	Accuracy 0.6176	Prec@1 61.7571	Prec@5 82.0661	
+Val: [295]	Time 14.458	Data 2.673	Loss 0.966	Accuracy 0.7975	Prec@1 79.7536	Prec@5 94.2517	
+Best accuracy: [80.504]	
+Starting epoch number: 297 Learning rate: 6.25e-05
+Train: [296]	Time 73.311	Data 36.866	Loss 1.481	Accuracy 0.6204	Prec@1 62.0407	Prec@5 82.4418	
+Val: [296]	Time 14.802	Data 2.998	Loss 0.968	Accuracy 0.8004	Prec@1 80.0368	Prec@5 94.6340	
+Best accuracy: [80.504]	
+Starting epoch number: 298 Learning rate: 6.25e-05
+Train: [297]	Time 74.181	Data 37.749	Loss 1.479	Accuracy 0.6215	Prec@1 62.1459	Prec@5 82.2927	
+Val: [297]	Time 14.875	Data 3.062	Loss 0.999	Accuracy 0.7917	Prec@1 79.1732	Prec@5 94.3084	
+Best accuracy: [80.504]	
+Starting epoch number: 299 Learning rate: 6.25e-05
+Train: [298]	Time 71.383	Data 34.924	Loss 1.487	Accuracy 0.6207	Prec@1 62.0743	Prec@5 82.1377	
+Val: [298]	Time 14.354	Data 2.593	Loss 0.988	Accuracy 0.7897	Prec@1 78.9749	Prec@5 94.6057	
+Best accuracy: [80.504]	
+Starting epoch number: 300 Learning rate: 6.25e-05
+Train: [299]	Time 72.534	Data 36.072	Loss 1.476	Accuracy 0.6218	Prec@1 62.1795	Prec@5 82.3307	
+Val: [299]	Time 15.216	Data 3.362	Loss 1.004	Accuracy 0.7916	Prec@1 79.1590	Prec@5 94.3084	
+Best accuracy: [80.504]	
+Starting epoch number: 301 Learning rate: 5e-05
+Train: [300]	Time 71.417	Data 34.878	Loss 1.474	Accuracy 0.6214	Prec@1 62.1386	Prec@5 82.4213	
+Val: [300]	Time 13.957	Data 2.220	Loss 0.994	Accuracy 0.7973	Prec@1 79.7253	Prec@5 94.2093	
+Best accuracy: [80.504]	
+Starting epoch number: 302 Learning rate: 5e-05
+Train: [301]	Time 73.323	Data 36.904	Loss 1.470	Accuracy 0.6238	Prec@1 62.3827	Prec@5 82.4695	
+Val: [301]	Time 15.424	Data 3.635	Loss 0.999	Accuracy 0.7930	Prec@1 79.3006	Prec@5 94.2801	
+Best accuracy: [80.504]	
+Starting epoch number: 303 Learning rate: 5e-05
+Train: [302]	Time 74.127	Data 37.730	Loss 1.475	Accuracy 0.6206	Prec@1 62.0641	Prec@5 82.2927	
+Val: [302]	Time 14.994	Data 3.213	Loss 0.992	Accuracy 0.7937	Prec@1 79.3714	Prec@5 94.1668	
+Best accuracy: [80.504]	
+Starting epoch number: 304 Learning rate: 5e-05
+Train: [303]	Time 72.376	Data 36.038	Loss 1.483	Accuracy 0.6219	Prec@1 62.1883	Prec@5 82.3044	
+Val: [303]	Time 14.749	Data 2.946	Loss 1.350	Accuracy 0.7129	Prec@1 71.2870	Prec@5 91.2077	
+Best accuracy: [80.504]	
+Starting epoch number: 305 Learning rate: 5e-05
+Train: [304]	Time 72.789	Data 36.352	Loss 1.470	Accuracy 0.6221	Prec@1 62.2088	Prec@5 82.4038	
+Val: [304]	Time 14.806	Data 3.036	Loss 0.978	Accuracy 0.7939	Prec@1 79.3855	Prec@5 94.5774	
+Best accuracy: [80.504]	
+Starting epoch number: 306 Learning rate: 5e-05
+Train: [305]	Time 74.113	Data 37.720	Loss 1.478	Accuracy 0.6208	Prec@1 62.0758	Prec@5 82.2415	
+Val: [305]	Time 14.591	Data 2.783	Loss 0.949	Accuracy 0.8022	Prec@1 80.2209	Prec@5 94.6482	
+Best accuracy: [80.504]	
+Starting epoch number: 307 Learning rate: 5e-05
+Train: [306]	Time 74.392	Data 37.993	Loss 1.479	Accuracy 0.6211	Prec@1 62.1108	Prec@5 82.2795	
+Val: [306]	Time 14.634	Data 2.804	Loss 0.968	Accuracy 0.7930	Prec@1 79.3006	Prec@5 94.5491	
+Best accuracy: [80.504]	
+Starting epoch number: 308 Learning rate: 5e-05
+Train: [307]	Time 76.303	Data 39.903	Loss 1.484	Accuracy 0.6203	Prec@1 62.0261	Prec@5 82.3789	
+Val: [307]	Time 14.187	Data 2.298	Loss 0.979	Accuracy 0.7980	Prec@1 79.7961	Prec@5 94.4924	
+Best accuracy: [80.504]	
+Starting epoch number: 309 Learning rate: 5e-05
+Train: [308]	Time 73.465	Data 37.052	Loss 1.469	Accuracy 0.6236	Prec@1 62.3608	Prec@5 82.3701	
+Val: [308]	Time 13.791	Data 2.039	Loss 0.957	Accuracy 0.8005	Prec@1 80.0510	Prec@5 94.5349	
+Best accuracy: [80.504]	
+Starting epoch number: 310 Learning rate: 5e-05
+Train: [309]	Time 73.751	Data 37.283	Loss 1.481	Accuracy 0.6214	Prec@1 62.1357	Prec@5 82.2430	
+Val: [309]	Time 15.244	Data 3.303	Loss 0.965	Accuracy 0.8012	Prec@1 80.1218	Prec@5 94.3367	
+Best accuracy: [80.504]	
+Starting epoch number: 311 Learning rate: 5e-05
+Train: [310]	Time 74.299	Data 37.844	Loss 1.474	Accuracy 0.6206	Prec@1 62.0582	Prec@5 82.3000	
+Val: [310]	Time 15.658	Data 3.856	Loss 0.950	Accuracy 0.8032	Prec@1 80.3200	Prec@5 94.6906	
+Best accuracy: [80.504]	
+Starting epoch number: 312 Learning rate: 5e-05
+Train: [311]	Time 72.273	Data 35.820	Loss 1.474	Accuracy 0.6217	Prec@1 62.1722	Prec@5 82.4783	
+Val: [311]	Time 14.186	Data 2.442	Loss 0.972	Accuracy 0.7967	Prec@1 79.6687	Prec@5 94.4500	
+Best accuracy: [80.504]	
+Starting epoch number: 313 Learning rate: 5e-05
+Train: [312]	Time 73.188	Data 36.678	Loss 1.485	Accuracy 0.6200	Prec@1 61.9954	Prec@5 82.1787	
+Val: [312]	Time 14.183	Data 2.394	Loss 0.973	Accuracy 0.7948	Prec@1 79.4846	Prec@5 94.4783	
+Best accuracy: [80.504]	
+Starting epoch number: 314 Learning rate: 5e-05
+Train: [313]	Time 69.652	Data 33.132	Loss 1.478	Accuracy 0.6213	Prec@1 62.1342	Prec@5 82.4651	
+Val: [313]	Time 14.288	Data 2.537	Loss 0.960	Accuracy 0.8049	Prec@1 80.4899	Prec@5 94.7614	
+Best accuracy: [80.504]	
+Starting epoch number: 315 Learning rate: 5e-05
+Train: [314]	Time 71.211	Data 34.712	Loss 1.483	Accuracy 0.6206	Prec@1 62.0612	Prec@5 82.1012	
+Val: [314]	Time 14.065	Data 2.317	Loss 0.976	Accuracy 0.7991	Prec@1 79.9094	Prec@5 94.7756	
+Best accuracy: [80.504]	
+Starting epoch number: 316 Learning rate: 5e-05
+Train: [315]	Time 69.153	Data 32.678	Loss 1.487	Accuracy 0.6208	Prec@1 62.0831	Prec@5 82.2225	
+Val: [315]	Time 14.060	Data 2.309	Loss 0.963	Accuracy 0.7994	Prec@1 79.9377	Prec@5 94.9313	
+Best accuracy: [80.504]	
+Starting epoch number: 317 Learning rate: 5e-05
+Train: [316]	Time 70.517	Data 34.069	Loss 1.485	Accuracy 0.6208	Prec@1 62.0802	Prec@5 82.2649	
+Val: [316]	Time 14.202	Data 2.434	Loss 1.007	Accuracy 0.7934	Prec@1 79.3431	Prec@5 94.2659	
+Best accuracy: [80.504]	
+Starting epoch number: 318 Learning rate: 5e-05
+Train: [317]	Time 69.372	Data 32.877	Loss 1.481	Accuracy 0.6219	Prec@1 62.1869	Prec@5 82.2824	
+Val: [317]	Time 13.807	Data 2.060	Loss 0.971	Accuracy 0.7909	Prec@1 79.0882	Prec@5 94.5491	
+Best accuracy: [80.504]	
+Starting epoch number: 319 Learning rate: 5e-05
+Train: [318]	Time 70.744	Data 34.303	Loss 1.480	Accuracy 0.6189	Prec@1 61.8901	Prec@5 82.3058	
+Val: [318]	Time 14.992	Data 3.281	Loss 0.939	Accuracy 0.8028	Prec@1 80.2775	Prec@5 94.9738	
+Best accuracy: [80.504]	
+Starting epoch number: 320 Learning rate: 5e-05
+Train: [319]	Time 70.119	Data 33.702	Loss 1.480	Accuracy 0.6195	Prec@1 61.9471	Prec@5 82.2634	
+Val: [319]	Time 13.881	Data 2.065	Loss 0.967	Accuracy 0.8005	Prec@1 80.0510	Prec@5 94.7897	
+Best accuracy: [80.504]	
+Starting epoch number: 321 Learning rate: 5e-05
+Train: [320]	Time 71.825	Data 35.391	Loss 1.478	Accuracy 0.6217	Prec@1 62.1664	Prec@5 82.0296	
+Val: [320]	Time 14.658	Data 2.895	Loss 1.181	Accuracy 0.7552	Prec@1 75.5203	Prec@5 91.8873	
+Best accuracy: [80.504]	
+Starting epoch number: 322 Learning rate: 5e-05
+Train: [321]	Time 72.981	Data 36.502	Loss 1.472	Accuracy 0.6248	Prec@1 62.4777	Prec@5 82.4169	
+Val: [321]	Time 13.926	Data 2.166	Loss 0.976	Accuracy 0.7954	Prec@1 79.5413	Prec@5 94.4924	
+Best accuracy: [80.504]	
+Starting epoch number: 323 Learning rate: 5e-05
+Train: [322]	Time 73.067	Data 36.630	Loss 1.475	Accuracy 0.6205	Prec@1 62.0465	Prec@5 82.4476	
+Val: [322]	Time 14.536	Data 2.761	Loss 0.977	Accuracy 0.7965	Prec@1 79.6545	Prec@5 94.7048	
+Best accuracy: [80.504]	
+Starting epoch number: 324 Learning rate: 5e-05
+Train: [323]	Time 78.559	Data 42.163	Loss 1.481	Accuracy 0.6203	Prec@1 62.0319	Prec@5 82.3029	
+Val: [323]	Time 14.474	Data 2.622	Loss 0.932	Accuracy 0.8070	Prec@1 80.7023	Prec@5 94.8605	
+Best accuracy: [80.702]	
+Starting epoch number: 325 Learning rate: 5e-05
+Train: [324]	Time 73.503	Data 37.107	Loss 1.475	Accuracy 0.6214	Prec@1 62.1357	Prec@5 82.3468	
+Val: [324]	Time 14.990	Data 3.166	Loss 1.000	Accuracy 0.7924	Prec@1 79.2439	Prec@5 94.3367	
+Best accuracy: [80.702]	
+Starting epoch number: 326 Learning rate: 5e-05
+Train: [325]	Time 72.368	Data 35.961	Loss 1.474	Accuracy 0.6203	Prec@1 62.0319	Prec@5 82.3175	
+Val: [325]	Time 14.070	Data 2.266	Loss 0.971	Accuracy 0.7974	Prec@1 79.7395	Prec@5 94.4358	
+Best accuracy: [80.702]	
+Starting epoch number: 327 Learning rate: 5e-05
+Train: [326]	Time 70.947	Data 34.522	Loss 1.473	Accuracy 0.6236	Prec@1 62.3579	Prec@5 82.5134	
+Val: [326]	Time 14.439	Data 2.689	Loss 0.980	Accuracy 0.7941	Prec@1 79.4138	Prec@5 94.5774	
+Best accuracy: [80.702]	
+Starting epoch number: 328 Learning rate: 5e-05
+Train: [327]	Time 70.869	Data 34.394	Loss 1.480	Accuracy 0.6205	Prec@1 62.0480	Prec@5 82.3000	
+Val: [327]	Time 14.370	Data 2.636	Loss 1.012	Accuracy 0.7910	Prec@1 79.1024	Prec@5 94.1385	
+Best accuracy: [80.702]	
+Starting epoch number: 329 Learning rate: 5e-05
+Train: [328]	Time 71.047	Data 34.431	Loss 1.475	Accuracy 0.6206	Prec@1 62.0597	Prec@5 82.3380	
+Val: [328]	Time 14.618	Data 2.824	Loss 0.988	Accuracy 0.7941	Prec@1 79.4138	Prec@5 94.4075	
+Best accuracy: [80.702]	
+Starting epoch number: 330 Learning rate: 5e-05
+Train: [329]	Time 71.695	Data 35.074	Loss 1.474	Accuracy 0.6232	Prec@1 62.3184	Prec@5 82.2649	
+Val: [329]	Time 14.237	Data 2.521	Loss 0.953	Accuracy 0.8028	Prec@1 80.2775	Prec@5 94.9455	
+Best accuracy: [80.702]	
+Starting epoch number: 331 Learning rate: 5e-05
+Train: [330]	Time 72.082	Data 35.638	Loss 1.483	Accuracy 0.6185	Prec@1 61.8521	Prec@5 82.2591	
+Val: [330]	Time 14.835	Data 2.933	Loss 0.954	Accuracy 0.7967	Prec@1 79.6687	Prec@5 94.8039	
+Best accuracy: [80.702]	
+Starting epoch number: 332 Learning rate: 5e-05
+Train: [331]	Time 72.143	Data 35.590	Loss 1.478	Accuracy 0.6212	Prec@1 62.1196	Prec@5 82.3541	
+Val: [331]	Time 14.307	Data 2.559	Loss 0.995	Accuracy 0.7958	Prec@1 79.5837	Prec@5 94.0535	
+Best accuracy: [80.702]	
+Starting epoch number: 333 Learning rate: 5e-05
+Train: [332]	Time 71.874	Data 35.402	Loss 1.474	Accuracy 0.6236	Prec@1 62.3579	Prec@5 82.4783	
+Val: [332]	Time 13.773	Data 1.999	Loss 0.964	Accuracy 0.8002	Prec@1 80.0227	Prec@5 94.5632	
+Best accuracy: [80.702]	
+Starting epoch number: 334 Learning rate: 5e-05
+Train: [333]	Time 73.490	Data 37.066	Loss 1.474	Accuracy 0.6233	Prec@1 62.3286	Prec@5 82.3175	
+Val: [333]	Time 13.953	Data 2.126	Loss 1.136	Accuracy 0.7753	Prec@1 77.5308	Prec@5 93.5580	
+Best accuracy: [80.702]	
+Starting epoch number: 335 Learning rate: 5e-05
+Train: [334]	Time 72.695	Data 36.159	Loss 1.482	Accuracy 0.6220	Prec@1 62.2000	Prec@5 82.1714	
+Val: [334]	Time 14.443	Data 2.698	Loss 0.958	Accuracy 0.8056	Prec@1 80.5607	Prec@5 94.8039	
+Best accuracy: [80.702]	
+Starting epoch number: 336 Learning rate: 5e-05
+Train: [335]	Time 70.839	Data 34.341	Loss 1.466	Accuracy 0.6262	Prec@1 62.6209	Prec@5 82.4315	
+Val: [335]	Time 13.822	Data 1.981	Loss 0.983	Accuracy 0.7913	Prec@1 79.1307	Prec@5 94.5066	
+Best accuracy: [80.702]	
+Starting epoch number: 337 Learning rate: 5e-05
+Train: [336]	Time 71.552	Data 35.022	Loss 1.475	Accuracy 0.6232	Prec@1 62.3184	Prec@5 82.2693	
+Val: [336]	Time 14.242	Data 2.517	Loss 0.984	Accuracy 0.7936	Prec@1 79.3572	Prec@5 94.4500	
+Best accuracy: [80.702]	
+Starting epoch number: 338 Learning rate: 5e-05
+Train: [337]	Time 71.165	Data 34.736	Loss 1.474	Accuracy 0.6228	Prec@1 62.2819	Prec@5 82.2707	
+Val: [337]	Time 13.858	Data 2.114	Loss 0.954	Accuracy 0.8011	Prec@1 80.1076	Prec@5 94.6482	
+Best accuracy: [80.702]	
+Starting epoch number: 339 Learning rate: 5e-05
+Train: [338]	Time 71.948	Data 35.503	Loss 1.469	Accuracy 0.6234	Prec@1 62.3389	Prec@5 82.3468	
+Val: [338]	Time 14.886	Data 3.002	Loss 1.010	Accuracy 0.7856	Prec@1 78.5643	Prec@5 94.2093	
+Best accuracy: [80.702]	
+Starting epoch number: 340 Learning rate: 5e-05
+Train: [339]	Time 73.736	Data 37.314	Loss 1.472	Accuracy 0.6242	Prec@1 62.4178	Prec@5 82.5338	
+Val: [339]	Time 14.367	Data 2.622	Loss 0.995	Accuracy 0.7943	Prec@1 79.4280	Prec@5 94.2376	
+Best accuracy: [80.702]	
+Starting epoch number: 341 Learning rate: 5e-05
+Train: [340]	Time 72.969	Data 36.524	Loss 1.481	Accuracy 0.6210	Prec@1 62.1006	Prec@5 82.3424	
+Val: [340]	Time 14.193	Data 2.426	Loss 0.947	Accuracy 0.8032	Prec@1 80.3200	Prec@5 94.8605	
+Best accuracy: [80.702]	
+Starting epoch number: 342 Learning rate: 5e-05
+Train: [341]	Time 75.336	Data 38.943	Loss 1.478	Accuracy 0.6232	Prec@1 62.3228	Prec@5 82.1085	
+Val: [341]	Time 15.543	Data 3.671	Loss 1.016	Accuracy 0.7885	Prec@1 78.8475	Prec@5 94.2234	
+Best accuracy: [80.702]	
+Starting epoch number: 343 Learning rate: 5e-05
+Train: [342]	Time 74.566	Data 38.185	Loss 1.478	Accuracy 0.6191	Prec@1 61.9062	Prec@5 82.2751	
+Val: [342]	Time 13.826	Data 1.987	Loss 0.983	Accuracy 0.7939	Prec@1 79.3855	Prec@5 94.3650	
+Best accuracy: [80.702]	
+Starting epoch number: 344 Learning rate: 5e-05
+Train: [343]	Time 75.231	Data 38.853	Loss 1.479	Accuracy 0.6213	Prec@1 62.1298	Prec@5 82.2298	
+Val: [343]	Time 14.552	Data 2.744	Loss 0.984	Accuracy 0.7937	Prec@1 79.3714	Prec@5 94.6057	
+Best accuracy: [80.702]	
+Starting epoch number: 345 Learning rate: 5e-05
+Train: [344]	Time 73.487	Data 37.021	Loss 1.482	Accuracy 0.6198	Prec@1 61.9764	Prec@5 82.3599	
+Val: [344]	Time 14.028	Data 2.179	Loss 0.999	Accuracy 0.7890	Prec@1 78.9041	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 346 Learning rate: 5e-05
+Train: [345]	Time 74.160	Data 37.740	Loss 1.487	Accuracy 0.6206	Prec@1 62.0641	Prec@5 82.1904	
+Val: [345]	Time 14.942	Data 3.124	Loss 0.975	Accuracy 0.7981	Prec@1 79.8103	Prec@5 94.3933	
+Best accuracy: [80.702]	
+Starting epoch number: 347 Learning rate: 5e-05
+Train: [346]	Time 74.189	Data 37.752	Loss 1.475	Accuracy 0.6205	Prec@1 62.0465	Prec@5 82.2897	
+Val: [346]	Time 15.080	Data 3.197	Loss 0.966	Accuracy 0.7936	Prec@1 79.3572	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 348 Learning rate: 5e-05
+Train: [347]	Time 75.495	Data 39.154	Loss 1.476	Accuracy 0.6202	Prec@1 62.0232	Prec@5 82.3014	
+Val: [347]	Time 13.994	Data 2.167	Loss 0.976	Accuracy 0.7965	Prec@1 79.6545	Prec@5 94.8039	
+Best accuracy: [80.702]	
+Starting epoch number: 349 Learning rate: 5e-05
+Train: [348]	Time 71.158	Data 34.639	Loss 1.464	Accuracy 0.6249	Prec@1 62.4938	Prec@5 82.4681	
+Val: [348]	Time 14.085	Data 2.324	Loss 1.019	Accuracy 0.7926	Prec@1 79.2581	Prec@5 94.1385	
+Best accuracy: [80.702]	
+Starting epoch number: 350 Learning rate: 5e-05
+Train: [349]	Time 70.014	Data 33.476	Loss 1.473	Accuracy 0.6227	Prec@1 62.2687	Prec@5 82.3321	
+Val: [349]	Time 14.315	Data 2.509	Loss 0.941	Accuracy 0.8042	Prec@1 80.4191	Prec@5 94.9738	
+Best accuracy: [80.702]	
+Starting epoch number: 351 Learning rate: 5e-05
+Train: [350]	Time 72.628	Data 36.130	Loss 1.474	Accuracy 0.6222	Prec@1 62.2190	Prec@5 82.1772	
+Val: [350]	Time 14.284	Data 2.529	Loss 1.004	Accuracy 0.7866	Prec@1 78.6635	Prec@5 94.0960	
+Best accuracy: [80.702]	
+Starting epoch number: 352 Learning rate: 5e-05
+Train: [351]	Time 70.416	Data 33.910	Loss 1.471	Accuracy 0.6237	Prec@1 62.3681	Prec@5 82.4710	
+Val: [351]	Time 13.265	Data 1.543	Loss 0.973	Accuracy 0.8025	Prec@1 80.2492	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 353 Learning rate: 5e-05
+Train: [352]	Time 70.293	Data 33.829	Loss 1.487	Accuracy 0.6188	Prec@1 61.8828	Prec@5 82.1246	
+Val: [352]	Time 14.118	Data 2.368	Loss 0.951	Accuracy 0.7995	Prec@1 79.9519	Prec@5 94.6765	
+Best accuracy: [80.702]	
+Starting epoch number: 354 Learning rate: 5e-05
+Train: [353]	Time 70.359	Data 33.899	Loss 1.480	Accuracy 0.6206	Prec@1 62.0568	Prec@5 82.2444	
+Val: [353]	Time 14.870	Data 3.076	Loss 1.119	Accuracy 0.7696	Prec@1 76.9645	Prec@5 93.5438	
+Best accuracy: [80.702]	
+Starting epoch number: 355 Learning rate: 5e-05
+Train: [354]	Time 70.149	Data 33.631	Loss 1.485	Accuracy 0.6201	Prec@1 62.0129	Prec@5 82.1567	
+Val: [354]	Time 15.231	Data 3.472	Loss 0.986	Accuracy 0.7920	Prec@1 79.2015	Prec@5 94.4216	
+Best accuracy: [80.702]	
+Starting epoch number: 356 Learning rate: 5e-05
+Train: [355]	Time 71.050	Data 34.554	Loss 1.474	Accuracy 0.6208	Prec@1 62.0772	Prec@5 82.2532	
+Val: [355]	Time 14.231	Data 2.433	Loss 1.343	Accuracy 0.7287	Prec@1 72.8727	Prec@5 91.5617	
+Best accuracy: [80.702]	
+Starting epoch number: 357 Learning rate: 5e-05
+Train: [356]	Time 71.406	Data 34.977	Loss 1.473	Accuracy 0.6224	Prec@1 62.2351	Prec@5 82.4271	
+Val: [356]	Time 14.761	Data 2.979	Loss 0.996	Accuracy 0.7950	Prec@1 79.4988	Prec@5 94.5066	
+Best accuracy: [80.702]	
+Starting epoch number: 358 Learning rate: 5e-05
+Train: [357]	Time 70.638	Data 34.121	Loss 1.482	Accuracy 0.6199	Prec@1 61.9910	Prec@5 82.2269	
+Val: [357]	Time 14.158	Data 2.385	Loss 0.982	Accuracy 0.7941	Prec@1 79.4138	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 359 Learning rate: 5e-05
+Train: [358]	Time 70.225	Data 33.728	Loss 1.478	Accuracy 0.6219	Prec@1 62.1883	Prec@5 82.1933	
+Val: [358]	Time 13.704	Data 1.938	Loss 0.995	Accuracy 0.7899	Prec@1 78.9891	Prec@5 94.2093	
+Best accuracy: [80.702]	
+Starting epoch number: 360 Learning rate: 5e-05
+Train: [359]	Time 71.161	Data 34.680	Loss 1.473	Accuracy 0.6219	Prec@1 62.1912	Prec@5 82.5426	
+Val: [359]	Time 14.964	Data 3.119	Loss 0.960	Accuracy 0.8004	Prec@1 80.0368	Prec@5 94.4924	
+Best accuracy: [80.702]	
+Starting epoch number: 361 Learning rate: 5e-05
+Train: [360]	Time 72.948	Data 36.463	Loss 1.481	Accuracy 0.6206	Prec@1 62.0612	Prec@5 82.3380	
+Val: [360]	Time 14.864	Data 3.013	Loss 0.968	Accuracy 0.7998	Prec@1 79.9802	Prec@5 94.4500	
+Best accuracy: [80.702]	
+Starting epoch number: 362 Learning rate: 5e-05
+Train: [361]	Time 75.326	Data 38.919	Loss 1.478	Accuracy 0.6224	Prec@1 62.2365	Prec@5 82.2444	
+Val: [361]	Time 14.966	Data 3.131	Loss 0.994	Accuracy 0.7968	Prec@1 79.6829	Prec@5 94.5491	
+Best accuracy: [80.702]	
+Starting epoch number: 363 Learning rate: 5e-05
+Train: [362]	Time 72.201	Data 35.776	Loss 1.471	Accuracy 0.6220	Prec@1 62.1985	Prec@5 82.4988	
+Val: [362]	Time 14.311	Data 2.528	Loss 0.969	Accuracy 0.7991	Prec@1 79.9094	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 364 Learning rate: 5e-05
+Train: [363]	Time 71.014	Data 34.626	Loss 1.474	Accuracy 0.6216	Prec@1 62.1576	Prec@5 82.3365	
+Val: [363]	Time 14.317	Data 2.571	Loss 0.958	Accuracy 0.7982	Prec@1 79.8244	Prec@5 94.4641	
+Best accuracy: [80.702]	
+Starting epoch number: 365 Learning rate: 5e-05
+Train: [364]	Time 71.290	Data 34.928	Loss 1.486	Accuracy 0.6216	Prec@1 62.1605	Prec@5 82.0954	
+Val: [364]	Time 14.347	Data 2.601	Loss 0.972	Accuracy 0.8024	Prec@1 80.2350	Prec@5 94.4358	
+Best accuracy: [80.702]	
+Starting epoch number: 366 Learning rate: 5e-05
+Train: [365]	Time 70.411	Data 33.835	Loss 1.476	Accuracy 0.6218	Prec@1 62.1781	Prec@5 82.3877	
+Val: [365]	Time 14.115	Data 2.383	Loss 0.960	Accuracy 0.7981	Prec@1 79.8103	Prec@5 94.5491	
+Best accuracy: [80.702]	
+Starting epoch number: 367 Learning rate: 5e-05
+Train: [366]	Time 70.696	Data 34.238	Loss 1.484	Accuracy 0.6216	Prec@1 62.1605	Prec@5 82.1348	
+Val: [366]	Time 14.188	Data 2.471	Loss 0.956	Accuracy 0.7998	Prec@1 79.9802	Prec@5 94.8181	
+Best accuracy: [80.702]	
+Starting epoch number: 368 Learning rate: 5e-05
+Train: [367]	Time 69.522	Data 33.071	Loss 1.482	Accuracy 0.6183	Prec@1 61.8258	Prec@5 82.1743	
+Val: [367]	Time 13.990	Data 2.223	Loss 0.959	Accuracy 0.8033	Prec@1 80.3341	Prec@5 94.6198	
+Best accuracy: [80.702]	
+Starting epoch number: 369 Learning rate: 5e-05
+Train: [368]	Time 70.764	Data 34.259	Loss 1.478	Accuracy 0.6212	Prec@1 62.1225	Prec@5 82.2254	
+Val: [368]	Time 14.409	Data 2.639	Loss 0.975	Accuracy 0.7965	Prec@1 79.6545	Prec@5 94.3225	
+Best accuracy: [80.702]	
+Starting epoch number: 370 Learning rate: 5e-05
+Train: [369]	Time 69.852	Data 33.303	Loss 1.469	Accuracy 0.6247	Prec@1 62.4733	Prec@5 82.5470	
+Val: [369]	Time 14.127	Data 2.323	Loss 1.002	Accuracy 0.7895	Prec@1 78.9466	Prec@5 94.0535	
+Best accuracy: [80.702]	
+Starting epoch number: 371 Learning rate: 5e-05
+Train: [370]	Time 72.373	Data 35.992	Loss 1.475	Accuracy 0.6224	Prec@1 62.2424	Prec@5 82.3380	
+Val: [370]	Time 14.434	Data 2.624	Loss 1.341	Accuracy 0.7151	Prec@1 71.5135	Prec@5 91.6749	
+Best accuracy: [80.702]	
+Starting epoch number: 372 Learning rate: 5e-05
+Train: [371]	Time 72.870	Data 36.460	Loss 1.473	Accuracy 0.6211	Prec@1 62.1065	Prec@5 82.3482	
+Val: [371]	Time 14.862	Data 3.019	Loss 0.953	Accuracy 0.8007	Prec@1 80.0651	Prec@5 94.5915	
+Best accuracy: [80.702]	
+Starting epoch number: 373 Learning rate: 5e-05
+Train: [372]	Time 71.522	Data 35.017	Loss 1.468	Accuracy 0.6240	Prec@1 62.3959	Prec@5 82.5192	
+Val: [372]	Time 15.372	Data 3.560	Loss 0.943	Accuracy 0.8039	Prec@1 80.3908	Prec@5 94.7897	
+Best accuracy: [80.702]	
+Starting epoch number: 374 Learning rate: 5e-05
+Train: [373]	Time 71.415	Data 34.865	Loss 1.474	Accuracy 0.6216	Prec@1 62.1649	Prec@5 82.3248	
+Val: [373]	Time 14.668	Data 2.872	Loss 1.175	Accuracy 0.7563	Prec@1 75.6336	Prec@5 92.9775	
+Best accuracy: [80.702]	
+Starting epoch number: 375 Learning rate: 5e-05
+Train: [374]	Time 73.176	Data 36.761	Loss 1.475	Accuracy 0.6222	Prec@1 62.2205	Prec@5 82.4578	
+Val: [374]	Time 16.059	Data 4.161	Loss 0.960	Accuracy 0.8029	Prec@1 80.2917	Prec@5 94.5915	
+Best accuracy: [80.702]	
+Starting epoch number: 376 Learning rate: 5e-05
+Train: [375]	Time 74.728	Data 38.255	Loss 1.472	Accuracy 0.6221	Prec@1 62.2117	Prec@5 82.5148	
+Val: [375]	Time 14.738	Data 2.911	Loss 0.999	Accuracy 0.7926	Prec@1 79.2581	Prec@5 94.2517	
+Best accuracy: [80.702]	
+Starting epoch number: 377 Learning rate: 5e-05
+Train: [376]	Time 70.679	Data 34.161	Loss 1.474	Accuracy 0.6218	Prec@1 62.1825	Prec@5 82.5148	
+Val: [376]	Time 13.140	Data 1.326	Loss 0.942	Accuracy 0.8050	Prec@1 80.5040	Prec@5 94.7614	
+Best accuracy: [80.702]	
+Starting epoch number: 378 Learning rate: 5e-05
+Train: [377]	Time 72.698	Data 36.192	Loss 1.482	Accuracy 0.6213	Prec@1 62.1269	Prec@5 82.1787	
+Val: [377]	Time 14.573	Data 2.812	Loss 1.012	Accuracy 0.7811	Prec@1 78.1113	Prec@5 94.2659	
+Best accuracy: [80.702]	
+Starting epoch number: 379 Learning rate: 5e-05
+Train: [378]	Time 70.034	Data 33.444	Loss 1.479	Accuracy 0.6211	Prec@1 62.1050	Prec@5 82.3044	
+Val: [378]	Time 14.330	Data 2.550	Loss 0.958	Accuracy 0.7961	Prec@1 79.6121	Prec@5 94.7897	
+Best accuracy: [80.702]	
+Starting epoch number: 380 Learning rate: 5e-05
+Train: [379]	Time 71.368	Data 34.862	Loss 1.482	Accuracy 0.6211	Prec@1 62.1138	Prec@5 82.2386	
+Val: [379]	Time 15.034	Data 3.195	Loss 0.963	Accuracy 0.7951	Prec@1 79.5130	Prec@5 94.5915	
+Best accuracy: [80.702]	
+Starting epoch number: 381 Learning rate: 5e-05
+Train: [380]	Time 71.413	Data 34.862	Loss 1.488	Accuracy 0.6190	Prec@1 61.8989	Prec@5 82.0603	
+Val: [380]	Time 14.755	Data 2.858	Loss 0.958	Accuracy 0.8008	Prec@1 80.0793	Prec@5 94.5207	
+Best accuracy: [80.702]	
+Starting epoch number: 382 Learning rate: 5e-05
+Train: [381]	Time 71.184	Data 34.731	Loss 1.483	Accuracy 0.6196	Prec@1 61.9632	Prec@5 82.2444	
+Val: [381]	Time 14.621	Data 2.756	Loss 1.002	Accuracy 0.7929	Prec@1 79.2864	Prec@5 94.7331	
+Best accuracy: [80.702]	
+Starting epoch number: 383 Learning rate: 5e-05
+Train: [382]	Time 72.985	Data 36.439	Loss 1.468	Accuracy 0.6228	Prec@1 62.2819	Prec@5 82.4491	
+Val: [382]	Time 14.378	Data 2.594	Loss 0.978	Accuracy 0.7936	Prec@1 79.3572	Prec@5 94.4216	
+Best accuracy: [80.702]	
+Starting epoch number: 384 Learning rate: 5e-05
+Train: [383]	Time 70.040	Data 33.511	Loss 1.475	Accuracy 0.6220	Prec@1 62.1956	Prec@5 82.2605	
+Val: [383]	Time 13.718	Data 1.940	Loss 1.050	Accuracy 0.7852	Prec@1 78.5219	Prec@5 93.8695	
+Best accuracy: [80.702]	
+Starting epoch number: 385 Learning rate: 5e-05
+Train: [384]	Time 70.197	Data 33.699	Loss 1.482	Accuracy 0.6199	Prec@1 61.9881	Prec@5 82.0939	
+Val: [384]	Time 15.646	Data 3.881	Loss 0.991	Accuracy 0.7900	Prec@1 79.0033	Prec@5 94.4924	
+Best accuracy: [80.702]	
+Starting epoch number: 386 Learning rate: 5e-05
+Train: [385]	Time 69.341	Data 32.772	Loss 1.469	Accuracy 0.6230	Prec@1 62.3023	Prec@5 82.3029	
+Val: [385]	Time 14.575	Data 2.814	Loss 1.557	Accuracy 0.6827	Prec@1 68.2713	Prec@5 89.6078	
+Best accuracy: [80.702]	
+Starting epoch number: 387 Learning rate: 5e-05
+Train: [386]	Time 71.405	Data 34.961	Loss 1.480	Accuracy 0.6208	Prec@1 62.0831	Prec@5 82.2181	
+Val: [386]	Time 14.884	Data 3.035	Loss 1.022	Accuracy 0.7929	Prec@1 79.2864	Prec@5 94.1385	
+Best accuracy: [80.702]	
+Starting epoch number: 388 Learning rate: 5e-05
+Train: [387]	Time 72.776	Data 36.304	Loss 1.474	Accuracy 0.6241	Prec@1 62.4061	Prec@5 82.1743	
+Val: [387]	Time 13.870	Data 2.077	Loss 1.132	Accuracy 0.7636	Prec@1 76.3557	Prec@5 93.1049	
+Best accuracy: [80.702]	
+Starting epoch number: 389 Learning rate: 5e-05
+Train: [388]	Time 74.143	Data 37.725	Loss 1.473	Accuracy 0.6238	Prec@1 62.3769	Prec@5 82.1684	
+Val: [388]	Time 14.780	Data 2.988	Loss 0.977	Accuracy 0.7957	Prec@1 79.5696	Prec@5 94.4783	
+Best accuracy: [80.702]	
+Starting epoch number: 390 Learning rate: 5e-05
+Train: [389]	Time 71.719	Data 35.281	Loss 1.480	Accuracy 0.6219	Prec@1 62.1942	Prec@5 82.2225	
+Val: [389]	Time 15.257	Data 3.442	Loss 0.955	Accuracy 0.7995	Prec@1 79.9519	Prec@5 94.7331	
+Best accuracy: [80.702]	
+Starting epoch number: 391 Learning rate: 5e-05
+Train: [390]	Time 72.889	Data 36.443	Loss 1.467	Accuracy 0.6237	Prec@1 62.3739	Prec@5 82.6215	
+Val: [390]	Time 14.884	Data 3.058	Loss 1.027	Accuracy 0.7873	Prec@1 78.7342	Prec@5 94.2942	
+Best accuracy: [80.702]	
+Starting epoch number: 392 Learning rate: 5e-05
+Train: [391]	Time 70.691	Data 34.208	Loss 1.473	Accuracy 0.6227	Prec@1 62.2745	Prec@5 82.2824	
+Val: [391]	Time 14.685	Data 2.837	Loss 1.072	Accuracy 0.7787	Prec@1 77.8706	Prec@5 93.9969	
+Best accuracy: [80.702]	
+Starting epoch number: 393 Learning rate: 5e-05
+Train: [392]	Time 72.972	Data 36.516	Loss 1.471	Accuracy 0.6236	Prec@1 62.3579	Prec@5 82.4505	
+Val: [392]	Time 14.510	Data 2.713	Loss 0.965	Accuracy 0.8022	Prec@1 80.2209	Prec@5 94.7756	
+Best accuracy: [80.702]	
+Starting epoch number: 394 Learning rate: 5e-05
+Train: [393]	Time 76.402	Data 39.974	Loss 1.482	Accuracy 0.6210	Prec@1 62.0977	Prec@5 82.1699	
+Val: [393]	Time 14.857	Data 3.082	Loss 0.948	Accuracy 0.8019	Prec@1 80.1926	Prec@5 94.9738	
+Best accuracy: [80.702]	
+Starting epoch number: 395 Learning rate: 5e-05
+Train: [394]	Time 75.370	Data 38.899	Loss 1.467	Accuracy 0.6232	Prec@1 62.3213	Prec@5 82.4549	
+Val: [394]	Time 14.577	Data 2.701	Loss 0.957	Accuracy 0.7994	Prec@1 79.9377	Prec@5 94.6198	
+Best accuracy: [80.702]	
+Starting epoch number: 396 Learning rate: 5e-05
+Train: [395]	Time 76.448	Data 40.077	Loss 1.484	Accuracy 0.6211	Prec@1 62.1094	Prec@5 82.3745	
+Val: [395]	Time 14.453	Data 2.650	Loss 1.353	Accuracy 0.7127	Prec@1 71.2728	Prec@5 91.2360	
+Best accuracy: [80.702]	
+Starting epoch number: 397 Learning rate: 5e-05
+Train: [396]	Time 76.859	Data 40.461	Loss 1.472	Accuracy 0.6227	Prec@1 62.2672	Prec@5 82.3979	
+Val: [396]	Time 15.531	Data 3.673	Loss 0.966	Accuracy 0.8012	Prec@1 80.1218	Prec@5 94.4216	
+Best accuracy: [80.702]	
+Starting epoch number: 398 Learning rate: 5e-05
+Train: [397]	Time 78.363	Data 41.977	Loss 1.468	Accuracy 0.6241	Prec@1 62.4105	Prec@5 82.3584	
+Val: [397]	Time 14.535	Data 2.705	Loss 0.936	Accuracy 0.8065	Prec@1 80.6456	Prec@5 94.9738	
+Best accuracy: [80.702]	
+Starting epoch number: 399 Learning rate: 5e-05
+Train: [398]	Time 76.274	Data 39.880	Loss 1.468	Accuracy 0.6242	Prec@1 62.4178	Prec@5 82.5411	
+Val: [398]	Time 15.988	Data 4.203	Loss 0.976	Accuracy 0.7985	Prec@1 79.8528	Prec@5 94.4075	
+Best accuracy: [80.702]	
+Starting epoch number: 400 Learning rate: 5e-05
+Train: [399]	Time 76.193	Data 39.832	Loss 1.472	Accuracy 0.6233	Prec@1 62.3286	Prec@5 82.5105	
+Val: [399]	Time 15.041	Data 3.236	Loss 0.972	Accuracy 0.7991	Prec@1 79.9094	Prec@5 94.5632	
+Best accuracy: [80.702]	
