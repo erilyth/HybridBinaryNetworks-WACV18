@@ -5,7 +5,7 @@ Binarization is an extreme network compression approach that provides large comp
 ### Cite
 If you use our paper or repo in your work, please cite the original paper as:
 ```
-@article{Huang2016Densely,
+@article{Prabhu2018Hybrid,
   author  = {Ameya Prabhu, Vishal Batchu, Rohit Gajawada, Sri Aurobindo Munagala, Anoop Namboodiri},
   title   = {Hybrid Binary Networks: Optimizing for Accuracy, Efficiency and Memory},
   journal = {IEEE Winter Conference on Applications of Computer Vision (WACV)},
