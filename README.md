@@ -2,6 +2,17 @@
 
 Binarization is an extreme network compression approach that provides large computational speedups along with energy and memory savings, albeit at significant accuracy costs. We investigate the question of where to binarize inputs at layer-level granularity and show that selectively binarizing the inputs to specific layers in the network could lead to significant improvements in accuracy while preserving most of the advantages of binarization. We analyze the binarization tradeoff using a metric that jointly models the input binarization-error and computational cost and introduce an efficient algorithm to select layers whose inputs are to be binarized. Practical guidelines based on insights obtained from applying the algorithm to a variety of models are discussed.
 
+### Cite
+If you use our paper or repo in your work, please cite the original paper as:
+```
+@article{Huang2016Densely,
+  author  = {Ameya Prabhu, Vishal Batchu, Rohit Gajawada, Sri Aurobindo Munagala, Anoop Namboodiri},
+  title   = {Hybrid Binary Networks: Optimizing for Accuracy, Efficiency and Memory},
+  journal = {2018 IEEE Winter Conference on Applications of Computer Vision (WACV)},
+  year    = {2019}
+}
+```
+
 ### Usage instructions
 * Clone the repo
 * Install PyTorch and other required dependencies
