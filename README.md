@@ -9,7 +9,7 @@ If you use our paper or repo in your work, please cite the original paper as:
   author  = {Ameya Prabhu, Vishal Batchu, Rohit Gajawada, Sri Aurobindo Munagala, Anoop Namboodiri},
   title   = {Hybrid Binary Networks: Optimizing for Accuracy, Efficiency and Memory},
   journal = {2018 IEEE Winter Conference on Applications of Computer Vision (WACV)},
-  year    = {2019}
+  year    = {2018}
 }
 ```
 
